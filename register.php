@@ -7,18 +7,18 @@
     <title>Document</title>
 </head>
 <body>
-<div>
+    <div>
         <h2>Inscription</h2>
 
         <form action="#" method="post">
             <p>
-                <label for="email">Email :</label>
-                <input type="email" id="email" name="email">
+                <label for="RegisterEmail">Email :</label>
+                <input type="email" id="RegisterEmail" name="RegisterEmail">
             </p>
 
             <p>
-                <label for="pass">Password :</label>
-                <input type="password" id="pass" name="pass">
+                <label for="RegisterPass">Password :</label>
+                <input type="password" id="RegisterPass" name="RegisterPass">
             </p>
 
             <input type="submit" value="Submit">
