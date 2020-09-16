@@ -19,6 +19,7 @@ if(empty($_POST['addTitle']) || empty($_POST['addTask'])){
     $addTodos->bindParam(':title', $_POST['addTitle']);
     $addTodos->bindParam(':task', $_POST['addTask']);
     $addTodos->execute();
+    header('Location: ../home.php');
 }
 
 ?>
