@@ -10,7 +10,7 @@
     <div>
         <h2>Inscription</h2>
 
-        <form action="#" method="post">
+        <form action="./Database/user_infos_database.php" method="post">
             <p>
                 <label for="RegisterEmail">Email :</label>
                 <input type="email" id="RegisterEmail" name="RegisterEmail">
