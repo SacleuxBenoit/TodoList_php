@@ -8,7 +8,7 @@
 </head>
 <body>
     <div>
-        <h2>Inscription</h2>
+        <h2>Register</h2>
 
         <form action="./Database/user_infos_database.php" method="post">
             <p>
@@ -25,5 +25,7 @@
             
         </form>
     </div>
+
+    <p>If you have an account <a href="login.php">click here</a></p>
 </body>
 </html>
