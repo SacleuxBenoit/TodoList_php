@@ -10,8 +10,18 @@
 <body>
     <h1>Todo List</h1>
 
-    <form action="home.php" method="post">
-        <input type="text" name="addList" id="addList">
+    <form action="./Database/user_todos_database.php" method="post">
+
+    <p>
+            <label for="addTitle">Title</label>
+            <input type="text" name="addTitle" id="addTitle">
+        </p>
+
+        <p>
+            <label for="addTask">Task</label>
+            <input type="text" name="addTask" id="addTask">
+        </p>
+
         <input type="submit" value="Envoyer">
     </form>
 </body>
