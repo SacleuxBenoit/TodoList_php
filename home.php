@@ -23,7 +23,7 @@ include('pass.php')
 
     <p>
         <label for="addTask">Task</label>
-        <input type="text" name="addTask" id="addTask">
+        <textarea id="addTask" name="addTask" rows="10" cols="40"></textarea>
     </p>
 
         <input type="submit" value="Envoyer">
@@ -45,8 +45,8 @@ include('pass.php')
             $display_todos = $bdd->query('SELECT title,task FROM create_todos');
 
             while($donnees = $display_todos->fetch()){
-                echo '<h2>' . htmlspecialchars($donnees['title']) .'</h2>' . "</br>";
-                echo htmlspecialchars($donnees['task']) . "</br>";
+                echo '<div>' .'<h2>' . htmlspecialchars($donnees['title']) .'</h2>';
+                echo htmlspecialchars($donnees['task']) . "</div>";
             }
 
         ?>
