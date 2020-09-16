@@ -1,3 +1,7 @@
+<?php
+session_start();
+include('pass.php')
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -13,16 +17,39 @@
     <form action="./Database/user_todos_database.php" method="post">
 
     <p>
-            <label for="addTitle">Title</label>
-            <input type="text" name="addTitle" id="addTitle">
-        </p>
+        <label for="addTitle">Title</label>
+        <input type="text" name="addTitle" id="addTitle">
+    </p>
 
-        <p>
-            <label for="addTask">Task</label>
-            <input type="text" name="addTask" id="addTask">
-        </p>
+    <p>
+        <label for="addTask">Task</label>
+        <input type="text" name="addTask" id="addTask">
+    </p>
 
         <input type="submit" value="Envoyer">
     </form>
+
+
+    <div>
+        <?php
+            try
+            {
+                $bdd = new PDO('mysql:host=localhost;dbname=TodoList;charset=utf8', 'root', $_SESSION['pass']);
+                $bdd->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+            }
+            catch(Exception $e)
+            {
+                    die('Erreur : '.$e->getMessage());
+            }
+
+            $display_todos = $bdd->query('SELECT title,task FROM create_todos');
+
+            while($donnees = $display_todos->fetch()){
+                echo '<h2>' . htmlspecialchars($donnees['title']) .'</h2>' . "</br>";
+                echo htmlspecialchars($donnees['task']) . "</br>";
+            }
+
+        ?>
+    </div>
 </body>
 </html>
