@@ -10,9 +10,9 @@
     <div>
         <h2>Login</h2>
 
-        <form action="#" method="post">
+        <form action="./Database/user_login_database.php" method="post">
             <p>
-                <label for="email">Email :</label>
+                <label for="LoginEmail">Email :</label>
                 <input type="email" id="LoginEmail" name="LoginEmail">
             </p>
 
