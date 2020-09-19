@@ -42,11 +42,14 @@ include('pass.php')
                     die('Erreur : '.$e->getMessage());
             }
 
-            $display_todos = $bdd->query('SELECT title,task FROM create_todos');
+            $display_todos = $bdd->query('SELECT * FROM create_todos LIMIT 10');
 
             while($donnees = $display_todos->fetch()){
-                echo '<div>' .'<h2>' . htmlspecialchars($donnees['title']) .'</h2>';
-                echo htmlspecialchars($donnees['task']) . "</div>";
+                ?>
+                <div><h2><?php echo htmlspecialchars($donnees['title'])?></h2>
+                <?php echo htmlspecialchars($donnees['task'])?></div>
+                <a href="./Database/todos_delete_database.php?id=<?php echo $donnees['id']; ?>">Delete</a>
+                <?php
             }
 
         ?>
