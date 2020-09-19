@@ -46,9 +46,11 @@ include('pass.php')
 
             while($donnees = $display_todos->fetch()){
                 ?>
-                <div><h2><?php echo htmlspecialchars($donnees['title'])?></h2>
-                <?php echo htmlspecialchars($donnees['task'])?></div>
-                <a href="./Database/todos_delete_database.php?id=<?php echo $donnees['id']; ?>">Delete</a>
+                    <div>
+                        <p class="todosTitle"><?php echo htmlspecialchars($donnees['title'])?></p>
+                        <p class="todosTask"><?php echo htmlspecialchars($donnees['task'])?></p></div>
+                        <a href="./Database/todos_delete_database.php?id=<?php echo $donnees['id']; ?>">Delete</a>
+                        <a href="./Database/todos_modify_database.php?id=<?php echo $donnees['id']; ?>">Modify</a>
                 <?php
             }
 
