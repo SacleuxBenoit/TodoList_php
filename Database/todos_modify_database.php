@@ -1,33 +1,28 @@
 <?php
 session_start();
 include('../pass.php');
-?>
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <link rel="stylesheet" href="../css/style.css">
-    <title>Document</title>
-</head>
-<body>
 
-    <h1>Modify</h1>
+    try
+    {
+        $bdd = new PDO('mysql:host=localhost;dbname=TodoList;charset=utf8', 'root', $_SESSION['pass']);
+        $bdd->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+    }
+    catch(Exception $e)
+    {
+            die('Erreur : '.$e->getMessage());
+    }
 
-    <form action="../home.php" method="post">
+    $id = $_GET['id'];
+    
+    $modify_todos = $bdd->prepare('UPDATE create_todos SET title = :title, task = :task WHERE id = :id');
+    $modify_todos->bindParam(':title', $_POST['modifyTitle']);
+    $modify_todos->bindParam(':task', $_POST['modifyTask']);
+    $modify_todos->bindParam(':id', $id);
+    $modify_todos->execute();
 
-    <p>
-        <label for="modifyTitle">Title</label>
-        <input type="text" name="modifyTitle" id="modifyTitle">
-    </p>
-
-    <p>
-        <label for="modifyTask">Task</label>
-        <textarea id="modifyTask" name="modifyTask" rows="10" cols="40"></textarea>
-    </p>
-
-        <input type="submit" value="Envoyer">
-    </form>
+    if($modify_todos){
+        header('Location: ../home.php');
+    }
+    ?>
 </body>
 </html>
