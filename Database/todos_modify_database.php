@@ -22,6 +22,8 @@ include('../pass.php');
 
     if($modify_todos){
         header('Location: ../home.php');
+    }else{
+        echo "Error with the modification of the todos";
     }
     ?>
 </body>
