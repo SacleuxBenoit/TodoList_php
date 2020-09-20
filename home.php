@@ -50,10 +50,9 @@ include('pass.php')
                         <p class="todosTitle"><?php echo htmlspecialchars($donnees['title'])?></p>
                         <p class="todosTask"><?php echo htmlspecialchars($donnees['task'])?></p></div>
                         <a href="./Database/todos_delete_database.php?id=<?php echo $donnees['id']; ?>">Delete</a>
-                        <a href="./Database/todos_modify_database.php?id=<?php echo $donnees['id']; ?>">Modify</a>
+                        <a href="./todos_modify.php?id=<?php echo $donnees['id']; ?>">Modify</a>
                 <?php
             }
-
         ?>
     </div>
 </body>
