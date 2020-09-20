@@ -8,20 +8,22 @@
     <title>Document</title>
 </head>
 <body>
+    <?php $id = $_GET['id']?>
+<h1>Modify</h1>
 
-    <h1>Modify</h1>
+<form action="./Database/todos_modify_database.php?id=<?php echo $id?>" method="post">
 
-    <form action="./Database/todos_modify_database.php" method="post">
+<p>
+    <label for="modifyTitle">Title</label>
+    <input type="text" name="modifyTitle" id="modifyTitle">
+</p>
 
-    <p>
-        <label for="modifyTitle">Title</label>
-        <input type="text" name="modifyTitle" id="modifyTitle">
-    </p>
+<p>
+    <label for="modifyTask">Task</label>
+    <textarea id="modifyTask" name="modifyTask" rows="10" cols="40"></textarea>
+</p>
 
-    <p>
-        <label for="modifyTask">Task</label>
-        <textarea id="modifyTask" name="modifyTask" rows="10" cols="40"></textarea>
-    </p>
-
-        <input type="submit" value="Envoyer">
-    </form>
+    <input type="submit" value="Envoyer">
+</form>
+</body>
+</html>
