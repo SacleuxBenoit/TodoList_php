@@ -12,7 +12,7 @@ include('pass.php')
     <title>Document</title>
 </head>
 <body>
-    <h1>Todo List</h1>
+    <h1><a href="index.php">Todo List</a></h1>
 
     <form action="./Database/user_todos_database.php" method="post">
 
