@@ -1,0 +1,21 @@
+body{
+    text-align: center;
+    display: grid;
+    grid-template-areas:
+    '. header header .'
+    '. createTodos createTodos .'
+    '. . todos .';
+}
+
+header{
+    grid-area: header;
+}
+
+.createTodos{
+    grid-area: createTodos;
+}
+.divTodos{
+    grid-area: todos;
+    border: 1px solid blue;
+    width: 20em;
+}
