@@ -10,6 +10,6 @@ $donnees = $user_login->fetch();
 if($_POST['LoginEmail'] == $donnees['email'] && password_verify($_POST['LoginPass'],$donnees['pass'])){
     header('Location: ./../home.php');
 }else{
-    header('Location: ./../login.php');
+    header('Location: ./../index.php');
 }
 ?>
