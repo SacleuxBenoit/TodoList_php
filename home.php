@@ -12,25 +12,27 @@ include('pass.php')
     <title>Document</title>
 </head>
 <body>
-    <h1><a href="index.php">Todo List</a></h1>
 
-    <form action="./Database/user_todos_database.php" method="post">
+    <header>
+        <h1><a href="index.php">Todo List</a></h1>
+    </header>
 
-    <p>
-        <label for="addTitle">Title</label>
-        <input type="text" name="addTitle" id="addTitle">
-    </p>
+    <form action="./Database/user_todos_database.php" method="post" class="createTodos">
+        <p>
+            <label for="addTitle">Title</label>
+            <input type="text" name="addTitle" id="addTitle">
+        </p>
 
-    <p>
-        <label for="addTask">Task</label>
-        <textarea id="addTask" name="addTask" rows="10" cols="40"></textarea>
-    </p>
+        <p>
+            <label for="addTask">Task</label>
+            <textarea id="addTask" name="addTask" rows="10" cols="40"></textarea>
+        </p>
 
-        <input type="submit" value="Envoyer">
+            <input type="submit" value="Envoyer">
     </form>
 
 
-    <div>
+    <div class="divTodos">
         <?php
             try
             {
