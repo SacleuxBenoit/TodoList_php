@@ -51,6 +51,11 @@ include('pass.php')
                 <?php
             }
         ?>
+
+        <p>
+            <a href="./Database/todos_deleteALL_database.php">DELETE EVERY TODOS</a>
+        </p>
+
     </div>
 </body>
 </html>
