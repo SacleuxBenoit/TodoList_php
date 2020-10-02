@@ -18,10 +18,6 @@ include('pass.php')
     </header>
 
     <form action="./Database/user_todos_database.php" method="post" class="createTodos">
-        <p>
-            <label for="addTitle">Title</label>
-            <input type="text" name="addTitle" id="addTitle">
-        </p>
 
         <p>
             <label for="addTask">Task</label>
@@ -49,7 +45,6 @@ include('pass.php')
             while($donnees = $display_todos->fetch()){
                 ?>
                     <div>
-                        <p class="todosTitle"><?php echo htmlspecialchars($donnees['title'])?></p>
                         <p class="todosTask"><?php echo htmlspecialchars($donnees['task'])?></p></div>
                         <a href="./Database/todos_delete_database.php?id=<?php echo $donnees['id']; ?>">Delete</a>
                         <a href="./todos_modify.php?id=<?php echo $donnees['id']; ?>">Modify</a>
