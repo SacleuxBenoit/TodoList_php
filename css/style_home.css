@@ -19,3 +19,17 @@ header{
     border: 1px solid blue;
     width: 20em;
 }
+
+a{
+    text-decoration: none;
+    color: black;
+}
+
+div > a{
+    color: lightcoral;
+}
+
+.deleteALL{
+    text-decoration: none;
+    color: red;
+}
