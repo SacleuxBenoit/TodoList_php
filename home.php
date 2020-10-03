@@ -46,14 +46,14 @@ include('pass.php')
                 ?>
                     <div>
                         <p class="todosTask"><?php echo htmlspecialchars($donnees['task'])?></p></div>
-                        <a href="./Database/todos_delete_database.php?id=<?php echo $donnees['id']; ?>">Delete</a>
+                        <a href="./Database/todos_delete_database.php?id=<?php echo $donnees['id']; ?>">Delete</a> |
                         <a href="./todos_modify.php?id=<?php echo $donnees['id']; ?>">Modify</a>
                 <?php
             }
         ?>
 
         <p>
-            <a href="./Database/todos_deleteALL_database.php">DELETE EVERY TODOS</a>
+            <a href="./Database/todos_deleteALL_database.php"  class="deleteALL" >DELETE EVERY TODOS</a>
         </p>
 
     </div>
