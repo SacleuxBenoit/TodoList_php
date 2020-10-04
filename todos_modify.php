@@ -14,11 +14,6 @@
 <form action="./Database/todos_modify_database.php?id=<?php echo $id?>" method="post">
 
 <p>
-    <label for="modifyTitle">Title</label>
-    <input type="text" name="modifyTitle" id="modifyTitle">
-</p>
-
-<p>
     <label for="modifyTask">Task</label>
     <textarea id="modifyTask" name="modifyTask" rows="10" cols="40"></textarea>
 </p>
