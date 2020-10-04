@@ -17,7 +17,7 @@ include('pass.php')
         <h1><a href="index.php">Todo List</a></h1>
     </header>
 
-    <form action="./Database/user_todos_database.php" method="post" class="createTodos">
+    <form action="./Database/todos_create_database.php" method="post" class="createTodos">
 
         <p>
             <label for="addTask">Task</label>
