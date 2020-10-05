@@ -18,9 +18,9 @@ include('pass.php')
     </header>
 
     <form action="./Database/todos_create_database.php" method="post" class="createTodos">
+        <label for="addTask" class="titleTask">your task :</label>
 
         <p>
-            <label for="addTask">Task</label>
             <textarea id="addTask" name="addTask" rows="10" cols="40"></textarea>
         </p>
 
