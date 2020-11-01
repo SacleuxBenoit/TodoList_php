@@ -1,9 +1,9 @@
 <?php
 session_start();
-include('connection_database.php');
+include('../connection_database.php');
 
 if(empty($_POST['RegisterEmail']) || empty($_POST['RegisterPass'])){
-    header('Location: ../register.php');
+    header('Location: ../../register.php');
 }else{
     $pass_hash = password_hash($_POST['RegisterPass'], PASSWORD_DEFAULT);
     $user_info = $bdd->prepare('INSERT INTO user(email,pass) VALUES(:email, :pass)');
