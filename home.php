@@ -17,7 +17,7 @@ include('pass.php')
         <h1><a href="index.php">Todo List</a></h1>
     </header>
 
-    <form action="./Database/todos_create_database.php" method="post" class="createTodos">
+    <form action="./Database/Todos/todos_create_database.php" method="post" class="createTodos">
         <label for="addTask" class="titleTask">your task :</label>
 
         <p>
@@ -46,14 +46,14 @@ include('pass.php')
                 ?>
                     <div>
                         <p class="todosTask"><?php echo htmlspecialchars($donnees['task'])?></p></div>
-                        <a href="./Database/todos_delete_database.php?id=<?php echo $donnees['id']; ?>">Delete</a> |
+                        <a href="./Database/Todos/todos_delete_database.php?id=<?php echo $donnees['id']; ?>">Delete</a> |
                         <a href="./todos_modify.php?id=<?php echo $donnees['id']; ?>">Modify</a>
                 <?php
             }
         ?>
 
         <p>
-            <a href="./Database/todos_deleteALL_database.php"  class="deleteALL" >DELETE EVERY TODOS</a>
+            <a href="./Database/Todos/todos_deleteALL_database.php"  class="deleteALL" >DELETE EVERY TODOS</a>
         </p>
 
     </div>

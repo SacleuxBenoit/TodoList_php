@@ -1,6 +1,6 @@
 <?php
 session_start();   
-include('connection_database.php');
+include('../connection_database.php');
 
     $id = $_GET['id'];
     
@@ -10,7 +10,7 @@ include('connection_database.php');
     $modify_todos->execute();
 
     if($modify_todos){
-        header('Location: ../home.php');
+        header('Location: ../../home.php');
     }else{
         echo "Error with the modification of the todos";
     }

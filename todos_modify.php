@@ -11,7 +11,7 @@
     <?php $id = $_GET['id']?>
 <h1>Modify</h1>
 
-<form action="./Database/todos_modify_database.php?id=<?php echo $id?>" method="post">
+<form action="./Database/Todos/todos_modify_database.php?id=<?php echo $id?>" method="post">
 
 <p>
     <label for="modifyTask">Task</label>
