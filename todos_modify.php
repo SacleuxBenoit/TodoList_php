@@ -9,7 +9,7 @@
 </head>
 <body>
     <?php $id = $_GET['id']?>
-<h1>Modify</h1>
+<a href="./home.php"><h1>Modify</h1></a>
 
 <form action="./Database/Todos/todos_modify_database.php?id=<?php echo $id?>" method="post">
 
