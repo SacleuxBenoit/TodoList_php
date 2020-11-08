@@ -19,8 +19,8 @@
     </p>
 
     <p>
-        <label for="modiftDeadline">Deadline :</label>
-        <input type="datetime-local" name="modifyDeadLine" id="modifyDeadLine">
+        <label for="modifyDeadline">Deadline :</label>
+        <input type="datetime-local" name="modifyDeadline" id="modifyDeadline">
     </p>
 
     <input type="submit" value="Envoyer">
