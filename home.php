@@ -54,7 +54,7 @@ include('pass.php')
                         <a href="./Database/Todos/todos_delete_database.php?id=<?php echo $donnees['id']; ?>">Delete</a> |
                         <a href="./todos_modify.php?id=<?php echo $donnees['id']; ?>">Modify</a>
                 <?php
-            }
+            } 
         ?>
 
         <p>

@@ -13,10 +13,15 @@
 
 <form action="./Database/Todos/todos_modify_database.php?id=<?php echo $id?>" method="post">
 
-<p>
-    <label for="modifyTask">Task</label>
-    <textarea id="modifyTask" name="modifyTask" rows="10" cols="40"></textarea>
-</p>
+    <p>
+        <label for="modifyTask">Task</label>
+        <textarea id="modifyTask" name="modifyTask" rows="10" cols="40"></textarea>
+    </p>
+
+    <p>
+        <label for="modiftDeadline">Deadline :</label>
+        <input type="datetime-local" name="modifyDeadLine" id="modifyDeadLine">
+    </p>
 
     <input type="submit" value="Envoyer">
 </form>
