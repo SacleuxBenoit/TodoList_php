@@ -4,14 +4,14 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <link rel="stylesheet" href="./css/style_modify.css">
+    <link rel="stylesheet" href="../css/style_modify.css">
     <title>Document</title>
 </head>
 <body>
     <?php $id = $_GET['id']?>
 <a href="./home.php"><h1>Modify</h1></a>
 
-<form action="./Database/Todos/todos_modify_database.php?id=<?php echo $id?>" method="post">
+<form action="../Database/Todos/todos_modify_database.php?id=<?php echo $id?>" method="post">
 
     <p>
         <label for="modifyTask">Task</label>
