@@ -11,7 +11,7 @@ include('../connection_database.php');
     $modify_todos->execute();
 
     if($modify_todos){
-        header('Location: ../../layouts/home.php');
+        header('Location: ../../index.php');
     }else{
         echo "Error with the modification of the todos";
     }
