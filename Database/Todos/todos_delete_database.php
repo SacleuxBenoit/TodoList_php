@@ -9,7 +9,7 @@ $delete_todos->bindParam(':id', $id);
 $delete_todos->execute();
 
 if($delete_todos){
-    header('Location: ../../home.php');
+    header('Location: ../../layouts/todos.php');
 }else{
     echo "Error deleting todos";
 }
