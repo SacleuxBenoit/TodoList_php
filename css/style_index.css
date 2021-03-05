@@ -1,0 +1,25 @@
+body{
+    text-align: center;
+    display: grid;
+    grid-template-areas:
+    '. header header .'
+    '. login register .'
+    '. login register .';
+}
+
+header{
+    grid-area: header;
+}
+
+.login{
+    grid-area: login;
+    border: 1px solid black;
+    font-size: 2em;
+    height: 10em;
+}
+
+.register{
+    grid-area: register;
+    border: 1px solid black;
+    font-size: 2em;
+}
