@@ -3,6 +3,8 @@
  include('../../pass.php');
  include('../connection_database.php');
 
+ $_SESSION['username'] = $_POST['LoginPseudo'];
+
  $user_login = $bdd->prepare('SELECT username,pass FROM user WHERE username = :username');
  $user_login->bindParam(':username', $_POST['LoginPseudo']);
  $user_login->execute();
