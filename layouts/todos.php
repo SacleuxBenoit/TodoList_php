@@ -45,7 +45,9 @@ include('../pass.php')
                     die('Erreur : '.$e->getMessage());
             }
 
-            $display_todos = $bdd->query('SELECT * FROM create_todos LIMIT 10');
+            $display_todos = $bdd->prepare('SELECT * FROM create_todos WHERE id_user = :id_user');
+            $display_todos->bindParam(':id_user', $_SESSION['id_user']);
+            $display_todos->execute();
 
             while($donnees = $display_todos->fetch()){
                 ?>                   
