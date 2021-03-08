@@ -18,11 +18,6 @@
         <textarea id="modifyTask" name="modifyTask" rows="10" cols="40"></textarea>
     </p>
 
-    <p>
-        <label for="modifyDeadline">Deadline :</label>
-        <input type="datetime-local" name="modifyDeadline" id="modifyDeadline">
-    </p>
-
     <input type="submit" value="Envoyer">
 </form>
 </body>
