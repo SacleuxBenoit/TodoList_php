@@ -24,11 +24,6 @@ include('../pass.php')
             <textarea id="addTask" name="addTask" rows="10" cols="40"></textarea>
         </p>
 
-        <p>
-            <label for="deadLine">Deadline :</label>
-            <input type="datetime-local" name="deadLine" id="deadLine">
-        </p>
-
             <input type="submit" value="Envoyer">
     </form>
 
