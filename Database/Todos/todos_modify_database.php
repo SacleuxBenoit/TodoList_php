@@ -1,7 +1,7 @@
 <?php
 session_start();   
 include('../connection_database.php');
-
+include('../pass.php');
     $id = $_GET['id'];
     
     $modify_todos = $bdd->prepare('UPDATE create_todos SET task = :task, deadline = :deadline, updatedAT = NOW() WHERE id = :id');

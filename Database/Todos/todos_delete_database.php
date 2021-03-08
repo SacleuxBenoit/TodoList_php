@@ -1,6 +1,7 @@
 <?php
 session_start();
 include('../connection_database.php');
+include('../pass.php');
 
 $id = $_GET['id'];
 

@@ -1,6 +1,7 @@
 <?php
 session_start();
 include('../connection_database.php');
+include('../pass.php');
 
 if(empty($_POST['addTask']) || empty($_POST['deadLine'])){
     header('Location: ../../layouts/todos.php');

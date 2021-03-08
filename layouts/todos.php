@@ -35,15 +35,8 @@ include('../pass.php')
 
     <div class="divTodos">
         <?php
-            try
-            {
-                $bdd = new PDO('mysql:host=localhost;dbname=TodoList;charset=utf8', $_SESSION['user'], $_SESSION['pass']);
-                $bdd->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
-            }
-            catch(Exception $e)
-            {
-                    die('Erreur : '.$e->getMessage());
-            }
+        include('../Database/connection_database.php');
+        include('../pass.php');
 
             $display_todos = $bdd->prepare('SELECT * FROM create_todos WHERE id_user = :id_user');
             $display_todos->bindParam(':id_user', $_SESSION['id_user']);

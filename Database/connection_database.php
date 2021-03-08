@@ -1,5 +1,4 @@
 <?php
-    include('../../pass.php');
     try
     {
         $bdd = new PDO('mysql:host=localhost;dbname=TodoList;charset=utf8', 'root', $_SESSION['pass']);
