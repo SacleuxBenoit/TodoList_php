@@ -11,6 +11,7 @@
 <header>
     <h1>Todo List</h1>
 </header>
+
     <div class="login">
         <h2>Login</h2>
         <form action="./Database/User/user_login_database.php" method="post">
@@ -18,14 +19,15 @@
                 <label for="LoginPseudo">Pseudo :</label>
                 <input type="text" id="LoginPseudo" name="LoginPseudo">
             </p>
+
             <p>
                 <label for="LoginPass">Password :</label>
                 <input type="password" id="LoginPass" name="LoginPass">
             </p>
             <input type="submit" value="Submit">
-            
         </form>
     </div>
+
     <div class="register">
         <h2>Register</h2>
         <form action="./Database/User/user_register_database.php" method="post">
@@ -33,12 +35,29 @@
                 <label for="RegisterPseudo">Pseudo :</label>
                 <input type="text" id="RegisterPseudo" name="RegisterPseudo">
             </p>
+
             <p>
                 <label for="RegisterPass">Password :</label>
                 <input type="password" id="RegisterPass" name="RegisterPass">
             </p>
             <input type="submit" value="Submit">
-            
+        </form>
+    </div>
+
+    <div class="settings">
+        <h2>Settings</h2>
+        <form action="#" method="post">
+            <p>
+                <label for="SettingsPseudo">Pseudo :</label>
+                <input type="text" id="SettingsPseudo" name="SettingsPseudo">
+            </p>
+
+            <p>
+                <label for="SettingsPass">Password :</label>
+                <input type="password" id="SettingsPass" name="SettingsPass">
+            </p>
+
+            <input type="submit" value="Submit">
         </form>
     </div>
 </body>
