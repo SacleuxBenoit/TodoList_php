@@ -46,7 +46,7 @@
 
     <div class="settings">
         <h2>Settings</h2>
-        <form action="#" method="post">
+        <form action="./Database/User/user_settings_database.php" method="post">
             <p>
                 <label for="SettingsPseudo">Pseudo :</label>
                 <input type="text" id="SettingsPseudo" name="SettingsPseudo">
