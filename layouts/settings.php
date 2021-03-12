@@ -4,9 +4,16 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="../css/style_settings.css">
     <title>Document</title>
 </head>
 <body>
+
+<header>
+    <h1>Todo List</h1>
+</header>
+
+<div class="container">
 
     <form action="#">
         <label for="settingsUsername">New username :</label>
@@ -21,6 +28,8 @@
     </form>
 
     <p><a href="#">DELETE ACCOUNT</a></p>
+
+</div>
 
 </body>
 </html>

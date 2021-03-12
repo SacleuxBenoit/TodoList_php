@@ -1,0 +1,15 @@
+body{
+    text-align: center;
+    display: grid;
+    grid-template-areas:
+    '. header header .'
+    '. container container .';
+}
+
+header{
+    grid-area: header;
+}
+
+.container{
+    grid-area: container;
+}
