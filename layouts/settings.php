@@ -7,18 +7,20 @@
     <title>Document</title>
 </head>
 <body>
+
     <form action="#">
-        <p>
-            <label for="renamePseudo">Change pseudo :</label>
-            <input type="text" name="renamePseudo" id="renamePseudo">
-        </p>
-
-        <p>
-            <label for="renamePseudo">Change password :</label>
-            <input type="password" name="renamePseudo" id="renamePseudo">
-        </p>
-
+        <label for="settingsUsername">New username :</label>
+        <input type="text" name="settingsUsername" id="settingsUsername">
         <input type="submit" value="Submit">
     </form>
+
+    <form action="#">
+        <label for="settingsPassword">New password :</label>
+        <input type="password" name="settingsPassword" id="settingsPassword">
+        <input type="submit" value="Submit">
+    </form>
+
+    <p><a href="#">DELETE ACCOUNT</a></p>
+
 </body>
 </html>
