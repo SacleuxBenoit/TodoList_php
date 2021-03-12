@@ -8,7 +8,7 @@
  $user_settings->execute();
  $donnees = $user_settings->fetch();
 
- $_SESSION['username'] = $_POST['SettingsPass'];
+ $_SESSION['username'] = $_POST['SettingsPseudo'];
  $_SESSION['id_user'] = $donnees['id'];
  
  if(isset($_POST['SettingsPseudo'])){
