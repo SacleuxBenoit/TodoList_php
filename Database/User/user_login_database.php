@@ -8,7 +8,7 @@
  $user_login->execute();
  $donnees = $user_login->fetch();
 
- $_SESSION['username'] = $_POST['LoginPseudo'] || $_POST['SettingsPass'];
+ $_SESSION['username'] = $_POST['LoginPseudo'];
  $_SESSION['id_user'] = $donnees['id'];
  
  if(isset($_POST['LoginPseudo'])){

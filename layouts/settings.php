@@ -15,7 +15,7 @@
 
 <div class="container">
 
-    <form action="#">
+    <form action="../Database/Settings/settings_username.php">
         <label for="settingsUsername">New username :</label>
         <input type="text" name="settingsUsername" id="settingsUsername">
         <input type="submit" value="Submit">
