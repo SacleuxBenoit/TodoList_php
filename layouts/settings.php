@@ -28,7 +28,6 @@
     </form>
 
     <p><a href="#">DELETE ACCOUNT</a></p>
-
 </div>
 
 </body>
