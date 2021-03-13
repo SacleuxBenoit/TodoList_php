@@ -11,7 +11,7 @@
      $user_info->bindParam(':RegisterPseudo', $_POST['RegisterPseudo']);
      $user_info->bindParam(':pass', $pass_hash);
      $user_info->execute();
-     header('Location: ../../layouts/todos.php');
+     header('Location: ../../index.php');
  }
 
  ?>
