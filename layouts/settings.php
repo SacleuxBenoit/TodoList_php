@@ -27,8 +27,11 @@
         <input type="submit" value="Submit">
     </form>
 
-    <p><a href="../Database/Settings/settings_delete_account.php">DELETE ACCOUNT</a></p>
+    <p>
+        <button onclick="deleteAccount()">DELETE ACCOUNT</button>
+    </p>
 </div>
 
+<script src="../js/script.js"></script>
 </body>
 </html>
