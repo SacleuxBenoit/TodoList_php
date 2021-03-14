@@ -21,13 +21,13 @@
         <input type="submit" value="Submit">
     </form>
 
-    <form action="#" method="post">
+    <form action="../Database/Settings/settings_password.php" method="post">
         <label for="settingsPassword">New password :</label>
         <input type="password" name="settingsPassword" id="settingsPassword">
         <input type="submit" value="Submit">
     </form>
 
-    <p><a href="#">DELETE ACCOUNT</a></p>
+    <p><a href="../Database/Settings/settings_delete_account.php">DELETE ACCOUNT</a></p>
 </div>
 
 </body>
