@@ -51,9 +51,11 @@ include('../pass.php')
         ?>
 
         <p>
-            <a href="../Database/Todos/todos_deleteALL_database.php"  class="deleteALL" >DELETE EVERY TODOS</a>
+            <button onclick="deleteTodos()">DELETE EVERY TODOS</button>
         </p>
 
     </div>
+
+    <script src="../js/script.js"></script>
 </body>
 </html>
