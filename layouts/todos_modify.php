@@ -25,7 +25,9 @@ include('../pass.php');
 <form action="../Database/Todos/todos_modify_database.php?id=<?php echo $id?>" method="post">
 
     <p>
-        <label for="modifyTask">Task</label>
+        <label for="modifyTask">Task :</label>
+    </p>
+    <p>
         <textarea id="modifyTask" name="modifyTask" rows="10" cols="40"><?php echo $get_todos['task']?></textarea>
     </p>
 
