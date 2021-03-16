@@ -21,7 +21,7 @@ include('../pass.php')
         <label for="addTask" class="titleTask">your task :</label>
 
         <p>
-            <input type="text" class="addTask" name="addTask">
+            <input type="text" class="addTask" name="addTask" id="addTask">
         </p>
 
             <input type="submit" value="Envoyer">
