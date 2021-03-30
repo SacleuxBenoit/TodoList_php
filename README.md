@@ -4,7 +4,8 @@ Simple todolist where you can create, update, delete your todos.
 
 ## Stack :
 
-*   html / css
+*   html 
+*   css
 *   Php
 *   MySQL
 
