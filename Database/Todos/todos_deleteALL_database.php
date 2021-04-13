@@ -1,7 +1,7 @@
 <?php
 session_start();
 include('../connection_database.php');
-include('../../pass.php');
+include('../../login_database.php');
 
 $deleteALL_todos = $bdd->prepare('DELETE FROM create_todos WHERE id_user = :id_user');
 $deleteALL_todos->bindParam(':id_user', $_SESSION['id_user']);

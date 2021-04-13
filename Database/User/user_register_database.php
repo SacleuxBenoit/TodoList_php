@@ -1,6 +1,6 @@
 <?php
  session_start();
- include('../../pass.php');
+ include('../../login_database.php');
  include('../connection_database.php');
 
  if(empty($_POST['RegisterPseudo']) || empty($_POST['RegisterPass'])){

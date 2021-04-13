@@ -1,6 +1,5 @@
 <?php
 session_start();
-include('../pass.php')
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -31,7 +30,7 @@ include('../pass.php')
     <div class="divTodos">
         <?php
         include('../Database/connection_database.php');
-        include('../pass.php');
+        include('../login_database.php');
 
             $display_todos = $bdd->prepare('SELECT * FROM create_todos WHERE id_user = :id_user');
             $display_todos->bindParam(':id_user', $_SESSION['id_user']);

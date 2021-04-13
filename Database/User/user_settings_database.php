@@ -1,6 +1,6 @@
 <?php
  session_start();
- include('../../pass.php');
+ include('../../login_database.php');
  include('../connection_database.php');
 
  $_SESSION['usernameRegister'] = $_POST['SettingsPseudo'];
