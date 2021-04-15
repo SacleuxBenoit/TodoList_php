@@ -1,3 +1,8 @@
+<?php
+if(empty($_SESSION['id_user'])){
+    header('Location: ../index.php');
+}
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
