@@ -48,6 +48,14 @@ if(empty($_SESSION['id_user'])){
                         <p><?php echo htmlspecialchars($donnees['task'])?></p>
                         <a href="../Database/Todos/todos_delete_database.php?id=<?php echo $donnees['id']; ?>">Delete</a> |
                         <a href="./todos_modify.php?id=<?php echo $donnees['id']; ?>">Modify</a>
+
+                        <form action="#" id="buttonUp">
+                            <button>Up</button>
+                        </form>
+
+                        <form action="#" id="buttonDown">
+                            <button>Down</button>
+                        </form>
                         </div>  
 
                 <?php
