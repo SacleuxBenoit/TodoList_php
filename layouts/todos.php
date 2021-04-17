@@ -49,11 +49,11 @@ if(empty($_SESSION['id_user'])){
                         <a href="../Database/Todos/todos_delete_database.php?id=<?php echo $donnees['id']; ?>">Delete</a> |
                         <a href="./todos_modify.php?id=<?php echo $donnees['id']; ?>">Modify</a>
 
-                        <form action="#" id="buttonUp">
+                        <form action="../Database/Todos/todos_orderUp_database.php" id="buttonUp">
                             <button>Up</button>
                         </form>
 
-                        <form action="#" id="buttonDown">
+                        <form action="../Database/Todos/todos_orderDown_database.php" id="buttonDown">
                             <button>Down</button>
                         </form>
                         </div>  
