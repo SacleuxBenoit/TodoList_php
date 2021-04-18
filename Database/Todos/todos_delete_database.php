@@ -3,9 +3,11 @@ session_start();
 include('../connection_database.php');
 include('../../login_database.php');
 
-$id = $_GET['id'];
+$id = $_GET['id_todos'];
 
-$delete_todos = $bdd->prepare('DELETE FROM create_todos WHERE id= :id');
+echo $id;
+
+$delete_todos = $bdd->prepare('DELETE FROM create_todos WHERE id_todos = :id');
 $delete_todos->bindParam(':id', $id);
 $delete_todos->execute();
 

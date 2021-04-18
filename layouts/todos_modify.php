@@ -13,16 +13,16 @@ include('../login_database.php');
     <title>Modify todos</title>
 </head>
 <body>
-    <?php $id = $_GET['id'];
+    <?php $id = $_GET['id_todos'];
 
-    $todos = $bdd->prepare('SELECT task FROM create_todos WHERE id = :id');
+    $todos = $bdd->prepare('SELECT task FROM create_todos WHERE id_todos = :id');
     $todos->bindParam(':id', $id);
     $todos->execute();
     $get_todos = $todos->fetch();
     ?>
 <a href="./todos.php"><h1>Modify</h1></a>
 
-<form action="../Database/Todos/todos_modify_database.php?id=<?php echo $id?>" method="post">
+<form action="../Database/Todos/todos_modify_database.php?id_todos=<?php echo $id?>" method="post">
 
     <p>
         <label for="modifyTask">Task :</label>
