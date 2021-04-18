@@ -24,7 +24,7 @@ a{
     color: black;
 }
 
-div > a{
+div > p > a{
     color: lightcoral;
 }
 
