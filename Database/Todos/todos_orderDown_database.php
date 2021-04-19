@@ -9,9 +9,9 @@ $select_orderDown_todos = $bdd->prepare('SELECT order_todos FROM create_todos WH
 $select_orderDown_todos->bindParam(':id_todos', $id);
 $select_orderDown_todos->execute();
 
-$$get_orderDown_todos = $select_orderDown_todos->fetch();
+$get_orderDown_todos = $select_orderDown_todos->fetch();
 
-$increment_orderDown_todos = $$get_orderDown_todos['order_todos'] + 1;
+$increment_orderDown_todos = $get_orderDown_todos['order_todos'] + 1;
 
 $update_orderDown_todos = $bdd->prepare('UPDATE create_todos SET order_todos = :order_todos WHERE id_todos = :id_todos');
 $update_orderDown_todos->bindParam(':order_todos', $increment_orderDown_todos);
