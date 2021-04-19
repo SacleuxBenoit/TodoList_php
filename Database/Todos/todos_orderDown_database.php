@@ -17,4 +17,6 @@ $update_orderDown_todos = $bdd->prepare('UPDATE create_todos SET order_todos = :
 $update_orderDown_todos->bindParam(':order_todos', $increment_orderDown_todos);
 $update_orderDown_todos->bindParam(':id_todos', $id);
 $update_orderDown_todos->execute();
+
+header('Location: ../../layouts/todos.php');
 ?>
