@@ -37,7 +37,7 @@ if(empty($_SESSION['id_user'])){
         include('../Database/connection_database.php');
         include('../login_database.php');
 
-            $display_todos = $bdd->prepare('SELECT * FROM create_todos WHERE id_user = :id_user');
+            $display_todos = $bdd->prepare('SELECT * FROM create_todos WHERE id_user = :id_user ORDER BY order_todos');
             $display_todos->bindParam(':id_user', $_SESSION['id_user']);
             $display_todos->execute();
 
