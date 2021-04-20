@@ -13,7 +13,7 @@ $get_orderUp_todos = $select_orderUp_todos->fetch();
 
 $increment_orderUp_todos = $get_orderUp_todos['order_todos'] - 1;
 
-if($get_orderUp_todos['order_todos'] > 0){
+if($get_orderUp_todos['order_todos'] > 1){
     $update_orderUp_todos = $bdd->prepare('UPDATE create_todos SET order_todos = :order_todos WHERE id_todos = :id_todos');
     $update_orderUp_todos->bindParam(':order_todos', $increment_orderUp_todos);
     $update_orderUp_todos->bindParam(':id_todos', $id);
