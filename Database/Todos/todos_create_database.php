@@ -6,7 +6,7 @@ include('../../login_database.php');
 if(empty($_POST['addTask'])){
     header('Location: ../../layouts/todos.php');
 }else{
-    $addTodos = $bdd->prepare('INSERT INTO create_todos(id_user,task,createdAT) VALUES(:id_user, :task, NOW())');
+    $addTodos = $bdd->prepare('INSERT INTO create_todos(id_user,order_todos,task,createdAT) VALUES(:id_user, 0 , :task, NOW())');
     $addTodos->bindParam(':id_user', $_SESSION['id_user']);
     $addTodos->bindParam(':task', $_POST['addTask'], PDO::PARAM_STR);
     $addTodos->execute();
