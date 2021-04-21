@@ -57,7 +57,7 @@ if(empty($_SESSION['id_user'])){
                             <a href="../Database/Todos/todos_orderUp_database.php?id_todos=<?php echo $donnees['id_todos']?>">Up</a> |
                             <a href="../Database/Todos/todos_orderDown_database.php?id_todos=<?php echo $donnees['id_todos']?>">Down</a> |
                             <?php echo $donnees['order_todos'] ?> |
-                            <a href="../Database/Todos/todos_pin_database.php">pin</a>
+                            <a href="../Database/Todos/todos_pin_database.php?id_todos=<?php echo $donnees['id_todos']?>">pin</a>
                         </p>
                         </form>
                     </div>  
