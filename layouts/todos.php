@@ -28,6 +28,13 @@ if(empty($_SESSION['id_user'])){
             <input type="text" class="addTask" name="addTask" id="addTask">
         </p>
 
+        <select name="categories" id="categories">
+                <option value='Aucun'>Aucun</option>
+                <option value='Lundi'>Lundi</option>
+                <option value='Mardi'>Mardi</option>
+                <option value='Mercredi'>Mercredi</option>
+            </select> 
+
             <input type="submit" value="Envoyer">
     </form>
 
