@@ -3,6 +3,9 @@
  include('../../login_database.php');
  include('../connection_database.php');
 
+ $_SESSION['username'] = $_POST['RegisterPseudo'];
+
+
  if(empty($_POST['RegisterPseudo']) || empty($_POST['RegisterPass'])){
      header('Location: ../../index.php');
  }else{
@@ -11,7 +14,17 @@
      $user_info->bindParam(':RegisterPseudo', $_POST['RegisterPseudo']);
      $user_info->bindParam(':pass', $pass_hash);
      $user_info->execute();
-     header('Location: ../../index.php');
+
+     $user_id = $bdd->prepare('SELECT id FROM user WHERE username = :username');
+     $user_id->bindParam(':username', $_POST['RegisterPseudo']);
+     $user_id->execute();
+
+     $get_user_id = $user_id->fetch();
+
+     $_SESSION['id_user'] = $get_user_id['id'];
+     
+     header('Location: ../../layouts/todos.php');
+
  }
 
  ?>
