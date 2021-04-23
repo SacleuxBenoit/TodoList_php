@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Hôte : localhost:8889
--- Généré le :  ven. 23 avr. 2021 à 12:18
+-- Généré le :  ven. 23 avr. 2021 à 12:21
 -- Version du serveur :  5.7.26
 -- Version de PHP :  7.4.2
 
@@ -31,6 +31,19 @@ CREATE TABLE `create_todos` (
   `deadLine` datetime DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
+-- --------------------------------------------------------
+
+--
+-- Structure de la table `user`
+--
+
+CREATE TABLE `user` (
+  `ID` int(11) NOT NULL,
+  `username` varchar(255) NOT NULL,
+  `pass` varchar(255) NOT NULL,
+  `number_todos_delete` int(11) DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
 --
 -- Index pour les tables déchargées
 --
@@ -42,6 +55,12 @@ ALTER TABLE `create_todos`
   ADD PRIMARY KEY (`id_todos`);
 
 --
+-- Index pour la table `user`
+--
+ALTER TABLE `user`
+  ADD PRIMARY KEY (`ID`);
+
+--
 -- AUTO_INCREMENT pour les tables déchargées
 --
 
@@ -50,3 +69,9 @@ ALTER TABLE `create_todos`
 --
 ALTER TABLE `create_todos`
   MODIFY `id_todos` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=1;
+
+--
+-- AUTO_INCREMENT pour la table `user`
+--
+ALTER TABLE `user`
+  MODIFY `ID` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=1;
