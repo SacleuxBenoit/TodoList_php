@@ -10,7 +10,7 @@ include('../login_database.php');
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link rel="stylesheet" href="../css/style_modify.css">
-    <title>Modify todos</title>
+    <title>TodoList - Modify</title>
 </head>
 <body>
     <?php $id = $_GET['id_todos'];
