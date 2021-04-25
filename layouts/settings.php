@@ -1,3 +1,8 @@
+<?php
+    if(!empty($_POST['SettingsPseudo'])){
+        header('Location: ../index.php');
+    }
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
