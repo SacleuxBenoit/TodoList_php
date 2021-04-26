@@ -48,7 +48,13 @@ if(empty($_SESSION['username'])){
                 $get_categories->execute();
 
                 while($display_categories = $get_categories->fetch()){
-                    echo $display_categories['categories'];
+                    ?>
+                        <ul>
+                            <li>
+                                <?php echo $display_categories['categories'] ?>
+                            </li>
+                        </ul>
+                    <?php
                 }
             ?>
         </nav>
