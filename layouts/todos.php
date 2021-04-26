@@ -51,7 +51,7 @@ if(empty($_SESSION['username'])){
                     ?>
                         <ul>
                             <li>
-                                <?php echo $display_categories['categories'] ?>
+                                <a href="./categories.php"> <?php echo $display_categories['categories']?> </a> 
                             </li>
                         </ul>
                     <?php
