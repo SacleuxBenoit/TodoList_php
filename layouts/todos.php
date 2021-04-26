@@ -49,11 +49,13 @@ if(empty($_SESSION['username'])){
 
                 while($display_categories = $get_categories->fetch()){
                     ?>
-                        <ul>
-                            <li>
-                                <a href="./categories.php"> <?php echo $display_categories['categories']?> </a> 
-                            </li>
-                        </ul>
+                        <div id="divCategories">
+                            <ul>
+                                <li>
+                                    <a href="./categories.php"> <?php echo $display_categories['categories']?> </a> 
+                                </li>
+                            </ul>
+                        </div>
                     <?php
                 }
             ?>
