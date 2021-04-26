@@ -1,5 +1,7 @@
 <?php
 session_start();
+include('../Database/connection_database.php');
+include('../login_database.php');
 
 if(empty($_SESSION['username'])){
     header('Location: ../index.php');
@@ -38,12 +40,22 @@ if(empty($_SESSION['username'])){
             <input type="submit" value="Envoyer">
     </form>
 
+    <div class="divCategories">
+        <nav>
+            <?php
+                $get_categories = $bdd->prepare('SELECT DISTINCT categories FROM create_todos WHERE id_user = :id_user ORDER BY categories');
+                $get_categories->bindParam('id_user', $_SESSION['id_user']);
+                $get_categories->execute();
+
+                while($display_categories = $get_categories->fetch()){
+                    echo $display_categories['categories'];
+                }
+            ?>
+        </nav>
+    </div>
 
     <div class="divTodos">
         <?php
-        include('../Database/connection_database.php');
-        include('../login_database.php');
-
             $display_todos = $bdd->prepare('SELECT * FROM create_todos WHERE id_user = :id_user ORDER BY order_todos');
             $display_todos->bindParam(':id_user', $_SESSION['id_user']);
             $display_todos->execute();
