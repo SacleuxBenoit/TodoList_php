@@ -7,18 +7,6 @@ body{
     '. . todos .';
 }
 
-header{
-    grid-area: header;
-}
-
-.createTodos{
-    grid-area: createTodos;
-}
-.divTodos{
-    grid-area: todos;
-    width: 30em;
-}
-
 a{
     text-decoration: none;
     color: black;
@@ -28,18 +16,39 @@ div > p > a{
     color: lightcoral;
 }
 
-.deleteALL{
-    text-decoration: none;
-    font-size: 1.8em;
-    color: red;
+li{
+    list-style-type: none;
+}
+/* ------------------------ HEADER  ------------------------*/
+
+header{
+    grid-area: header;
+}
+
+.createTodos{
+    grid-area: createTodos;
+}
+
+.titleTask{
+    font-size: 1.5em;
+}
+
+/* ------------------------ DIV TODOS  ------------------------*/
+
+.divTodos{
+    grid-area: todos;
+    width: 30em;
 }
 
 .todosTask{
     font-size: 1.6em;
     border: 1px solid blue;
-
 }
 
-.titleTask{
-    font-size: 1.5em;
+/* ------------------------ delete todos  ------------------------*/
+
+.deleteALL{
+    text-decoration: none;
+    font-size: 1.8em;
+    color: red;
 }
