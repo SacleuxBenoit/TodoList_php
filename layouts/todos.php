@@ -31,10 +31,10 @@ if(empty($_SESSION['username'])){
         </p>
 
         <select name="categories" id="categories">
-                <option value='Aucun'>Aucun</option>
-                <option value='Lundi'>Lundi</option>
-                <option value='Mardi'>Mardi</option>
-                <option value='Mercredi'>Mercredi</option>
+                <option value='none'>none</option>
+                <option value='Monday'>Monday</option>
+                <option value='Tuesday'>Tuesday</option>
+                <option value='Wednesday'>Wednesday</option>
             </select> 
 
             <input type="submit" value="Envoyer">
