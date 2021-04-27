@@ -76,8 +76,7 @@ if(empty($_SESSION['username'])){
 
                         <p>
                             <a href="../Database/Todos/todos_delete_database.php?id_todos=<?php echo $donnees['id_todos']; ?>">Delete</a> |
-                            <a href="./todos_modify.php?id_todos=<?php echo $donnees['id_todos']; ?>">Modify</a> |
-                            <a href="#">En cours</a>
+                            <a href="./todos_modify.php?id_todos=<?php echo $donnees['id_todos']; ?>">Modify</a>
                         </p>
 
                         <p>
