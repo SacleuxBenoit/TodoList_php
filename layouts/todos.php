@@ -47,6 +47,9 @@ if(empty($_SESSION['username'])){
                 $get_categories->bindParam('id_user', $_SESSION['id_user']);
                 $get_categories->execute();
 
+                ?>
+                    <h2>Catégories :</h2>
+                <?php
                 while($display_categories = $get_categories->fetch()){
                     ?>
                         <div id="divCategories">
