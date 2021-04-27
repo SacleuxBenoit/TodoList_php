@@ -55,12 +55,7 @@ $categories = $_GET['categories'];
             } 
         ?>
 
-        <p>
-            <button onclick="deleteTodos()">DELETE EVERY TODOS</button>
-        </p>
-
     </div>
 
-    <script src="../js/script.js"></script>
 </body>
 </html>
