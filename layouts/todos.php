@@ -31,11 +31,11 @@ if(empty($_SESSION['username'])){
         </p>
 
         <select name="categories" id="categories">
-                <option value='none'>none</option>
-                <option value='Monday'>Monday</option>
-                <option value='Tuesday'>Tuesday</option>
-                <option value='Wednesday'>Wednesday</option>
-            </select> 
+            <option value='none'>none</option>
+            <option value='Monday'>Monday</option>
+            <option value='Tuesday'>Tuesday</option>
+            <option value='Wednesday'>Wednesday</option>
+        </select> 
 
             <input type="submit" value="Envoyer">
     </form>
@@ -46,10 +46,7 @@ if(empty($_SESSION['username'])){
                 $get_categories = $bdd->prepare('SELECT DISTINCT categories FROM create_todos WHERE id_user = :id_user ORDER BY categories');
                 $get_categories->bindParam('id_user', $_SESSION['id_user']);
                 $get_categories->execute();
-
-                
-                    
-                
+   
                 while($display_categories = $get_categories->fetch()){
                     if($display_categories['categories']){
                         echo '<h2>' . 'Categories :' . '</h2>';
@@ -75,33 +72,32 @@ if(empty($_SESSION['username'])){
             $display_todos->execute();
 
             while($donnees = $display_todos->fetch()){
-                ?>        
+        ?>        
+            <div class="todosTask">         
+                <p><?php echo htmlspecialchars($donnees['task'])?></p>
 
-                <div class="todosTask">         
-                        <p><?php echo htmlspecialchars($donnees['task'])?></p>
+                <p>
+                    <a href="../Database/Todos/todos_delete_database.php?id_todos=<?php echo $donnees['id_todos']; ?>">Delete</a> |
+                    <a href="./todos_modify.php?id_todos=<?php echo $donnees['id_todos']; ?>">Modify</a>
+                </p>
 
-                        <p>
-                            <a href="../Database/Todos/todos_delete_database.php?id_todos=<?php echo $donnees['id_todos']; ?>">Delete</a> |
-                            <a href="./todos_modify.php?id_todos=<?php echo $donnees['id_todos']; ?>">Modify</a>
-                        </p>
+                <p>
+                    <a href="../Database/Todos/todos_orderUp_database.php?id_todos=<?php echo $donnees['id_todos']?>">Up</a> |
+                    <a href="../Database/Todos/todos_orderDown_database.php?id_todos=<?php echo $donnees['id_todos']?>">Down</a> |
 
-                        <p>
-                            <a href="../Database/Todos/todos_orderUp_database.php?id_todos=<?php echo $donnees['id_todos']?>">Up</a> |
-                            <a href="../Database/Todos/todos_orderDown_database.php?id_todos=<?php echo $donnees['id_todos']?>">Down</a> |
-
-                                <?php 
-                                    if($donnees['order_todos'] > 0){
-                                        echo $donnees['order_todos'] . ' |';
-                                ?>
-                                    <a href="../Database/Todos/todos_pin_database.php?id_todos=<?php echo $donnees['id_todos']?>">pin</a>
-                                <?php
-                                    }
-                                    else{
-                                        echo 'message pinned';
-                                    }
-                                ?>
-                        </p>
-                    </div>  
+                        <?php 
+                            if($donnees['order_todos'] > 0){
+                                echo $donnees['order_todos'] . ' |';
+                        ?>
+                            <a href="../Database/Todos/todos_pin_database.php?id_todos=<?php echo $donnees['id_todos']?>">pin</a>
+                        <?php
+                            }
+                            else{
+                                echo 'message pinned';
+                            }
+                        ?>
+                </p>
+            </div>  
 
                 <?php
             } 
