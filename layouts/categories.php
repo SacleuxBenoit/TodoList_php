@@ -16,46 +16,49 @@ $categories = $_GET['categories'];
     <title>TodoList - categories</title>
 </head>
 <body>
-<div class="divTodos">
+
+    <header>
+        <h1><a href="http://localhost:8888/test/TodoList_php/database/user/user_logout_database.php">Todo List</a></h1>
+    </header>
+
+    <div class="divTodos">
         <?php
             $display_categories = $bdd->prepare('SELECT * FROM create_todos WHERE categories = :categories ORDER BY order_todos');
             $display_categories->bindParam(':categories', $categories);
             $display_categories->execute();
 
             while($donnees = $display_categories->fetch()){
-                ?>        
+        ?>        
 
-                <div class="todosTask">         
-                        <p><?php echo htmlspecialchars($donnees['task'])?></p>
+            <div class="todosTask">         
+                <p><?php echo htmlspecialchars($donnees['task'])?></p>
 
-                        <p>
-                            <a href="../Database/Todos/todos_delete_database.php?id_todos=<?php echo $donnees['id_todos']; ?>">Delete</a> |
-                            <a href="./todos_modify.php?id_todos=<?php echo $donnees['id_todos']; ?>">Modify</a>
-                        </p>
+                <p>
+                    <a href="../Database/Todos/todos_delete_database.php?id_todos=<?php echo $donnees['id_todos']; ?>">Delete</a> |
+                    <a href="./todos_modify.php?id_todos=<?php echo $donnees['id_todos']; ?>">Modify</a>
+                </p>
 
-                        <p>
-                            <a href="../Database/Todos/todos_orderUp_database.php?id_todos=<?php echo $donnees['id_todos']?>">Up</a> |
-                            <a href="../Database/Todos/todos_orderDown_database.php?id_todos=<?php echo $donnees['id_todos']?>">Down</a> |
+                <p>
+                    <a href="../Database/Todos/todos_orderUp_database.php?id_todos=<?php echo $donnees['id_todos']?>">Up</a> |
+                    <a href="../Database/Todos/todos_orderDown_database.php?id_todos=<?php echo $donnees['id_todos']?>">Down</a> |
 
-                                <?php 
-                                    if($donnees['order_todos'] > 0){
-                                        echo $donnees['order_todos'] . ' |';
-                                ?>
-                                    <a href="../Database/Todos/todos_pin_database.php?id_todos=<?php echo $donnees['id_todos']?>">pin</a>
-                                <?php
-                                    }
-                                    else{
-                                        echo 'message pinned';
-                                    }
-                                ?>
-                        </p>
-                    </div>  
+                        <?php 
+                            if($donnees['order_todos'] > 0){
+                                echo $donnees['order_todos'] . ' |';
+                        ?>
+                            <a href="../Database/Todos/todos_pin_database.php?id_todos=<?php echo $donnees['id_todos']?>">pin</a>
+                        <?php
+                            }
+                            else{
+                                echo 'message pinned';
+                            }
+                        ?>
+                </p>
+            </div>  
 
-                <?php
+        <?php
             } 
         ?>
-
     </div>
-
 </body>
 </html>
