@@ -2,6 +2,10 @@
 session_start();
 include('../Database/connection_database.php');
 include('../login_database.php');
+
+if(empty($_GET['id_todos'])){
+    header('Location: ../index.php');
+}
 ?>
 <!DOCTYPE html>
 <html lang="en">
