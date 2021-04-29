@@ -42,15 +42,13 @@ if(empty($_SESSION['username'])){
 
     <div class="divCategories">
         <nav>
+            <h2>categories : </h2>
             <?php
                 $get_categories = $bdd->prepare('SELECT DISTINCT categories FROM create_todos WHERE id_user = :id_user ORDER BY categories');
                 $get_categories->bindParam('id_user', $_SESSION['id_user']);
                 $get_categories->execute();
    
                 while($display_categories = $get_categories->fetch()){
-                    if($display_categories['categories']){
-                        echo '<h2>' . 'Categories :' . '</h2>';
-                    }
                     ?>
                         <div id="divCategories">
                             <ul>
