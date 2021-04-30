@@ -42,7 +42,6 @@ if(empty($_SESSION['username'])){
 
     <div class="divCategories">
         <nav>
-            <h2>categories : </h2>
             <?php
                 $get_categories = $bdd->prepare('SELECT DISTINCT categories FROM create_todos WHERE id_user = :id_user ORDER BY categories');
                 $get_categories->bindParam('id_user', $_SESSION['id_user']);
@@ -53,7 +52,7 @@ if(empty($_SESSION['username'])){
                         <div id="divCategories">
                             <ul>
                                 <li>
-                                    <a href="./categories.php?categories=<?php echo $display_categories['categories'];?>"> <?php echo $display_categories['categories']?> </a> 
+                                   <h2><a href="./categories.php?categories=<?php echo $display_categories['categories'];?>"> <?php echo $display_categories['categories']?> </a></h2> 
                                 </li>
                             </ul>
                         </div>
