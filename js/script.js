@@ -1,5 +1,5 @@
 function deleteAccount(){
-    let result = confirm("Êtes-vous sur de vouloire supprimer le compte ?");
+    let result = confirm("Are you sure you want to delete your account ?");
 
     if(result){
         document.location.href="../Database/Settings/settings_delete_account.php";
@@ -8,7 +8,7 @@ function deleteAccount(){
 
 
 function deleteTodos(){
-    let result = confirm("Êtes-vous sur de vouloire supprimer toutes les todos ?");
+    let result = confirm("Are you sure you want to delete all todos ?");
 
     if(result){
         document.location.href="../Database/Todos/todos_deleteAll_database.php";
