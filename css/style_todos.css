@@ -44,12 +44,12 @@ header{
 
 .divTodos{
     grid-area: todos;
-    width: 30em;
+    width: 50em;
 }
 
 .todosTask{
     font-size: 1.6em;
-    border: 1px solid blue;
+    border: 0.5px solid blue;
 }
 
 /* ------------------------ delete todos  ------------------------*/
