@@ -22,5 +22,6 @@ $delete_account->execute();
 $delete_todos = $bdd->prepare('DELETE FROM create_todos WHERE id_user = :id');
 $delete_todos->bindParam(':id', $get_user_id['id']);
 $delete_todos->execute();
-/*header('Location: ../../index.php');*/
+
+header('Location: ../../index.php');
 ?>
