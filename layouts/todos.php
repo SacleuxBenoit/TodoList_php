@@ -56,7 +56,7 @@ if(empty($_SESSION['username'])){
                         <div id="divCategories">
                             <ul>
                                 <li>
-                                   <h2><a href="./categories.php?categories=<?php echo $display_categories['categories'];?>"> <?php echo $display_categories['categories']?> </a></h2> 
+                                   <h2><a href="./categories.php?categories=<?php echo $display_categories['categories'];?>"> <?php echo $display_categories['categories'] ?> </a> | x</h2> 
                                 </li>
                             </ul>
                         </div>
