@@ -1,0 +1,33 @@
+body{
+    text-align: center;
+    display: grid;
+    grid-template-areas:
+    '. header header .'
+    '. . todos .';
+}
+
+a{
+    text-decoration: none;
+    color: black;
+}
+
+div > p > a{
+    color: lightcoral;
+}
+/* ------------------------ HEADER  ------------------------*/
+
+header{
+    grid-area: header;
+}
+
+/* ------------------------ DIV TODOS  ------------------------*/
+
+.divTodos{
+    grid-area: todos;
+    width: 50em;
+}
+
+.todosTask{
+    font-size: 1.6em;
+    border: 0.5px solid blue;
+}
