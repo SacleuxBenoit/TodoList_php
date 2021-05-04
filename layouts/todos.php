@@ -41,6 +41,10 @@ if(empty($_SESSION['username'])){
     </form>
 
     <div class="divCategories">
+        <p>
+            <h2>Categories +</h2>
+        </p>
+
         <nav>
             <?php
                 $get_categories = $bdd->prepare('SELECT DISTINCT categories FROM create_todos WHERE id_user = :id_user ORDER BY categories');
