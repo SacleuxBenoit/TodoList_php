@@ -23,8 +23,9 @@ $categories = $_GET['categories'];
 
     <div class="divTodos">
         <?php
-            $display_categories = $bdd->prepare('SELECT * FROM create_todos WHERE categories = :categories ORDER BY order_todos');
+            $display_categories = $bdd->prepare('SELECT * FROM create_todos WHERE categories = :categories AND id_user = :id_user ORDER BY order_todos');
             $display_categories->bindParam(':categories', $categories);
+            $display_categories->bindParam(':id_user', $_SESSION['id_user']);
             $display_categories->execute();
 
             while($donnees = $display_categories->fetch()){
