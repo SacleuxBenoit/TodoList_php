@@ -1,6 +1,17 @@
 # TodoList_php
 
-Simple todolist where you can create, update, delete your todos.
+Simple todolist where you can :
+
+*   create / delete an account
+*   create / update / delete todos
+*   sort and pin todos
+*   add and display categories for todos
+
+## What's next ?
+
+*   modify the password
+*   create / delete categories
+*   update the user interface
 
 ## Stack :
 
