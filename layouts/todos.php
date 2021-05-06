@@ -42,8 +42,13 @@ if(empty($_SESSION['username'])){
 
     <div class="divCategories">
         <p>
-            <h2>Categories +</h2>
+            <h2> Categories <button>+</button> </h2> 
         </p>
+
+        <form action="#" id="formHidden" style='visibility:hidden'>
+            <input type="text">
+            <input type="submit" value="Submit">
+        </form>
 
         <nav>
             <?php
