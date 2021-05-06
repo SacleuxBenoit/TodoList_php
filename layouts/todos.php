@@ -42,7 +42,7 @@ if(empty($_SESSION['username'])){
 
     <div class="divCategories">
         <p>
-            <h2> Categories <button>+</button> </h2> 
+            <h2> Categories <button onclick="showForm()">+</button> </h2> 
         </p>
 
         <form action="#" id="formHidden" style='visibility:hidden'>

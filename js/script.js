@@ -6,11 +6,14 @@ function deleteAccount(){
     }
 }
 
-
 function deleteTodos(){
     let result = confirm("Are you sure you want to delete all todos ?");
 
     if(result){
         document.location.href="../Database/Todos/todos_deleteAll_database.php";
     }
+}
+
+function showForm(){
+    document.getElementById('formHidden').style.visibility = "visible";
 }
