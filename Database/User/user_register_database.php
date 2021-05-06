@@ -30,9 +30,8 @@ $_SESSION['username'] = $_POST['RegisterPseudo'];
         $_SESSION['id_user'] = $get_user_id['id'];
         
         header('Location: ../../layouts/todos.php');
-    }else
-    {
-        header('Location ../../index.php');
+    }else{
+        header('Location: ../../index.php');
     }
 
  ?>
