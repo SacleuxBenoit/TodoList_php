@@ -14,7 +14,7 @@ $_SESSION['username'] = $_POST['RegisterPseudo'];
 
     $verify_username = $get_username->fetch();
 
-    if(!$verify_username){
+    if(!$verify_username && !empty($_POST['RegisterPseudo'])){
         $pass_hash = password_hash($_POST['RegisterPass'], PASSWORD_DEFAULT);
         $user_info = $bdd->prepare('INSERT INTO user(username,pass) VALUES(:RegisterPseudo, :pass)');
         $user_info->bindParam(':RegisterPseudo', $_POST['RegisterPseudo']);
@@ -30,8 +30,7 @@ $_SESSION['username'] = $_POST['RegisterPseudo'];
         $_SESSION['id_user'] = $get_user_id['id'];
         
         header('Location: ../../layouts/todos.php');
-    }
-    else
+    }else
     {
         header('Location ../../index.php');
     }
