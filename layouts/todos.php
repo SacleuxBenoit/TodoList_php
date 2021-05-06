@@ -42,7 +42,7 @@ if(empty($_SESSION['username'])){
 
     <div class="divCategories">
         <p>
-            <h2> Categories <button onclick="showForm()">+</button> </h2> 
+            <h2> Categories <button onclick="showForm()" id="buttonCategories" value="+">+</button> </h2> 
         </p>
 
         <form action="../Database/Categories/create_categories_database.php" id="formHidden" style='visibility:hidden'>
