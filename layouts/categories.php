@@ -18,7 +18,7 @@ $categories = $_GET['categories'];
 <body>
 
     <header>
-        <h1><a href="http://localhost:8888/test/TodoList_php/layouts/todos.php">Todo List</a></h1>
+        <h1><a href="http://localhost:8888/test/TodoList_php/layouts/todos.php">Todo List</a> </h1><?php echo $_GET['categories'] ?>
     </header>
 
     <div class="divTodos">
