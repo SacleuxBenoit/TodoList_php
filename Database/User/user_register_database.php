@@ -15,6 +15,9 @@ $_SESSION['username'] = $_POST['RegisterPseudo'];
     $verify_username = $get_username->fetch();
 
     if(!$verify_username && !empty($_POST['RegisterPseudo'])){
+
+        // register user
+
         $pass_hash = password_hash($_POST['RegisterPass'], PASSWORD_DEFAULT);
         $user_info = $bdd->prepare('INSERT INTO user(username,pass) VALUES(:RegisterPseudo, :pass)');
         $user_info->bindParam(':RegisterPseudo', $_POST['RegisterPseudo']);
@@ -28,6 +31,12 @@ $_SESSION['username'] = $_POST['RegisterPseudo'];
         $get_user_id = $user_id->fetch();
    
         $_SESSION['id_user'] = $get_user_id['id'];
+
+                // Create todos Welcome
+
+                $welcome_message = $bdd->prepare('INSERT INTO create_todos(id_user,task,categories,createdAT) VALUES (:id_user,"Welcome to your TodoList","none",now())');
+                $welcome_message->bindParam(':id_user', $_SESSION['id_user']);
+                $welcome_message->execute();
         
         header('Location: ../../layouts/todos.php');
     }else{
