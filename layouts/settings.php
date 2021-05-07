@@ -1,5 +1,8 @@
 <?php
     session_start();
+    include('../login_database.php');
+    include('../Database/connection_database.php');
+
     if(empty($_SESSION['username'])){
         header('Location: ../index.php');
     }
@@ -37,6 +40,24 @@
         <button onclick="deleteAccount()">DELETE ACCOUNT</button>
     </p>
 </div>
+
+<?php
+    $get_admin = $bdd->prepare('SELECT is_admin FROM user WHERE username = :username');
+    $get_admin->bindParam(':username', $_SESSION['username']);
+    $get_admin->execute();
+
+    $verify_admin = $get_admin->fetch();
+
+    if($verify_admin['is_admin']){
+    ?>
+        <div>
+            <a href="./admin/statistics.php">Statistics</a>
+        </div>
+    <?php
+    }else{
+        echo "isn't admin";
+    }
+?>
 
 <script src="../js/script.js"></script>
 </body>
