@@ -12,6 +12,12 @@ include('../../Database/connection_database.php');
     <title>statistics</title>
 </head>
 <body>
-    
+    <h1>statistics : </h1>
+
+    <div id="stats">
+        <p>number of users :</p>
+        <p>number of task :</p>
+        <p>number of different categories :</p>
+    </div>
 </body>
 </html>
