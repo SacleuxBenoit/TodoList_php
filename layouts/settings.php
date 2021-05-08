@@ -54,8 +54,6 @@
             <a href="./admin/statistics.php">Statistics</a>
         </div>
     <?php
-    }else{
-        echo "isn't admin";
     }
 ?>
 
