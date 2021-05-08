@@ -46,7 +46,7 @@ if(empty($_SESSION['username'])){
         </p>
 
         <form action="../Database/Categories/create_categories_database.php" id="formHidden" style='visibility:hidden'>
-            <input type="text">
+            <input type="text" id="newCategories" name="newCategories">
             <input type="submit" value="Submit">
         </form>
 
