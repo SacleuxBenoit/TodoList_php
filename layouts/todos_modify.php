@@ -39,6 +39,17 @@ if(empty($_GET['id_todos'])){
         </p>
 
         <select name="categories" id="categories">
+            <?php
+                $get_categories = $bdd->prepare('SELECT DISTINCT categories FROM categories WHERE id_user = :id_user');
+                $get_categories->bindParam(':id_user', $_SESSION['id_user']);
+                $get_categories->execute();
+
+                while($display_categories = $get_categories->fetch()){
+            ?>
+                <option><?php echo $display_categories['categories'] ?></option>
+            <?php
+                }
+            ?> 
             <option value='none'>none</option>
             <option value='Monday'>Monday</option>
             <option value='Tuesday'>Tuesday</option>
