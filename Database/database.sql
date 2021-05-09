@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Hôte : localhost:8889
--- Généré le :  ven. 23 avr. 2021 à 12:21
+-- Généré le :  Dim 09 mai 2021 à 11:44
 -- Version du serveur :  5.7.26
 -- Version de PHP :  7.4.2
 
@@ -17,6 +17,18 @@ SET time_zone = "+00:00";
 -- --------------------------------------------------------
 
 --
+-- Structure de la table `categories`
+--
+
+CREATE TABLE `categories` (
+  `id_categories` int(11) NOT NULL,
+  `id_user` int(11) NOT NULL,
+  `categories` varchar(255) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+-- --------------------------------------------------------
+
+--
 -- Structure de la table `create_todos`
 --
 
@@ -25,7 +37,7 @@ CREATE TABLE `create_todos` (
   `id_user` int(11) NOT NULL,
   `order_todos` int(11) DEFAULT NULL,
   `task` text NOT NULL,
-  `categories` varchar(255) DEFAULT NULL,
+  `categories` varchar(255) NOT NULL,
   `createdAT` datetime DEFAULT NULL,
   `updatedAT` datetime DEFAULT NULL,
   `deadLine` datetime DEFAULT NULL
@@ -38,7 +50,8 @@ CREATE TABLE `create_todos` (
 --
 
 CREATE TABLE `user` (
-  `ID` int(11) NOT NULL,
+  `id` int(11) NOT NULL,
+  `is_admin` tinyint(1) NOT NULL DEFAULT '0',
   `username` varchar(255) NOT NULL,
   `pass` varchar(255) NOT NULL,
   `number_todos_delete` int(11) DEFAULT NULL
@@ -47,6 +60,12 @@ CREATE TABLE `user` (
 --
 -- Index pour les tables déchargées
 --
+
+--
+-- Index pour la table `categories`
+--
+ALTER TABLE `categories`
+  ADD PRIMARY KEY (`id_categories`);
 
 --
 -- Index pour la table `create_todos`
@@ -58,20 +77,26 @@ ALTER TABLE `create_todos`
 -- Index pour la table `user`
 --
 ALTER TABLE `user`
-  ADD PRIMARY KEY (`ID`);
+  ADD PRIMARY KEY (`id`);
 
 --
 -- AUTO_INCREMENT pour les tables déchargées
 --
 
 --
+-- AUTO_INCREMENT pour la table `categories`
+--
+ALTER TABLE `categories`
+  MODIFY `id_categories` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=19;
+
+--
 -- AUTO_INCREMENT pour la table `create_todos`
 --
 ALTER TABLE `create_todos`
-  MODIFY `id_todos` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=1;
+  MODIFY `id_todos` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=71;
 
 --
 -- AUTO_INCREMENT pour la table `user`
 --
 ALTER TABLE `user`
-  MODIFY `ID` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=1;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=11;
