@@ -27,9 +27,11 @@ if(empty($_GET['id_todos'])){
         $get_todos = $todos->fetch();
     ?>
 
-    <a href="./todos.php"><h1>Modify</h1></a>
+    <header>
+        <a href="./todos.php"><h1>Modify</h1></a>
+    </header>
 
-    <form action="../Database/Todos/todos_modify_database.php?id_todos=<?php echo $id?>" method="post">
+    <form action="../Database/Todos/todos_modify_database.php?id_todos=<?php echo $id?>" method="post" class="createTodos">
 
         <p>
             <label for="modifyTask">your task :</label>
