@@ -32,7 +32,7 @@ if(empty($_GET['id_todos'])){
     <form action="../Database/Todos/todos_modify_database.php?id_todos=<?php echo $id?>" method="post">
 
         <p>
-            <label for="modifyTask">Task :</label>
+            <label for="modifyTask">your task :</label>
         </p>
         <p>
             <textarea id="modifyTask" name="modifyTask" rows="10" cols="40"><?php echo $get_todos['task']?></textarea>
@@ -58,5 +58,24 @@ if(empty($_GET['id_todos'])){
         
         <input type="submit" value="Envoyer">
     </form>
+
+    <div class="divTodos">
+        <?php
+            $display_categories = $bdd->prepare('SELECT * FROM create_todos WHERE id_user = :id_user ORDER BY order_todos');
+            $display_categories->bindParam(':id_user', $_SESSION['id_user']);
+            $display_categories->execute();
+
+            while($donnees = $display_categories->fetch()){
+        ?>        
+
+            <div class="todosTask">         
+                <p><?php echo htmlspecialchars($donnees['task'])?></p>
+
+            </div>  
+
+        <?php
+            } 
+        ?>
+    </div>
 </body>
 </html>
