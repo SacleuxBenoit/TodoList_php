@@ -27,7 +27,4 @@ function showForm(){
         buttonCategories.value = "+";
         document.getElementById('formHidden').style.visibility = "hidden";
     }
-
-
-
 }
