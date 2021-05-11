@@ -7,15 +7,23 @@ body{
     '. . todos . ';
 }
 
-header{
-    grid-area: header;
-}
-
 a{
     text-decoration: none;
     color: black;
     cursor: pointer;
 }
+
+.createTodos{
+    grid-area: createTodos;
+}
+
+/* ------------------------ Header  ------------------------*/
+
+header{
+    grid-area: header;
+}
+
+/* ------------------------ Todos  ------------------------*/
 
 .divTodos{
     grid-area: todos;
@@ -25,8 +33,4 @@ a{
 .todosTask{
     font-size: 1.6em;
     border: 0.5px solid black;
-}
-
-.createTodos{
-    grid-area: createTodos;
 }
