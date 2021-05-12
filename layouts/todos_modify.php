@@ -71,7 +71,7 @@ if(empty($_GET['id_todos'])){
         ?>        
 
             <div class="todosTask">         
-                <p><?php echo htmlspecialchars($donnees['task'])?></p>
+                <p><?php echo htmlspecialchars($donnees['task']) . ' - ' . $donnees['categories']?></p>
 
             </div>  
 
