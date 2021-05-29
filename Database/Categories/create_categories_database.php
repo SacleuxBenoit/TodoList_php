@@ -3,7 +3,13 @@ session_start();
 include('../../login_database.php');
 include('../connection_database.php');
 
-if(!empty($_POST['newCategories'])){
+$select_categories = $bdd->prepare('SELECT categories FROM categories WHERE id_user = :id_user');
+$select_categories->bindParam(':id_user', $_SESSION['id_user']);
+$select_categories->execute();
+
+$verify_categories = $select_categories->fetch();
+
+if(!empty($_POST['newCategories']) && $verify_categories['categories'] !== $_POST['newCategories']){
     $create_categories = $bdd->prepare('INSERT INTO categories(id_user,categories) VALUES(:id_user, :categories)');
     $create_categories->bindParam(':id_user', $_SESSION['id_user']);
     $create_categories->bindParam(':categories', $_POST['newCategories']);
