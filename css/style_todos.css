@@ -3,7 +3,7 @@ body{
     display: grid;
     grid-template-areas:
     '. header header . .'
-    '. createTodos createTodos . .'
+    '. . createTodos . .'
     'divCategories . todos . .';
 }
 
@@ -59,4 +59,3 @@ header{
     font-size: 1.8em;
     color: red;
 }
-
