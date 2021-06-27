@@ -4,7 +4,7 @@ body{
     grid-template-areas:
     '. header header . '
     '. createTodos createTodos . '
-    '. . todos . ';
+    'divCategories . todos . ';
 }
 
 a{
@@ -17,6 +17,12 @@ a{
     grid-area: createTodos;
 }
 
+/* ------------------------ DIV CATEGORIES  ------------------------*/
+
+.divCategories{
+    grid-area: divCategories;
+    text-align: left;
+}
 /* ------------------------ Header  ------------------------*/
 
 header{
