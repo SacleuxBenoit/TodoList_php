@@ -2,8 +2,8 @@ body{
     text-align: center;
     display: grid;
     grid-template-areas:
-    '. header header .'
-    '. . todos .';
+    '. header header . . .'
+    'divCategories . todos . . .';
 }
 
 a{
@@ -13,6 +13,10 @@ a{
 
 div > p > a{
     color: lightcoral;
+}
+
+li{
+    list-style-type: none;
 }
 /* ------------------------ HEADER  ------------------------*/
 
@@ -30,4 +34,11 @@ header{
 .todosTask{
     font-size: 1.6em;
     border: 0.5px solid blue;
+}
+
+/* ------------------------ DIV CATEGORIES  ------------------------*/
+
+.divCategories{
+    grid-area: divCategories;
+    text-align: left;
 }
