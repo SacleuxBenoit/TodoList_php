@@ -1,8 +1,7 @@
 <?php
 session_start();
-include('../Database/connection_database.php');
 include('../login_database.php');
-
+include('../Database/connection_database.php');
 $categories = $_GET['categories'];
 ?>
 
