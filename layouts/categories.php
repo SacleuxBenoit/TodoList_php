@@ -78,7 +78,7 @@ $categories = $_GET['categories'];
                             if($donnees['order_categories'] > 0){
                                 echo $donnees['order_categories'] . ' |';
                         ?>
-                            <a href="../Database/Todos/todos_pin_database.php?id_todos=<?php echo $donnees['id_todos']?>">pin</a>
+                            <a href="../Database/Todos/todos_pin_database.php?order_categories=<?php echo $donnees['id_todos']?>">pin</a>
                         <?php
                             }
                             else{
