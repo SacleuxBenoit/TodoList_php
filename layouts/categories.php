@@ -54,7 +54,7 @@ $categories = $_GET['categories'];
 
     <div class="divTodos">
         <?php
-            $display_categories = $bdd->prepare('SELECT * FROM create_todos WHERE categories = :categories AND id_user = :id_user ORDER BY order_todos');
+            $display_categories = $bdd->prepare('SELECT * FROM create_todos WHERE categories = :categories AND id_user = :id_user ORDER BY order_categories');
             $display_categories->bindParam(':categories', $categories);
             $display_categories->bindParam(':id_user', $_SESSION['id_user']);
             $display_categories->execute();
@@ -71,12 +71,12 @@ $categories = $_GET['categories'];
                 </p>
 
                 <p>
-                    <a href="../Database/Todos/todos_orderUp_database.php?id_todos=<?php echo $donnees['id_todos']?>">Up</a> |
-                    <a href="../Database/Todos/todos_orderDown_database.php?id_todos=<?php echo $donnees['id_todos']?>">Down</a> |
+                    <a href="../Database/Todos/todos_orderUp_database.php?order_categories=<?php echo $donnees['id_todos']?>">Up</a> |
+                    <a href="../Database/Todos/todos_orderDown_database.php?order_categories=<?php echo $donnees['id_todos']?>">Down</a> |
 
                         <?php 
-                            if($donnees['order_todos'] > 0){
-                                echo $donnees['order_todos'] . ' |';
+                            if($donnees['order_categories'] > 0){
+                                echo $donnees['order_categories'] . ' |';
                         ?>
                             <a href="../Database/Todos/todos_pin_database.php?id_todos=<?php echo $donnees['id_todos']?>">pin</a>
                         <?php
