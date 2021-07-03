@@ -94,5 +94,7 @@ if(isset($_GET['categories'])){
             } 
         ?>
     </div>
+
+    <script src="../js/script.js"></script>
 </body>
 </html>
