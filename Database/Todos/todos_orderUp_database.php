@@ -44,7 +44,7 @@ header('Location: ../../layouts/todos.php');
         
     }
 
-header('Location: ../../layouts/todos.php');
+    header('Location: ../../layouts/categories.php');
 }
 
 ?>
