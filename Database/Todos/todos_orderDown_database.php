@@ -36,7 +36,7 @@ if(isset($_GET['id_todos'])){
     $update_orderDown_categories->bindParam(':id_todos', $order_categories);
     $update_orderDown_categories->execute();
     
-    header('Location: ../../layouts/todos.php');
+    header('Location: ../../layouts/categories.php');
 }else{
     header('Location: ../../index.php');
 }
