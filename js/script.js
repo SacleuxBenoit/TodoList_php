@@ -4,7 +4,7 @@ function deleteAccount(){
     let result = confirm("Are you sure you want to delete your account ?");
 
     if(result){
-        document.location.href="../Database/Settings/settings_delete_account.php";
+        document.location.href="../Database/User/Settings/settings_delete_account.php";
     }
 }
 

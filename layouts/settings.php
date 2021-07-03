@@ -24,13 +24,13 @@
 
 <div class="container">
 
-    <form action="../Database/Settings/settings_username.php" method="post">
+    <form action="../Database/User/Settings/settings_username.php" method="post">
         <label for="settingsUsername">New username :</label>
         <input type="text" name="settingsUsername" id="settingsUsername">
         <input type="submit" value="Submit">
     </form>
 
-    <form action="../Database/Settings/settings_password.php" method="post">
+    <form action="../Database/User/Settings/settings_password.php" method="post">
         <label for="settingsPassword">New password :</label>
         <input type="password" name="settingsPassword" id="settingsPassword">
         <input type="submit" value="Submit">
