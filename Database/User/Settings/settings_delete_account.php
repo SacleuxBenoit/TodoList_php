@@ -1,7 +1,7 @@
 <?php
 session_start();
-include('../../login_database.php');
-include('../connection_database.php');
+include('../../../login_database.php');
+include('../../connection_database.php');
 
 $select_user_id = $bdd->prepare('SELECT id from user WHERE username = :username');
 $select_user_id->bindParam(':username', $_SESSION['username']);
@@ -23,5 +23,5 @@ $delete_todos = $bdd->prepare('DELETE FROM create_todos WHERE id_user = :id');
 $delete_todos->bindParam(':id', $get_user_id['id']);
 $delete_todos->execute();
 
-header('Location: ../../index.php');
+header('Location: ../../../index.php');
 ?>

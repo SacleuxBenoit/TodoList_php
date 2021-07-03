@@ -1,7 +1,7 @@
 <?php
 session_start();
-include('../../login_database.php');
-include('../connection_database.php');
+include('../../../login_database.php');
+include('../../connection_database.php');
 
 
 if(!empty($_POST['settingsPassword'])){
@@ -11,9 +11,9 @@ if(!empty($_POST['settingsPassword'])){
     $update_password->bindParam(':pass', $pass_hash);
     $update_password->bindParam(':username', $_SESSION['username']);
     $update_password->execute();
-    header('Location: ../../index.php');
+    header('Location: ../../../index.php');
 }else{
-    header('Location: ../../layouts/settings.php');
+    header('Location: ../../../layouts/settings.php');
 }
 
 ?>
