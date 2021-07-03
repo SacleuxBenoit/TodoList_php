@@ -2,9 +2,9 @@ body{
     display: grid;
     text-align: center;
     grid-template-areas:
-    '. header header . '
-    '. createTodos createTodos . '
-    'divCategories . todos . ';
+    '. header header . . .'
+    '. createTodos createTodos . . .'
+    'divCategories . todos . . .';
 }
 
 a{
