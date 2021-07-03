@@ -2,7 +2,9 @@
 session_start();
 include('../login_database.php');
 include('../Database/connection_database.php');
-$categories = $_GET['categories'];
+if(isset($_GET['categories'])){
+    $_SESSION['categories'] = $_GET['categories'];
+}
 ?>
 
 <!DOCTYPE html>
@@ -17,7 +19,7 @@ $categories = $_GET['categories'];
 <body>
 
     <header>
-        <h1><a href="http://localhost:8888/test/TodoList_php/layouts/todos.php">Todo List</a> </h1><?php echo $_GET['categories'] ?>
+        <h1><a href="http://localhost:8888/test/TodoList_php/layouts/todos.php">Todo List</a> </h1><?php echo $_SESSION['categories'] ?>
     </header>
 
     <nav class="divCategories">
@@ -55,7 +57,7 @@ $categories = $_GET['categories'];
     <div class="divTodos">
         <?php
             $display_categories = $bdd->prepare('SELECT * FROM create_todos WHERE categories = :categories AND id_user = :id_user ORDER BY order_categories');
-            $display_categories->bindParam(':categories', $categories);
+            $display_categories->bindParam(':categories', $_SESSION['categories']);
             $display_categories->bindParam(':id_user', $_SESSION['id_user']);
             $display_categories->execute();
 

@@ -18,7 +18,7 @@ if(isset($_GET['id_todos'])){
     $update_pin->bindParam(':id_todos', $order_categories);
     $update_pin->execute();
     
-    header('Location: ../../layouts/todos.php');
+    header('Location: ../../layouts/categories.php');
 }
 
 ?>
