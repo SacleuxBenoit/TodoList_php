@@ -5,7 +5,7 @@ body{
     display: grid;
     grid-template-areas:
     'header header header header  '
-    'divCategories . todos .'
+    'divCategories titleCategory titleCategory .'
     'divCategories . todos .';
     font-family: 'Open Sans', sans-serif;
 }
@@ -22,12 +22,10 @@ div > p > a{
 li{
     list-style-type: none;
 }
-/* ------------------------ HEADER  ------------------------*/
 
-header{
-    grid-area: header;
+.titleCategory{
+    grid-area: titleCategory;
 }
-
 /* ------------------------ DIV TODOS  ------------------------*/
 
 .divTodos{
