@@ -21,7 +21,8 @@ if(empty($_SESSION['username'])){
 
     <header>
         <p>
-            placeholder <!-- scrolling menu with settings; themes && logout -->
+        <a href="./settings.php">Settings</a> |
+        <a href="../Database/User/user_logout_database.php">Logout</a>
         </p>
     <!--    <h1><a href="http://localhost:8888/test/TodoList_php/database/user/user_logout_database.php">Todo List</a></h1> -->
     </header>
