@@ -1,10 +1,13 @@
 body{
+    margin: 0;
+    padding: 0;
     text-align: center;
     display: grid;
     grid-template-areas:
-    '. header header . . .'
-    '. createTodos createTodos . . .'
-    'divCategories . todos . . .';
+    'header header header header  '
+    'divCategories createTodos createTodos .'
+    'divCategories . todos .';
+    font-family: 'Open Sans', sans-serif;
 }
 
 a{
@@ -19,25 +22,12 @@ div > p > a{
 li{
     list-style-type: none;
 }
-/* ------------------------ HEADER  ------------------------*/
 
-header{
-    grid-area: header;
-}
+/* ------------------------ CREATE TASK  ------------------------*/
 
-.createTodos{
-    grid-area: createTodos;
-}
-
-.titleTask{
-    font-size: 1.5em;
-}
-
-/* ------------------------ DIV CATEGORIES  ------------------------*/
-
-.divCategories{
-    grid-area: divCategories;
-    text-align: left;
+.addTask{
+    width: 60em;
+    height: 5em;
 }
 
 /* ------------------------ DIV TODOS  ------------------------*/
