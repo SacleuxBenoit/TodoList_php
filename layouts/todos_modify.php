@@ -10,10 +10,16 @@ if(empty($_GET['id_todos'])){
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <style>
+    @import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300&display=swap');
+    </style>
+
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link rel="stylesheet" href="../css/style_modify.css">
+    <link rel="stylesheet" href="../css/css_components/style_components_header.css">
+    <link rel="stylesheet" href="../css/css_components/style_components_navBar.css">
     <title>TodoList - Modify</title>
 </head>
 <body>
@@ -27,9 +33,10 @@ if(empty($_GET['id_todos'])){
         $get_todos = $todos->fetch();
     ?>
 
-    <header>
-        <a href="./todos.php"><h1>Modify</h1></a>
-    </header>
+    <?php
+        include('../components/header.php');
+        echo '<h2 class="titleModify">' . '<a href="./todos.php">' . 'Modify :' . '</a>' . '</h2>'; 
+    ?>
 
     <form action="../Database/Todos/todos_modify_database.php?id_todos=<?php echo $id?>" method="post" class="createTodos">
 
@@ -61,37 +68,9 @@ if(empty($_GET['id_todos'])){
         <input type="submit" value="Envoyer">
     </form>
 
-    <nav class="divCategories">
-        <div>
-            <p>
-                <h2> Categories <button onclick="showForm()" id="buttonCategories" value="+">+</button> </h2> 
-            </p>
-
-            <form action="../Database/Categories/create_categories_database.php" id="formHidden" method="post" style='visibility:hidden'>
-                <input type="text" id="newCategories" name="newCategories">
-                <input type="submit" value="Submit">
-            </form>
-
-                <?php
-                    $get_categories = $bdd->prepare('SELECT DISTINCT categories FROM create_todos WHERE id_user = :id_user ORDER BY categories');
-                    $get_categories->bindParam('id_user', $_SESSION['id_user']);
-                    $get_categories->execute();
-    
-                    while($display_categories = $get_categories->fetch()){
-                        ?>
-                            <div id="divCategories">
-                                <ul>
-                                    <li>
-                                    <h2><a href="./categories.php?categories=<?php echo $display_categories['categories'];?>"> <?php echo $display_categories['categories'] ?> </a>
-                                        | <a href="../Database/Categories/delete_categories_database.php?categories=<?php echo $display_categories['categories'] ?>"> x</h2> </a>
-                                    </li>
-                                </ul>
-                            </div>
-                        <?php
-                    }
-                ?>
-        </div>
-    </nav>
+    <?php
+        include('../components/navBar_categories.php');
+    ?>
 
     <div class="divTodos">
         <?php
