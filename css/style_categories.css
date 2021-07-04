@@ -1,9 +1,13 @@
 body{
+    margin: 0;
+    padding: 0;
     text-align: center;
     display: grid;
     grid-template-areas:
-    '. header header . . .'
-    'divCategories . todos . . .';
+    'header header header header  '
+    'divCategories . todos .'
+    'divCategories . todos .';
+    font-family: 'Open Sans', sans-serif;
 }
 
 a{
@@ -33,12 +37,5 @@ header{
 
 .todosTask{
     font-size: 1.6em;
-    border: 0.5px solid blue;
-}
-
-/* ------------------------ DIV CATEGORIES  ------------------------*/
-
-.divCategories{
-    grid-area: divCategories;
-    text-align: left;
+    border: 0.5px solid black;
 }
