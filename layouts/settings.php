@@ -22,7 +22,17 @@
     <h1><a href="http://localhost:8888/test/TodoList_php/database/user/user_logout_database.php">Todo List</a></h1>
 </header>
 
-<div class="container">
+<div class="div_todos_settings">
+    <p>
+        placeHolder : Reset order_todos
+    </p>
+
+    <p>
+        placeHolder : delete categories
+    </p>
+</div>
+
+<div class="div_user_settings">
 
     <form action="../Database/User/Settings/settings_username.php" method="post">
         <label for="settingsUsername">New username :</label>
