@@ -25,11 +25,19 @@
 
 <div class="div_todos_settings">
     <p>
-        placeHolder : Reset order_todos
+        placeHolder : <a href="../Database/Todos/todos_reset_order_database.php">Reset order todos</a>
     </p>
 
     <p>
-        placeHolder : delete categories
+        Delete categories :
+        <form action="#" method="post">
+            <select name="deleteCategories" id="deleteCategories">
+                <!-- display categories that is in database -->
+            </select>
+
+            <input type="submit" value="Submit">
+
+        </form>
     </p>
 </div>
 
