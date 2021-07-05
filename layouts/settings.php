@@ -6,6 +6,10 @@
     if(empty($_SESSION['username'])){
         header('Location: ../index.php');
     }
+
+    $select_categories = $bdd->prepare('SELECT DISTINCT categories FROM categories WHERE id_user = :id_user');
+    $select_categories->bindParam(':id_user', $_SESSION['id_user']);
+    $select_categories->execute();
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -29,11 +33,20 @@
     </p>
 
     <p>
-        Delete categories :
-        <form action="#" method="post">
-            <select name="deleteCategories" id="deleteCategories">
-                <!-- display categories that is in database -->
-            </select>
+        <label for="deleteCategories">Delete categories :</label>
+        <select name="deleteCategories" id="deleteCategories">
+            <?php
+                $get_categories = $bdd->prepare('SELECT DISTINCT categories FROM categories WHERE id_user = :id_user');
+                $get_categories->bindParam(':id_user', $_SESSION['id_user']);
+                $get_categories->execute();
+
+                while($display_categories = $get_categories->fetch()){
+                    ?>
+                        <option><?php echo $display_categories['categories'] ?></option>
+                    <?php
+                }
+            ?> 
+        </select> 
 
             <input type="submit" value="Submit">
 
