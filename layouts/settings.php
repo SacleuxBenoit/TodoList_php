@@ -33,6 +33,7 @@
     </p>
 
     <p>
+    <form action="../Database/Categories/delete_categories_database.php" method="post">
         <label for="deleteCategories">Delete categories :</label>
         <select name="deleteCategories" id="deleteCategories">
             <?php
@@ -49,7 +50,6 @@
         </select> 
 
             <input type="submit" value="Submit">
-
         </form>
     </p>
 </div>
