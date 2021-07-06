@@ -25,6 +25,7 @@ li{
 
 .titleCategory{
     grid-area: titleCategory;
+    font-size: 2.2em;
 }
 /* ------------------------ DIV TODOS  ------------------------*/
 
