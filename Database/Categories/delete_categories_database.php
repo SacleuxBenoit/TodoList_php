@@ -20,6 +20,8 @@ if(isset($_GET['categories'])){
     $delete_categories->execute();
 
     header('Location: ../../layouts/settings.php');
+}else{
+    header('Location: ../../layouts/todos.php');
 }
 
 ?>
