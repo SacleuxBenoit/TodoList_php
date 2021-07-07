@@ -29,10 +29,6 @@
 
 <div class="div_todos_settings">
     <p>
-        placeHolder : <a href="../Database/Todos/todos_reset_order_database.php">Reset order todos</a>
-    </p>
-
-    <p>
     <form action="../Database/Categories/delete_categories_database.php" method="post">
         <label for="deleteCategories">Delete categories :</label>
         <select name="deleteCategories" id="deleteCategories">
@@ -51,7 +47,7 @@
 
             <input type="submit" value="Submit">
         </form>
-    </p>
+    </>
 </div>
 
 <div class="div_user_settings">
