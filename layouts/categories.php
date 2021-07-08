@@ -28,7 +28,7 @@ if(isset($_GET['categories'])){
         include('../components/header.php');
         include('../components/navBar_categories.php');
 
-        echo '<h2 class="titleCategory">' . '<a href="./todos.php">' . '<u>' . $_GET['categories'] . '</u>' . '</a>' . '</h2>'; 
+        echo '<h2 class="titleCategory">' . '<a href="./todos.php">' . '<u>' . isset($_GET['categories']) . '</u>' . '</a>' . '</h2>'; 
     ?>
 
     <div class="divTodos">
