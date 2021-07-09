@@ -29,25 +29,38 @@
 
 <div class="div_todos_settings">
     <p>
-    <form action="../Database/Categories/delete_categories_database.php" method="post">
-        <label for="deleteCategories">Delete categories :</label>
-        <select name="deleteCategories" id="deleteCategories">
-            <?php
-                $get_categories = $bdd->prepare('SELECT DISTINCT categories FROM categories WHERE id_user = :id_user');
-                $get_categories->bindParam(':id_user', $_SESSION['id_user']);
-                $get_categories->execute();
+        <form action="../Database/Categories/delete_categories_database.php" method="post">
+            <label for="deleteCategories">Delete categories :</label>
+            <select name="deleteCategories" id="deleteCategories">
+                <?php
+                    $get_categories = $bdd->prepare('SELECT DISTINCT categories FROM categories WHERE id_user = :id_user');
+                    $get_categories->bindParam(':id_user', $_SESSION['id_user']);
+                    $get_categories->execute();
 
-                while($display_categories = $get_categories->fetch()){
-                    ?>
-                        <option><?php echo $display_categories['categories'] ?></option>
-                    <?php
-                }
-            ?> 
-        </select> 
+                    while($display_categories = $get_categories->fetch()){
+                        ?>
+                            <option><?php echo $display_categories['categories'] ?></option>
+                        <?php
+                    }
+                ?> 
+            </select> 
 
             <input type="submit" value="Submit">
         </form>
-    </>
+    </p>
+
+    <p>
+        <form action="#" method="post">
+            <label for="darkMode">Dark mode :</label>
+                <select name="darkMode" id="darkMode">
+                    <option value="true">Yes</option>
+                    <option value="false">No</option>
+                </select>
+
+            <input type="submit" value="Submit">
+
+        </form>
+    </p>
 </div>
 
 <div class="div_user_settings">
