@@ -16,12 +16,14 @@ header{
     border: 1px solid black;
     font-size: 2em;
     height: 10em;
+    background-color: #D9D9D9;
 }
 
 .register{
     grid-area: register;
     border: 1px solid black;
     font-size: 2em;
+    background-color: #D9D9D9;
 }
 
 .settings{
@@ -29,4 +31,5 @@ header{
     border: 1px solid black;
     border-top: none;
     font-size: 2em;
+    background-color: #D9D9D9;
 }
