@@ -7,6 +7,12 @@ if(empty($_SESSION['username'])){
     header('Location: ../index.php');
 }
 
+// verify user want the darkMode
+
+$select_darkMode = $bdd->prepare('SELECT darkMode FROM user WHERE username =:username');
+$select_darkMode->bindParam(':username', $_SESSION['username']);
+$select_darkMode->execute();
+$fetch_select_darkMode = $select_darkMode->fetch();
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -17,10 +23,22 @@ if(empty($_SESSION['username'])){
 
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <link rel="stylesheet" href="../css/style_todos.css">
-    <link rel="stylesheet" href="../css/css_components/style_components_header.css">
-    <link rel="stylesheet" href="../css/css_components/style_components_navBar.css">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">    
+    <?php
+        if($fetch_select_darkMode['darkMode']){
+        ?>
+            <link rel="stylesheet" href="../css/darkMode/darkMode_components/darkMode_header.css.css">
+            <link rel="stylesheet" href="../css/darkMode/darkMode_todos.css">
+        <?php
+        }else{
+        ?>
+            <link rel="stylesheet" href="../css/style_todos.css">
+            <link rel="stylesheet" href="../css/css_components/style_components_header.css">
+            <link rel="stylesheet" href="../css/css_components/style_components_navBar.css">
+        <?php
+        }
+    ?>
+
     <title>TodoList</title>
 </head>
 <body>
