@@ -53,8 +53,8 @@
         <form action="../Database/User/user_darkMode_database.php" method="post">
             <label for="darkMode">Dark mode :</label>
                 <select name="darkMode" id="darkMode">
-                    <option value="true">Yes</option>
-                    <option value="false">No</option>
+                    <option value="1">Yes</option>
+                    <option value="0">No</option>
                 </select>
 
             <input type="submit" value="Submit">
