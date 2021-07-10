@@ -27,7 +27,8 @@ $fetch_select_darkMode = $select_darkMode->fetch();
     <?php
         if($fetch_select_darkMode['darkMode']){
         ?>
-            <link rel="stylesheet" href="../css/darkMode/darkMode_components/darkMode_header.css.css">
+            <link rel="stylesheet" href="../css/darkMode/darkMode_components/darkMode_header.css">
+            <link rel="stylesheet" href="../css/darkMode/darkMode_components/darkMode_navBar.css">
             <link rel="stylesheet" href="../css/darkMode/darkMode_todos.css">
         <?php
         }else{

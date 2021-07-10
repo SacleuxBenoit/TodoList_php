@@ -1,0 +1,51 @@
+body{
+    margin: 0;
+    padding: 0;
+    text-align: center;
+    display: grid;
+    grid-template-areas:
+    'header header header header  '
+    'divCategories createTodos createTodos .'
+    'divCategories . todos .';
+    font-family: 'Open Sans', sans-serif;
+}
+
+a{
+    text-decoration: none;
+    color: black;
+}
+
+div > p > a{
+    color: lightcoral;
+}
+
+li{
+    list-style-type: none;
+}
+
+/* ------------------------ CREATE TASK  ------------------------*/
+
+.addTask{
+    width: 60em;
+    height: 5em;
+}
+
+/* ------------------------ DIV TODOS  ------------------------*/
+
+.divTodos{
+    grid-area: todos;
+    width: 50em;
+}
+
+.todosTask{
+    font-size: 1.6em;
+    border: 0.5px solid black;
+}
+
+/* ------------------------ delete todos  ------------------------*/
+
+.deleteALL{
+    text-decoration: none;
+    font-size: 1.8em;
+    color: red;
+}
