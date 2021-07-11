@@ -6,6 +6,13 @@ include('../login_database.php');
 if(empty($_GET['id_todos'])){
     header('Location: ../index.php');
 }
+
+// verify user want the darkMode
+
+$select_darkMode = $bdd->prepare('SELECT darkMode FROM user WHERE username =:username');
+$select_darkMode->bindParam(':username', $_SESSION['username']);
+$select_darkMode->execute();
+$fetch_select_darkMode = $select_darkMode->fetch();
 ?>
 <!DOCTYPE html>
 <html lang="en">

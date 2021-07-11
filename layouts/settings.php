@@ -10,6 +10,13 @@
     $select_categories = $bdd->prepare('SELECT DISTINCT categories FROM categories WHERE id_user = :id_user');
     $select_categories->bindParam(':id_user', $_SESSION['id_user']);
     $select_categories->execute();
+
+    // verify user want the darkMode
+
+$select_darkMode = $bdd->prepare('SELECT darkMode FROM user WHERE username =:username');
+$select_darkMode->bindParam(':username', $_SESSION['username']);
+$select_darkMode->execute();
+$fetch_select_darkMode = $select_darkMode->fetch();
 ?>
 <!DOCTYPE html>
 <html lang="en">
