@@ -1,4 +1,6 @@
 body{
+    background-color: black;
+    color: white;
     margin: 0;
     padding: 0;
     text-align: center;
@@ -12,7 +14,7 @@ body{
 
 a{
     text-decoration: none;
-    color: black;
+    color: white;
 }
 
 div > p > a{
@@ -39,7 +41,7 @@ li{
 
 .todosTask{
     font-size: 1.6em;
-    border: 0.5px solid black;
+    border: 0.5px solid white;
 }
 
 /* ------------------------ delete todos  ------------------------*/
