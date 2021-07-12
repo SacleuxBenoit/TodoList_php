@@ -18,8 +18,19 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <link rel="stylesheet" href="../css/css_components/style_components_header.css">
-    <link rel="stylesheet" href="../css/style_settings.css">
+    <?php
+        if($fetch_select_darkMode['darkMode']){
+        ?>
+            <link rel="stylesheet" href="../css/darkMode/darkMode_settings.css">
+            <link rel="stylesheet" href="../css/darkMode/darkMode_components/darkMode_header.css">
+        <?php
+        }else{
+        ?>
+            <link rel="stylesheet" href="../css/style_settings.css">
+            <link rel="stylesheet" href="../css/css_components/style_components_header.css">
+        <?php
+        }
+    ?>
     <title>TodoList - Settings</title>
 </head>
 <body>

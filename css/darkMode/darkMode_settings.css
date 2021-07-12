@@ -1,0 +1,28 @@
+body{
+    text-align: center;
+    display: grid;
+    grid-template-areas:
+    '. header header .'
+    '. div_todos_settings div_user_settings .';
+}
+
+header{
+    grid-area: header;
+}
+
+.div_todos_settings{
+    grid-area: div_todos_settings;
+    border: 1px solid black;
+    font-size: 2em;
+}
+
+.div_user_settings{
+    grid-area: div_user_settings;
+    border: 1px solid black;
+    font-size: 2em;
+}
+
+a{
+    text-decoration: none;
+    color: black;
+}
