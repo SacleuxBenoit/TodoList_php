@@ -2,6 +2,7 @@
 session_start();
 include('../login_database.php');
 include('../Database/connection_database.php');
+include('../components/verify_darkMode.php');
 if(isset($_GET['categories'])){
     $_SESSION['categories'] = $_GET['categories'];
 }else{
@@ -19,9 +20,21 @@ if(isset($_GET['categories'])){
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <link rel="stylesheet" href="../css/style_categories.css">
-    <link rel="stylesheet" href="../css/css_components/style_components_header.css">
-    <link rel="stylesheet" href="../css/css_components/style_components_navBar.css">
+    <?php
+        if($fetch_select_darkMode['darkMode']){
+        ?>
+            <link rel="stylesheet" href="../css/darkMode/darkMode_categories.css">
+            <link rel="stylesheet" href="../css/darkMode/darkMode_components/darkMode_header.css">
+            <link rel="stylesheet" href="../css/darkMode/darkMode_components/darkMode_navBar.css">
+        <?php
+        }else{
+        ?>
+            <link rel="stylesheet" href="../css/style_categories.css">
+            <link rel="stylesheet" href="../css/css_components/style_components_header.css">
+            <link rel="stylesheet" href="../css/css_components/style_components_navBar.css">
+        <?php
+        }
+    ?>
     <title>TodoList - categories</title>
 </head>
 <body>

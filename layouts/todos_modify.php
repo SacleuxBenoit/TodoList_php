@@ -2,10 +2,12 @@
 session_start();
 include('../Database/connection_database.php');
 include('../login_database.php');
+include('../components/verify_darkMode.php');
 
 if(empty($_GET['id_todos'])){
     header('Location: ../index.php');
 }
+
 ?>
 <!DOCTYPE html>
 <html lang="en">
