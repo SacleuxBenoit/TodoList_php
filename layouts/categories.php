@@ -5,8 +5,6 @@ include('../Database/connection_database.php');
 include('../components/verify_darkMode.php');
 if(isset($_GET['categories'])){
     $_SESSION['categories'] = $_GET['categories'];
-}else{
-    header('Location: ./todos.php');
 }
 ?>
 
