@@ -6,7 +6,7 @@ include('../components/verify_darkMode.php');
 if(isset($_GET['categories'])){
     $_SESSION['categories'] = $_GET['categories'];
 }else{
-    header('Location: ../todos.php');
+    header('Location: ./todos.php');
 }
 ?>
 
