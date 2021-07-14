@@ -1,6 +1,7 @@
 <header>
-        <p>
+    <p>Placeholder home</p>
+    <p>
         <a href="./settings.php">Settings</a> |
         <a href="../Database/User/user_logout_database.php">Logout</a>
-        </p>
+    </p>
 </header>
