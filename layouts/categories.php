@@ -19,7 +19,7 @@ if(isset($_GET['categories'])){
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <?php
-        if($fetch_select_darkMode['darkMode']){
+        if(isset($fetch_select_darkMode['darkMode']) && $fetch_select_darkMode['darkMode']){
         ?>
             <link rel="stylesheet" href="../css/darkMode/darkMode_categories.css">
             <link rel="stylesheet" href="../css/darkMode/darkMode_components/darkMode_header.css">
