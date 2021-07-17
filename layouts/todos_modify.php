@@ -62,9 +62,6 @@ if(empty($_GET['id_todos'])){
                 }
             ?> 
             <option value='none'>none</option>
-            <option value='Monday'>Monday</option>
-            <option value='Tuesday'>Tuesday</option>
-            <option value='Wednesday'>Wednesday</option>
         </select> 
         
         <input type="submit" value="Envoyer">
