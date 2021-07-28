@@ -19,6 +19,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <?php
+    $select_darkMode = $bdd->prepare('SELECT darkMode FROM user WHERE username =:username');
+    $select_darkMode->bindParam(':username', $_SESSION['username']);
+    $select_darkMode->execute();
+    $fetch_select_darkMode = $select_darkMode->fetch();
         if($fetch_select_darkMode['darkMode']){
         ?>
             <link rel="stylesheet" href="../css/darkMode/darkMode_settings.css">
@@ -78,8 +82,18 @@
 <div class="div_user_settings">
 
     <form action="../Database/User/Settings/settings_username.php" method="post">
-        <label for="settingsUsername">New username :</label>
-        <input type="text" name="settingsUsername" id="settingsUsername">
+
+        <p>
+            <label for="settingsUsername">New username :</label>
+            <input type="text" name="settingsUsername" id="settingsUsername">
+        </p>
+
+
+        <p>
+            <label for="settingsUsername">password :</label>
+            <input type="password" name="settingsPass" id="settingsPass">
+        </p>
+
         <input type="submit" value="Submit">
     </form>
 
