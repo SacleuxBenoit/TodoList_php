@@ -81,7 +81,7 @@
 
 <div class="div_user_settings">
 
-    <form action="../Database/User/Settings/settings_username.php" method="post">
+    <form action="../Database/User/Settings/settings_username.php" method="post" id="formChangeUsername">
 
         <p>
             <label for="settingsUsername">New username :</label>
