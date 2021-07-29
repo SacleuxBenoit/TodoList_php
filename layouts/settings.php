@@ -90,8 +90,8 @@
 
 
         <p>
-            <label for="settingsUsername">password :</label>
-            <input type="password" name="settingsPass" id="settingsPass">
+            <label for="verifyPassword">password :</label>
+            <input type="password" name="verifyPassword" id="verifyPassword">
         </p>
 
         <input type="submit" value="Submit">
