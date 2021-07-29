@@ -10,7 +10,7 @@ if(!empty($_POST['settingsUsername'])){
     $send->execute();
     header('Location: ../../../layouts/todos.php');
 }else{
-    header('Location: ../../../index.php');
+    header('Location: ../../../layouts/settings.php');
 
 }
 
