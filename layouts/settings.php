@@ -106,8 +106,8 @@
         </p>
 
         <p>
-            <label for="settingsPassword">confirm password :</label>
-            <input type="password" name="settingsPassword" id="settingsPassword">
+            <label for="confirmNewPassword">confirm password :</label>
+            <input type="password" name="confirmNewPassword" id="confirmNewPassword">
             <input type="submit" value="Submit">
         </p>
 
