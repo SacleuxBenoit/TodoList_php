@@ -98,9 +98,19 @@
     </form>
 
     <form action="../Database/User/Settings/settings_password.php" method="post">
-        <label for="settingsPassword">New password :</label>
-        <input type="password" name="settingsPassword" id="settingsPassword">
-        <input type="submit" value="Submit">
+
+        <p>
+            <label for="settingsPassword">New password :</label>
+            <input type="password" name="settingsPassword" id="settingsPassword">
+            <input type="submit" value="Submit">
+        </p>
+
+        <p>
+            <label for="settingsPassword">confirm password :</label>
+            <input type="password" name="settingsPassword" id="settingsPassword">
+            <input type="submit" value="Submit">
+        </p>
+
     </form>
 
     <p>
