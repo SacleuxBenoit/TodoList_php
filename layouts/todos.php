@@ -18,6 +18,7 @@ if(empty($_SESSION['username'])){
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">    
+    <!-- if darkmode is enabled : use the css below -->
     <?php
         if($fetch_select_darkMode['darkMode']){
         ?>
@@ -27,6 +28,7 @@ if(empty($_SESSION['username'])){
         <?php
         }else{
         ?>
+            <!-- if darkmode is disabled : use the css below -->
             <link rel="stylesheet" href="../css/style_todos.css">
             <link rel="stylesheet" href="../css/css_components/style_components_header.css">
             <link rel="stylesheet" href="../css/css_components/style_components_navBar.css">
@@ -42,6 +44,7 @@ if(empty($_SESSION['username'])){
         include('../components/header.php');
     ?>
 
+            <!-- ------------------------------------ CREATE TODOS - START ------------------------------------ -->
     <form action="../Database/Todos/todos_create_database.php" method="post" class="createTodos">
         <label for="addTask" class="titleTask">your task :</label>
 
@@ -66,10 +69,13 @@ if(empty($_SESSION['username'])){
 
             <input type="submit" value="Envoyer">
     </form>
+            <!-- ------------------------------------ CREATE TODOS - END ------------------------------------ -->
 
     <?php
         include('../components/navBar_categories.php');
     ?>
+
+            <!-- ------------------------------------ DISPLAY TODOS - START ------------------------------------ -->
 
     <div class="divTodos">
         <?php
@@ -104,8 +110,8 @@ if(empty($_SESSION['username'])){
                         ?>
                 </p>
             </div>  
-
-                <?php
+            <!-- ------------------------------------ DISPLAY TODOS - END ------------------------------------ -->
+        <?php
             } 
         ?>
 
