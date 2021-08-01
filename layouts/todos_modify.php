@@ -12,6 +12,7 @@ if(empty($_GET['id_todos'])){
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <!-- import font -->
     <style>
     @import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300&display=swap');
     </style>
@@ -40,6 +41,8 @@ if(empty($_GET['id_todos'])){
         echo '<h2 class="titleModify">' . '<a href="./todos.php">' . 'Modify :' . '</a>' . '</h2>'; 
     ?>
 
+        <!-- ------------------------------------ MODIFY TODOS - START ------------------------------------ -->
+
     <form action="../Database/Todos/todos_modify_database.php?id_todos=<?php echo $id?>" method="post" class="createTodos">
 
         <p>
@@ -66,10 +69,12 @@ if(empty($_GET['id_todos'])){
         
         <input type="submit" value="Envoyer">
     </form>
+        <!-- ------------------------------------ MODIFY TODOS - END ------------------------------------ -->
 
     <?php
         include('../components/navBar_categories.php');
     ?>
+        <!-- ------------------------------------ DISPLAY EVERY TODOS - START ------------------------------------ -->
 
     <div class="divTodos">
         <?php
@@ -89,6 +94,7 @@ if(empty($_GET['id_todos'])){
             } 
         ?>
     </div>
+        <!-- ------------------------------------ DISPLAY EVERY TODOS - END ------------------------------------ -->
 
     <script src="../js/script.js"></script>
 </body>
