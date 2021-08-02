@@ -42,6 +42,7 @@
 <header>
     <h1><a href="http://localhost:8888/test/TodoList_php/layouts/todos.php">Todo List</a></h1>
 </header>
+            <!-- ------------------------------------ DELETE CATEGORIES && DARKMODE - START ------------------------------------ -->
 
 <div class="div_todos_settings">
     <p>
@@ -78,6 +79,9 @@
         </form>
     </p>
 </div>
+            <!-- ------------------------------------ DELETE CATEGORIES && DARKMODE - END ------------------------------------ -->
+
+            <!-- ------------------------------------ CHANGE USERNAME && PASSWORD - START ------------------------------------ -->
 
 <div class="div_user_settings">
 
@@ -118,6 +122,7 @@
         </p>
 
     </form>
+            <!-- ------------------------------------ CHANGE USERNAME && PASSWORD - END ------------------------------------ -->
 
     <p>
         <button onclick="deleteAccount()">DELETE ACCOUNT</button>
