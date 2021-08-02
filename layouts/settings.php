@@ -100,8 +100,14 @@
     <form action="../Database/User/Settings/settings_password.php" method="post">
 
         <p>
-            <label for="settingsPassword">New password :</label>
-            <input type="password" name="settingsPassword" id="settingsPassword">
+            <label for="settingsCurrentPassword">Current password :</label>
+            <input type="password" name="settingsCurrentPassword" id="settingsCurrentPassword">
+            <input type="submit" value="Submit">
+        </p>
+
+        <p>
+            <label for="settingsNewPassword">New password :</label>
+            <input type="password" name="settingsNewPassword" id="settingsNewPassword">
             <input type="submit" value="Submit">
         </p>
 
