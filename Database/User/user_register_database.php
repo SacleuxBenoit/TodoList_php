@@ -19,7 +19,7 @@ $_SESSION['username'] = $_POST['RegisterPseudo'];
         // register user
 
         $pass_hash = password_hash($_POST['RegisterPass'], PASSWORD_DEFAULT);
-        $user_info = $bdd->prepare('INSERT INTO user(username,pass) VALUES(:RegisterPseudo, :pass)');
+        $user_info = $bdd->prepare('INSERT INTO user(username,pass,darkMode) VALUES(:RegisterPseudo, :pass, 0)');
         $user_info->bindParam(':RegisterPseudo', $_POST['RegisterPseudo']);
         $user_info->bindParam(':pass', $pass_hash);
         $user_info->execute();
