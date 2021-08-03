@@ -42,7 +42,7 @@
 <header>
     <h1><a href="http://localhost:8888/test/TodoList_php/layouts/todos.php">Todo List</a></h1>
 </header>
-            <!-- ------------------------------------ DELETE CATEGORIES && DARKMODE - START ------------------------------------ -->
+            <!-- ------------------------------------ DELETE CATEGORIES / ACCOUNT / DARKMODE - START ------------------------------------ -->
 
 <div class="div_todos_settings">
     <p>
@@ -77,11 +77,14 @@
             <input type="submit" value="Submit">
 
         </form>
+        <p>
+            <button onclick="deleteAccount()">DELETE ACCOUNT</button>
+        </p>
     </p>
 </div>
-            <!-- ------------------------------------ DELETE CATEGORIES && DARKMODE - END ------------------------------------ -->
+            <!-- ------------------------------------ DELETE CATEGORIES / ACCOUNT / DARKMODE - END ------------------------------------ -->
 
-            <!-- ------------------------------------ CHANGE USERNAME && PASSWORD - START ------------------------------------ -->
+            <!-- ------------------------------------ CHANGE USERNAME - START ------------------------------------ -->
 
 <div class="div_user_settings">
 
@@ -100,6 +103,9 @@
 
         <input type="submit" value="Submit">
     </form>
+            <!-- ------------------------------------ CHANGE USERNAME - END ------------------------------------ -->
+
+            <!-- ------------------------------------ CHANGE PASSWORD - START ------------------------------------ -->
 
     <form action="../Database/User/Settings/settings_password.php" method="post">
 
@@ -120,12 +126,8 @@
         <input type="submit" value="Submit">
 
     </form>
-            <!-- ------------------------------------ CHANGE USERNAME && PASSWORD - END ------------------------------------ -->
-
-    <p>
-        <button onclick="deleteAccount()">DELETE ACCOUNT</button>
-    </p>
 </div>
+            <!-- ------------------------------------ CHANGE PASSWORD - END ------------------------------------ -->
 
 <script src="../js/script.js"></script>
 </body>
