@@ -106,20 +106,18 @@
         <p>
             <label for="settingsCurrentPassword">Current password :</label>
             <input type="password" name="settingsCurrentPassword" id="settingsCurrentPassword">
-            <input type="submit" value="Submit">
         </p>
 
         <p>
             <label for="settingsNewPassword">New password :</label>
             <input type="password" name="settingsNewPassword" id="settingsNewPassword">
-            <input type="submit" value="Submit">
         </p>
 
         <p>
             <label for="confirmNewPassword">confirm password :</label>
             <input type="password" name="confirmNewPassword" id="confirmNewPassword">
-            <input type="submit" value="Submit">
         </p>
+        <input type="submit" value="Submit">
 
     </form>
             <!-- ------------------------------------ CHANGE USERNAME && PASSWORD - END ------------------------------------ -->
