@@ -20,9 +20,24 @@ if(empty($_GET['id_todos'])){
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <link rel="stylesheet" href="../css/style_modify.css">
-    <link rel="stylesheet" href="../css/css_components/style_components_header.css">
-    <link rel="stylesheet" href="../css/css_components/style_components_navBar.css">
+        <!-- if darkmode is enabled : use the css below -->
+        <?php
+        if($fetch_select_darkMode['darkMode']){
+        ?>
+            <link rel="stylesheet" href="../css/darkMode/darkMode_components/darkMode_header.css">
+            <link rel="stylesheet" href="../css/darkMode/darkMode_components/darkMode_navBar.css">
+            <link rel="stylesheet" href="../css/darkMode/darkMode_modify.css">
+        <?php
+        }else{
+        ?>
+            <!-- if darkmode is disabled : use the css below -->
+            <link rel="stylesheet" href="../css/style_modify.css">
+            <link rel="stylesheet" href="../css/css_components/style_components_header.css">
+            <link rel="stylesheet" href="../css/css_components/style_components_navBar.css">
+        <?php
+        }
+    ?>
+
     <title>TodoList - Modify</title>
 </head>
 <body>
