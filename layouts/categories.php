@@ -11,6 +11,7 @@ if(isset($_GET['categories'])){
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <!-- import font -->
     <style>
     @import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300&display=swap');
     </style>
@@ -18,6 +19,7 @@ if(isset($_GET['categories'])){
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <!-- if darkmode is enabled : use the css below -->
     <?php
         if(isset($fetch_select_darkMode['darkMode']) && $fetch_select_darkMode['darkMode']){
         ?>
@@ -27,6 +29,7 @@ if(isset($_GET['categories'])){
         <?php
         }else{
         ?>
+            <!-- if darkmode is disabled : use the css below -->
             <link rel="stylesheet" href="../css/style_categories.css">
             <link rel="stylesheet" href="../css/css_components/style_components_header.css">
             <link rel="stylesheet" href="../css/css_components/style_components_navBar.css">
@@ -43,7 +46,7 @@ if(isset($_GET['categories'])){
 
         echo '<h2 class="titleCategory">' . '<a href="./todos.php">' . '<u>' . $_SESSION['categories'] . '</u>' . '</a>' . '</h2>'; 
     ?>
-
+            <!-- ------------------------------------ DISPLAY TODOS BY CATEGORY - START ------------------------------------ -->
     <div class="divTodos">
         <?php
             $display_categories = $bdd->prepare('SELECT * FROM create_todos WHERE categories = :categories AND id_user = :id_user ORDER BY order_categories');
@@ -79,7 +82,7 @@ if(isset($_GET['categories'])){
                         ?>
                 </p>
             </div>  
-
+            <!-- ------------------------------------ DISPLAY TODOS BY CATEGORY - END ------------------------------------ -->
         <?php
             } 
         ?>
