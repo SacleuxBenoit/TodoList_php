@@ -53,16 +53,12 @@ if(empty($_GET['id_todos'])){
 
     <?php
         include('../components/header.php');
-        echo '<h2 class="titleModify">' . '<a href="./todos.php">' . 'Modify :' . '</a>' . '</h2>'; 
     ?>
-
+    <h2 class="titleModify"><a href="./todos.php"><u>Modify :</u></a></h2>'; 
         <!-- ------------------------------------ MODIFY TODOS - START ------------------------------------ -->
 
     <form action="../Database/Todos/todos_modify_database.php?id_todos=<?php echo $id?>" method="post" class="createTodos">
 
-        <p>
-            <label for="modifyTask">your task :</label>
-        </p>
         <p>
             <textarea id="modifyTask" name="modifyTask" rows="10" cols="40"><?php echo $get_todos['task']?></textarea>
         </p>
