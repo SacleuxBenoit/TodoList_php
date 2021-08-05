@@ -10,7 +10,7 @@ body{
 
 header{
     grid-area: header;
-    color: white;
+    color: black;
 }
 
 .login{
