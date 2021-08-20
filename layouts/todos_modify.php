@@ -54,7 +54,7 @@ if(empty($_GET['id_todos'])){
     <?php
         include('../components/header.php');
     ?>
-    <h2 class="titleModify"><a href="./todos.php"><u>Modify :</u></a></h2>'; 
+    <h2 class="titleModify"><a href="./todos.php"><u>Modify :</u></a></h2>
         <!-- ------------------------------------ MODIFY TODOS - START ------------------------------------ -->
 
     <form action="../Database/Todos/todos_modify_database.php?id_todos=<?php echo $id?>" method="post" class="createTodos">
