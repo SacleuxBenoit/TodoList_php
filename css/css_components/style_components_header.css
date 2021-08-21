@@ -4,8 +4,9 @@ header{
     background-color: rgb(40, 126, 175);
 }
 
-header > p {
-    text-align: right;
+header > div > p{
+    text-align: left;
+    font-size: 1.3em;
 }
 
 .createTodos{
