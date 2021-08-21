@@ -15,7 +15,7 @@ a{
     color: black;
 }
 
-div > p > a{
+.color_lightcoral_link{
     color: lightcoral;
 }
 
