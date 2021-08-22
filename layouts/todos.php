@@ -103,13 +103,14 @@ if(empty($_SESSION['username'])){
                             if($donnees['order_todos'] > 0){
                                 echo $donnees['order_todos'] . ' |';
                         ?>
-                            <a href="../Database/Todos/todos_pin_database.php?id_todos=<?php echo $donnees['id_todos']?>" class="color_lightcoral_link">pin</a>
+                            <a href="../Database/Todos/todos_pin_database.php?id_todos=<?php echo $donnees['id_todos']?>" class="color_lightcoral_link">pin</a> |
                         <?php
                             }
                             else{
                                 echo 'message pinned';
                             }
                         ?>
+                    <a href="../Database/Todos/todos_check_database.php">Check todos</a>
                 </p>
             </div>  
             <!-- ------------------------------------ DISPLAY TODOS - END ------------------------------------ -->
