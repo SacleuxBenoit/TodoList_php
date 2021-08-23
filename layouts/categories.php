@@ -61,19 +61,19 @@ if(isset($_GET['categories'])){
                 <p><?php echo htmlspecialchars($donnees['task'])?></p>
 
                 <p>
-                    <a href="../Database/Todos/todos_delete_database.php?id_todos_from_categories=<?php echo $donnees['id_todos']; ?>">Delete</a> |
-                    <a href="./todos_modify.php?id_todos=<?php echo $donnees['id_todos']; ?>">Modify</a>
+                    <a href="../Database/Todos/todos_delete_database.php?id_todos_from_categories=<?php echo $donnees['id_todos']; ?>" class="color_lightcoral_link">Delete</a> |
+                    <a href="./todos_modify.php?id_todos=<?php echo $donnees['id_todos']; ?>" class="color_lightcoral_link">Modify</a>
                 </p>
 
                 <p>
-                    <a href="../Database/Todos/todos_orderUp_database.php?order_categories=<?php echo $donnees['id_todos']?>">Up</a> |
-                    <a href="../Database/Todos/todos_orderDown_database.php?order_categories=<?php echo $donnees['id_todos']?>">Down</a> |
+                    <a href="../Database/Todos/todos_orderUp_database.php?order_categories=<?php echo $donnees['id_todos']?>" class="color_lightcoral_link">Up</a> |
+                    <a href="../Database/Todos/todos_orderDown_database.php?order_categories=<?php echo $donnees['id_todos']?>" class="color_lightcoral_link">Down</a> |
 
                         <?php 
                             if($donnees['order_categories'] > 0){
                                 echo $donnees['order_categories'] . ' |';
                         ?>
-                            <a href="../Database/Todos/todos_pin_database.php?order_categories=<?php echo $donnees['id_todos']?>">pin</a>
+                            <a href="../Database/Todos/todos_pin_database.php?order_categories=<?php echo $donnees['id_todos']?>" class="color_lightcoral_link">pin</a>
                         <?php
                             }
                             else{
