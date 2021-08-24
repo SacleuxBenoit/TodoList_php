@@ -6,7 +6,8 @@ body{
     grid-template-areas:
     'header header header header  '
     'divCategories createTodos createTodos .'
-    'divCategories . todos .';
+    'divCategories . todos .'
+    'divCategories footer footer footer';
     font-family: 'Open Sans', sans-serif;
 }
 

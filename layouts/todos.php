@@ -34,6 +34,7 @@ if(empty($_SESSION['username'])){
             <link rel="stylesheet" href="../css/style_todos.css">
             <link rel="stylesheet" href="../css/css_components/style_components_header.css">
             <link rel="stylesheet" href="../css/css_components/style_components_navBar.css">
+            <link rel="stylesheet" href="../css/css_components/style_components_footer.css">
         <?php
         }
     ?>
