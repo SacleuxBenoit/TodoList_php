@@ -123,7 +123,10 @@ if(empty($_SESSION['username'])){
         </p>
 
     </div>
-
+    
+    <?php
+        include('../components/footer.php');
+    ?>
     <script src="../js/script.js"></script>
 </body>
 </html>
