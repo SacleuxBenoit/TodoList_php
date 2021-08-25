@@ -45,11 +45,12 @@ if(empty($_SESSION['username'])){
 
     <?php
         include('../components/header.php');
+        include('../components/navBar_categories.php');
     ?>
 
             <!-- ------------------------------------ CREATE TODOS - START ------------------------------------ -->
     <form action="../Database/Todos/todos_create_database.php" method="post" class="createTodos">
-        <label for="addTask" class="titleTask"><u>your task :</u></label>
+        <label for="addTask" class="titleTask"><u>task :</u></label>
 
         <p>
             <input type="text" class="addTask" name="addTask" id="addTask">
@@ -73,11 +74,7 @@ if(empty($_SESSION['username'])){
             <input type="submit" value="Envoyer">
     </form>
             <!-- ------------------------------------ CREATE TODOS - END ------------------------------------ -->
-
-    <?php
-        include('../components/navBar_categories.php');
-    ?>
-
+            
             <!-- ------------------------------------ DISPLAY TODOS - START ------------------------------------ -->
 
     <div class="divTodos">
