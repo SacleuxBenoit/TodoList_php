@@ -27,5 +27,9 @@
                         <?php
                     }
                 ?>
+
+                <p>
+                    <h2><a href="../layouts/deleted_tasks.php">Deleted tasks</a></h2>
+                </p>
         </div>
     </nav>
