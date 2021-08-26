@@ -27,7 +27,7 @@ include('../Database/connection_database.php');
 
         while($display_todos = $get_todos_deleted->fetch()){
             ?>        
-            <div class="todosTask">         
+            <div class="deletedTask">         
                 <p><?php echo htmlspecialchars($display_todos['task'])?></p>
 
                 <p>

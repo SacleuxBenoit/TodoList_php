@@ -16,3 +16,8 @@ header > div > p{
 .titleTask{
     font-size: 1.5em;
 }
+
+header > div > p > a{
+    text-decoration: none;
+    color: black;
+}

@@ -10,3 +10,7 @@ body{
     'footer footer footer footer';
     font-family: 'Open Sans', sans-serif;
 }
+
+.deletedTask{
+    border: 1px solid black;
+}
