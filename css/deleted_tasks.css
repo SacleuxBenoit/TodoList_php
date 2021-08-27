@@ -5,12 +5,20 @@ body{
     display: grid;
     grid-template-areas:
     'header header header header  '
-    'divCategories . . .'
-    'divCategories . . .'
+    'divCategories title title .'
+    'divCategories . containerDeletedTask .'
     'footer footer footer footer';
     font-family: 'Open Sans', sans-serif;
 }
 
+.containerDeletedTask{
+    grid-area: containerDeletedTask;
+}
+
 .deletedTask{
     border: 1px solid black;
+}
+
+.title{
+    grid-area: title;
 }
