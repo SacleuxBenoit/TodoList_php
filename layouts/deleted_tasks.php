@@ -33,8 +33,8 @@ include('../Database/connection_database.php');
                     <p><?php echo htmlspecialchars($display_todos['task'])?></p>
 
                     <p>
-                        <a href="#" class="color_lightcoral_link">RESTORE</a> |
-                        <a href="../Database/Todos/todos_delete_database.php?id_todos=<?php echo $display_todos['id_todos']; ?>" class="color_lightcoral_link">DELETE</a>
+                        <a href="../Database/Todos/todos_restoreTodos_database.php?id_todos=<?php echo $display_todos['id_todos']?>" class="color_lightcoral_link">RESTORE</a> |
+                        <a href="../Database/Todos/todos_delete_database.php?id_todos=<?php echo $display_todos['id_todos']?>" class="color_lightcoral_link">DELETE</a>
                     </p>
                 </div>  
             <?php
