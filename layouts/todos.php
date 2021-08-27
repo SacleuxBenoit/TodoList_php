@@ -89,8 +89,8 @@ if(empty($_SESSION['username'])){
                 <p><?php echo htmlspecialchars($donnees['task'])?></p>
 
                 <p>
-                    <a href="../Database/Todos/todos_delete_database.php?id_todos=<?php echo $donnees['id_todos']; ?>" class="color_lightcoral_link">Delete</a> |
-                    <a href="./todos_modify.php?id_todos=<?php echo $donnees['id_todos']; ?>" class="color_lightcoral_link">Modify</a>
+                    <a href="./todos_modify.php?id_todos=<?php echo $donnees['id_todos']; ?>" class="color_lightcoral_link">Modify</a> |
+                    <a href="../Database/Todos/todos_delete_database.php?id_todos=<?php echo $donnees['id_todos']; ?>" class="color_lightcoral_link">Delete</a> 
                 </p>
 
                 <p>

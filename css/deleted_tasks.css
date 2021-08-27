@@ -6,7 +6,7 @@ body{
     grid-template-areas:
     'header header header header  '
     'divCategories title title .'
-    'divCategories . containerDeletedTask .'
+    'divCategories containerDeletedTask containerDeletedTask .'
     'footer footer footer footer';
     font-family: 'Open Sans', sans-serif;
 }
