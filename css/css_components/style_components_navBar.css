@@ -9,3 +9,8 @@
 ul{
     list-style-type: none;
 }
+
+.colorLink{
+    color: black;
+    text-decoration: none;
+}

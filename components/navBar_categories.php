@@ -19,8 +19,8 @@
                             <div id="divCategories">
                                 <ul>
                                     <li>
-                                    <h2><a href="./categories.php?categories=<?php echo $display_categories['categories'];?>"> <?php echo $display_categories['categories'] ?> </a>
-                                        | <a href="../Database/Categories/delete_categories_database.php?categories=<?php echo $display_categories['categories'] ?>"> x</h2> </a>
+                                    <h2><a href="./categories.php?categories=<?php echo $display_categories['categories']?>" class="colorLink"> <?php echo $display_categories['categories'] ?> </a>
+                                        | <a href="../Database/Categories/delete_categories_database.php?categories=<?php echo $display_categories['categories'] ?>" class="colorLink"> x</h2> </a>
                                     </li>
                                 </ul>
                             </div>
@@ -29,7 +29,7 @@
                 ?>
 
                 <p>
-                    <h2><a href="../layouts/deleted_tasks.php">Deleted tasks</a></h2>
+                    <h2><a href="../layouts/deleted_tasks.php" class="colorLink">Deleted tasks</a></h2>
                 </p>
         </div>
     </nav>
