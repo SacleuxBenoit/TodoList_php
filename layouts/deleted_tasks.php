@@ -38,5 +38,7 @@ include('../Database/connection_database.php');
         <?php
             } 
         ?>
+
+        <script src="../js/script.js"></script>
 </body>
 </html>
