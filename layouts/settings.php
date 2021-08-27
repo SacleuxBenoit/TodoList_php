@@ -30,8 +30,8 @@
         <?php
         }else{
         ?>
-            <link rel="stylesheet" href="../css/style_settings.css">
-            <link rel="stylesheet" href="../css/css_components/style_components_header.css">
+            <link rel="stylesheet" href="../css/settings.css">
+            <link rel="stylesheet" href="../css/css_components/header.css">
         <?php
         }
     ?>

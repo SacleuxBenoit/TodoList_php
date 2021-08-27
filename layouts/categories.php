@@ -30,9 +30,9 @@ if(isset($_GET['categories'])){
         }else{
         ?>
             <!-- if darkmode is disabled : use the css below -->
-            <link rel="stylesheet" href="../css/style_categories.css">
-            <link rel="stylesheet" href="../css/css_components/style_components_header.css">
-            <link rel="stylesheet" href="../css/css_components/style_components_navBar.css">
+            <link rel="stylesheet" href="../css/categories.css">
+            <link rel="stylesheet" href="../css/css_components/header.css">
+            <link rel="stylesheet" href="../css/css_components/navBar.css">
         <?php
         }
     ?>

@@ -31,10 +31,10 @@ if(empty($_SESSION['username'])){
         }else{
         ?>
             <!-- if darkmode is disabled : use the css below -->
-            <link rel="stylesheet" href="../css/style_todos.css">
-            <link rel="stylesheet" href="../css/css_components/style_components_header.css">
-            <link rel="stylesheet" href="../css/css_components/style_components_navBar.css">
-            <link rel="stylesheet" href="../css/css_components/style_components_footer.css">
+            <link rel="stylesheet" href="../css/todos.css">
+            <link rel="stylesheet" href="../css/css_components/header.css">
+            <link rel="stylesheet" href="../css/css_components/navBar.css">
+            <link rel="stylesheet" href="../css/css_components/footer.css">
         <?php
         }
     ?>

@@ -31,9 +31,9 @@ if(empty($_GET['id_todos'])){
         }else{
         ?>
             <!-- if darkmode is disabled : use the css below -->
-            <link rel="stylesheet" href="../css/style_modify.css">
-            <link rel="stylesheet" href="../css/css_components/style_components_header.css">
-            <link rel="stylesheet" href="../css/css_components/style_components_navBar.css">
+            <link rel="stylesheet" href="../css/todos_modify.css">
+            <link rel="stylesheet" href="../css/css_components/header.css">
+            <link rel="stylesheet" href="../css/css_components/navBar.css">
         <?php
         }
     ?>
