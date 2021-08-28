@@ -49,7 +49,7 @@ if(isset($_GET['categories'])){
             <!-- ------------------------------------ DISPLAY TODOS BY CATEGORY - START ------------------------------------ -->
     <div class="divTodos">
         <?php
-            $display_categories = $bdd->prepare('SELECT * FROM create_todos WHERE categories = :categories AND id_user = :id_user ORDER BY order_categories');
+            $display_categories = $bdd->prepare('SELECT * FROM create_todos WHERE categories = :categories AND id_user = :id_user AND is_delete = 0 ORDER BY order_categories');
             $display_categories->bindParam(':categories', $_SESSION['categories']);
             $display_categories->bindParam(':id_user', $_SESSION['id_user']);
             $display_categories->execute();
