@@ -15,8 +15,18 @@ body{
     grid-area: containerDeletedTask;
 }
 
+.color_lightcoral_link{
+    color: lightcoral;
+}
+
+a{
+    text-decoration: none;
+    color: black;
+}
+
 .deletedTask{
     border: 1px solid black;
+    font-size: 1.6em;
 }
 
 .title{
