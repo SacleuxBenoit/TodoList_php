@@ -108,7 +108,7 @@ if(empty($_SESSION['username'])){
                                 echo 'message pinned';
                             }
                         ?>
-                    <a href="../Database/Todos/todos_check_database.php">Check todos</a>
+                    <a href="../Database/Todos/todos_check_database.php?id_todos=<?php echo $donnees['id_todos']?>">Check todos</a>
                 </p>
             </div>  
             <!-- ------------------------------------ DISPLAY TODOS - END ------------------------------------ -->
