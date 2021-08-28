@@ -85,8 +85,15 @@ if(empty($_SESSION['username'])){
 
             while($donnees = $display_todos->fetch()){
         ?>        
-            <div class="todosTask">         
-                <p><?php echo htmlspecialchars($donnees['task'])?></p>
+            <div class="todosTask">   
+                <?php
+                    if($donnees['is_check']){
+                        echo '<p class="colorP" style="color:green">' . htmlspecialchars($donnees['task']) .'</p>';
+                    }else{
+                        echo '<p class="colorP" style="color:black">' . htmlspecialchars($donnees['task']) .'</p>';
+                    }
+
+                ?>      
 
                 <p>
                     <a href="./todos_modify.php?id_todos=<?php echo $donnees['id_todos']; ?>" class="color_lightcoral_link">Modify</a> |
