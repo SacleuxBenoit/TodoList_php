@@ -14,3 +14,7 @@ ul{
     color: black;
     text-decoration: none;
 }
+
+.navDeletedTasks{
+    padding-top: 2em;
+}

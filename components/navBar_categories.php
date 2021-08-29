@@ -28,7 +28,7 @@
                     }
                 ?>
 
-                <p>
+                <p class="navDeletedTasks">
                     <h2><a href="../layouts/deleted_tasks.php" class="colorLink">Deleted tasks</a></h2>
                 </p>
         </div>
