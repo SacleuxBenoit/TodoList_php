@@ -15,6 +15,10 @@ ul{
     text-decoration: none;
 }
 
-.navDeletedTasks{
+.navDeletedTasks, .navWhatsNew{
     padding-top: 2em;
+}
+
+.linkToWhatsNew{
+    font-size: 0.7em;
 }
