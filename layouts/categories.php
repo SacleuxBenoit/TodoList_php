@@ -58,7 +58,13 @@ if(isset($_GET['categories'])){
         ?>        
 
             <div class="todosTask">         
-                <p><?php echo htmlspecialchars($donnees['task'])?></p>
+                <?php
+                    if($donnees['is_check']){
+                        echo '<p class="colorP" style="color:green">' . htmlspecialchars($donnees['task']) .'</p>';
+                    }else{
+                        echo '<p class="colorP" style="color:black">' . htmlspecialchars($donnees['task']) .'</p>';
+                    }
+                ?>
 
                 <p>
                     <a href="./todos_modify.php?id_todos=<?php echo $donnees['id_todos']; ?>" class="color_lightcoral_link">Modify</a> |
@@ -73,13 +79,15 @@ if(isset($_GET['categories'])){
                             if($donnees['order_categories'] > 0){
                                 echo $donnees['order_categories'] . ' |';
                         ?>
-                            <a href="../Database/Todos/todos_pin_database.php?order_categories=<?php echo $donnees['id_todos']?>" class="color_lightcoral_link">pin</a>
+                            <a href="../Database/Todos/todos_pin_database.php?order_categories=<?php echo $donnees['id_todos']?>" class="color_lightcoral_link">pin</a> |
                         <?php
                             }
                             else{
-                                echo 'message pinned';
+                                echo 'message pinned |';
                             }
                         ?>
+                    <a href="../Database/Todos/todos_check_database.php?id_todos=<?php echo $donnees['id_todos']?>">Check todos</a>
+
                 </p>
             </div>  
             <!-- ------------------------------------ DISPLAY TODOS BY CATEGORY - END ------------------------------------ -->
