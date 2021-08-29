@@ -3,6 +3,7 @@ session_start();
 include('../connection_database.php');
 include('../../login_database.php');
 
+// if user came from todos.php update order_todos (increase 1)
 if(isset($_GET['id_todos'])){
     $id_todos = $_GET['id_todos'];
 
@@ -20,7 +21,10 @@ if(isset($_GET['id_todos'])){
     $update_orderDown_todos->execute();
     
     header('Location: ../../layouts/todos.php');
-}else if(isset($_GET['order_categories'])){
+    exit();
+}
+// else if user came from categories.php update order_categories (increase 1)
+else if(isset($_GET['order_categories'])){
     $order_categories = $_GET['order_categories'];
 
     $select_orderDown_categories = $bdd->prepare('SELECT order_categories FROM create_todos WHERE id_todos = :id_todos');
@@ -37,6 +41,7 @@ if(isset($_GET['id_todos'])){
     $update_orderDown_categories->execute();
     
     header('Location: ../../layouts/categories.php');
+    exit();
 }else{
     header('Location: ../../index.php');
 }

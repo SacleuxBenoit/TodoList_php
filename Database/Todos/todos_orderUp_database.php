@@ -3,7 +3,7 @@ session_start();
 include('../connection_database.php');
 include('../../login_database.php');
 
-
+// if user came from todos.php update order_todos (decrease 1)
 if(isset($_GET['id_todos'])){
     $id_todos = $_GET['id_todos'];
 
@@ -19,13 +19,13 @@ if(isset($_GET['id_todos'])){
         $update_orderUp_todos = $bdd->prepare('UPDATE create_todos SET order_todos = :order_todos WHERE id_todos = :id_todos');
         $update_orderUp_todos->bindParam(':order_todos', $increment_orderUp_todos);
         $update_orderUp_todos->bindParam(':id_todos', $id_todos);
-        $update_orderUp_todos->execute();
-        
+        $update_orderUp_todos->execute();   
     }
-
 header('Location: ../../layouts/todos.php');
-
-}else if(isset($_GET['order_categories'])){
+exit();
+}
+// if user came from categories.php update order_categories (decrease 1)
+else if(isset($_GET['order_categories'])){
     $order_categories = $_GET['order_categories'];
 
     $select_orderUp_categories = $bdd->prepare('SELECT order_categories FROM create_todos WHERE id_todos = :id_todos');
@@ -43,8 +43,9 @@ header('Location: ../../layouts/todos.php');
         $update_orderUp_categories->execute();
         
     }
-
     header('Location: ../../layouts/categories.php');
+}else{
+    header('Location: ../../index.php');
 }
 
 ?>
