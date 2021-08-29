@@ -1,0 +1,21 @@
+body{
+    margin: 0;
+    padding: 0;
+    text-align: center;
+    display: grid;
+    grid-template-areas:
+    'header header header header  '
+    'divCategories titleNews titleNews .'
+    'divCategories news news .'
+    'footer footer footer footer';
+    font-family: 'Open Sans', sans-serif;
+}
+
+.titleNews{
+    grid-area: titleNews;
+}
+
+.news{
+    grid-area: news;
+    text-align: left;
+}
