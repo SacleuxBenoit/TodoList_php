@@ -97,8 +97,14 @@ if(empty($_GET['id_todos'])){
         ?>        
 
             <div class="todosTask">         
-                <p><?php echo htmlspecialchars($donnees['task']) . ' - ' . $donnees['categories']?></p>
+                <?php
+                    if($donnees['is_check']){
+                        echo '<p class="colorP" style="color:green">' . htmlspecialchars($donnees['task']) .'</p>';
+                    }else{
+                        echo '<p class="colorP" style="color:black">' . htmlspecialchars($donnees['task']) .'</p>';
+                    }
 
+                ?>    
             </div>  
 
         <?php
