@@ -29,11 +29,11 @@
                 ?>
 
                 <p class="navDeletedTasks">
-                    <h2><a href="../layouts/deleted_tasks.php">Deleted tasks</a></h2>
+                    <h2><a href="../layouts/deleted_tasks.php" class="colorLink">Deleted tasks</a></h2>
                 </p>
 
                 <p class="navWhatsNew">
-                    <h2><a href="../layouts/whatsNew.php" class="linkToWhatsNew">What's new ?</a></h2>
+                    <h2><a href="../layouts/whatsNew.php" class="linkToWhatsNew colorLink">What's new ?</a></h2>
                 </p>
         </div>
     </nav>
