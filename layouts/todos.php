@@ -26,6 +26,7 @@ if(empty($_SESSION['username'])){
         ?>
             <link rel="stylesheet" href="../css/darkMode/darkMode_components/darkMode_header.css">
             <link rel="stylesheet" href="../css/darkMode/darkMode_components/darkMode_navBar.css">
+            <link rel="stylesheet" href="../css/darKmode/darkMode_components/darkMode_footer.css">
             <link rel="stylesheet" href="../css/darkMode/darkMode_todos.css">
         <?php
         }else{
