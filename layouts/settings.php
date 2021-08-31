@@ -96,7 +96,7 @@
                     ?>
                         <div>
                             <p>
-                                <label for="newAdmin">promouvoir un admin :</label>
+                                <label for="newAdmin">promote an admin :</label>
                                 <input type="text" name="newAdmin" id="newAdmin">
                                 <input type="submit" value="Submit">
                             </p>
