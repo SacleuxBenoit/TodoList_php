@@ -31,15 +31,27 @@ include('../Database/connection_database.php');
 
     <div class="news">
         <div>
-            <u>28/08/2021 && 29/08/2021</u>
+            <u>30/08/2021</u>
 
             <p>
-                creation of the part :<a href="./deleted_tasks.php">Delete tasks</a> : once a todo is deleted, it end up <a href="./deleted_tasks.php">here</a>, the user has the possibility
-                of permanently deleting the todo OR restoring it.
+                <ul>
+                    <li>- Correction of problem with the links in navBar</li>
+                    <li>- Import font for this page</li>
+                    <li>- Display the green color when a todo is check in the page todos modify</li>
+                    <li>- Starting to update darkmode</li>
+                </ul>
             </p>
 
+        <div>
+            <u>28/08/2021 && 29/08/2021</u>
+    
             <p>
-                the 'check todos' part has been created, user can now change the color of a todo to green.
+                <ul>
+                    <li>- Creation of the part :<a href="./deleted_tasks.php">Delete tasks</a> : once a todo is deleted, it end up <a href="./deleted_tasks.php">here</a>,
+                        the user has the possibility of permanently deleting the todo OR restoring it.
+                    </li>
+                    <li>- The 'check todos' part has been created, user can now change the color of a todo to green.</li>
+                </ul>
             </p>
         </div>
     </div>
