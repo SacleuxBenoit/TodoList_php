@@ -84,7 +84,7 @@
                 <!-- ------------------------------------ DELETE CATEGORIES / ACCOUNT / DARKMODE - END ------------------------------------ -->
                 <!-- ------------------------------------ ADMIN PANEL - START ------------------------------------ -->
 
-        <form action="#" method="post">
+        <form action="../Database/Admin/promoteNewAdmin_database.php" method="post">
             <?php
                 $verify_is_admin = $bdd->prepare('SELECT is_admin FROM user WHERE id = :id_user');
                 $verify_is_admin->bindParam(':id_user', $_SESSION['id_user']);
