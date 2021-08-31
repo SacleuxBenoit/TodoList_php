@@ -42,93 +42,115 @@
 <header>
     <h1><a href="http://localhost:8888/test/TodoList_php/layouts/todos.php">Todo List</a></h1>
 </header>
-            <!-- ------------------------------------ DELETE CATEGORIES / ACCOUNT / DARKMODE - START ------------------------------------ -->
+                <!-- ------------------------------------ DELETE CATEGORIES / ACCOUNT / DARKMODE - START ------------------------------------ -->
 
-<div class="div_todos_settings">
-    <p>
-        <form action="../Database/Categories/delete_categories_database.php" method="post">
-            <label for="deleteCategories">Delete categories :</label>
-            <select name="deleteCategories" id="deleteCategories">
-                <?php
-                    $get_categories = $bdd->prepare('SELECT DISTINCT categories FROM categories WHERE id_user = :id_user');
-                    $get_categories->bindParam(':id_user', $_SESSION['id_user']);
-                    $get_categories->execute();
+    <div class="div_todos_settings">
+        <p>
+            <form action="../Database/Categories/delete_categories_database.php" method="post">
+                <label for="deleteCategories">Delete categories :</label>
+                <select name="deleteCategories" id="deleteCategories">
+                    <?php
+                        $get_categories = $bdd->prepare('SELECT DISTINCT categories FROM categories WHERE id_user = :id_user');
+                        $get_categories->bindParam(':id_user', $_SESSION['id_user']);
+                        $get_categories->execute();
 
-                    while($display_categories = $get_categories->fetch()){
-                        ?>
-                            <option><?php echo $display_categories['categories'] ?></option>
-                        <?php
-                    }
-                ?> 
-            </select> 
+                        while($display_categories = $get_categories->fetch()){
+                            ?>
+                                <option><?php echo $display_categories['categories'] ?></option>
+                            <?php
+                        }
+                    ?> 
+                </select> 
+
+                <input type="submit" value="Submit">
+            </form>
+        </p>
+
+        <p>
+            <form action="../Database/User/user_darkMode_database.php" method="post">
+                <label for="darkMode">Dark mode :</label>
+                    <select name="darkMode" id="darkMode">
+                        <option value="1">Yes</option>
+                        <option value="0">No</option>
+                    </select>
+
+                <input type="submit" value="Submit">
+
+            </form>
+            <p>
+                <button onclick="deleteAccount()">DELETE ACCOUNT</button>
+            </p>
+        </p>
+                <!-- ------------------------------------ DELETE CATEGORIES / ACCOUNT / DARKMODE - END ------------------------------------ -->
+                <!-- ------------------------------------ ADMIN PANEL - START ------------------------------------ -->
+
+        <form action="#" method="post">
+            <?php
+                $verify_is_admin = $bdd->prepare('SELECT is_admin FROM user WHERE id = :id_user');
+                $verify_is_admin->bindParam(':id_user', $_SESSION['id_user']);
+                $verify_is_admin->execute();
+
+                $fetch_verify_is_admin = $verify_is_admin->fetch();
+
+                if($fetch_verify_is_admin['is_admin']){
+                    ?>
+                        <div>
+                            <p>
+                                <label for="newAdmin">promouvoir un admin :</label>
+                                <input type="text" name="newAdmin" id="newAdmin">
+                                <input type="submit" value="Submit">
+                            </p>
+                        </div>
+                    <?php
+                }
+            ?>
+        </form>
+    </div>
+                <!-- ------------------------------------ ADMIN PANEL - END ------------------------------------ -->
+                <!-- ------------------------------------ CHANGE USERNAME - START ------------------------------------ -->
+
+    <div class="div_user_settings">
+
+        <form action="../Database/User/Settings/settings_username.php" method="post" id="formChangeUsername">
+
+            <p>
+                <label for="settingsUsername">New username :</label>
+                <input type="text" name="settingsUsername" id="settingsUsername">
+            </p>
+
+
+            <p>
+                <label for="verifyPassword">password :</label>
+                <input type="password" name="verifyPassword" id="verifyPassword">
+            </p>
 
             <input type="submit" value="Submit">
         </form>
-    </p>
+                <!-- ------------------------------------ CHANGE USERNAME - END ------------------------------------ -->
 
-    <p>
-        <form action="../Database/User/user_darkMode_database.php" method="post">
-            <label for="darkMode">Dark mode :</label>
-                <select name="darkMode" id="darkMode">
-                    <option value="1">Yes</option>
-                    <option value="0">No</option>
-                </select>
+                <!-- ------------------------------------ CHANGE PASSWORD - START ------------------------------------ -->
 
+        <form action="../Database/User/Settings/settings_password.php" method="post">
+
+            <p>
+                <label for="settingsCurrentPassword">Current password :</label>
+                <input type="password" name="settingsCurrentPassword" id="settingsCurrentPassword">
+            </p>
+
+            <p>
+                <label for="settingsNewPassword">New password :</label>
+                <input type="password" name="settingsNewPassword" id="settingsNewPassword">
+            </p>
+
+            <p>
+                <label for="confirmNewPassword">confirm password :</label>
+                <input type="password" name="confirmNewPassword" id="confirmNewPassword">
+            </p>
             <input type="submit" value="Submit">
 
         </form>
-        <p>
-            <button onclick="deleteAccount()">DELETE ACCOUNT</button>
-        </p>
-    </p>
-</div>
-            <!-- ------------------------------------ DELETE CATEGORIES / ACCOUNT / DARKMODE - END ------------------------------------ -->
-
-            <!-- ------------------------------------ CHANGE USERNAME - START ------------------------------------ -->
-
-<div class="div_user_settings">
-
-    <form action="../Database/User/Settings/settings_username.php" method="post" id="formChangeUsername">
-
-        <p>
-            <label for="settingsUsername">New username :</label>
-            <input type="text" name="settingsUsername" id="settingsUsername">
-        </p>
-
-
-        <p>
-            <label for="verifyPassword">password :</label>
-            <input type="password" name="verifyPassword" id="verifyPassword">
-        </p>
-
-        <input type="submit" value="Submit">
-    </form>
-            <!-- ------------------------------------ CHANGE USERNAME - END ------------------------------------ -->
-
-            <!-- ------------------------------------ CHANGE PASSWORD - START ------------------------------------ -->
-
-    <form action="../Database/User/Settings/settings_password.php" method="post">
-
-        <p>
-            <label for="settingsCurrentPassword">Current password :</label>
-            <input type="password" name="settingsCurrentPassword" id="settingsCurrentPassword">
-        </p>
-
-        <p>
-            <label for="settingsNewPassword">New password :</label>
-            <input type="password" name="settingsNewPassword" id="settingsNewPassword">
-        </p>
-
-        <p>
-            <label for="confirmNewPassword">confirm password :</label>
-            <input type="password" name="confirmNewPassword" id="confirmNewPassword">
-        </p>
-        <input type="submit" value="Submit">
-
-    </form>
-</div>
+    </div>
             <!-- ------------------------------------ CHANGE PASSWORD - END ------------------------------------ -->
-
 <script src="../js/script.js"></script>
 </body>
 </html>
