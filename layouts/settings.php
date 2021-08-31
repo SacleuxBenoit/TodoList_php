@@ -84,27 +84,46 @@
                 <!-- ------------------------------------ DELETE CATEGORIES / ACCOUNT / DARKMODE - END ------------------------------------ -->
                 <!-- ------------------------------------ ADMIN PANEL - START ------------------------------------ -->
 
-        <form action="../Database/Admin/promoteNewAdmin_database.php" method="post">
             <?php
-                $verify_is_admin = $bdd->prepare('SELECT is_admin FROM user WHERE id = :id_user');
-                $verify_is_admin->bindParam(':id_user', $_SESSION['id_user']);
-                $verify_is_admin->execute();
+                $verify_currentUser_is_admin = $bdd->prepare('SELECT is_admin FROM user WHERE id = :id_user');
+                $verify_currentUser_is_admin->bindParam(':id_user', $_SESSION['id_user']);
+                $verify_currentUser_is_admin->execute();
 
-                $fetch_verify_is_admin = $verify_is_admin->fetch();
+                $fetch_verify_currentUser_is_admin = $verify_currentUser_is_admin->fetch();
 
-                if($fetch_verify_is_admin['is_admin']){
+                if($fetch_verify_currentUser_is_admin['is_admin']){
                     ?>
-                        <div>
-                            <p>
-                                <label for="newAdmin">promote an admin :</label>
-                                <input type="text" name="newAdmin" id="newAdmin">
-                                <input type="submit" value="Submit">
-                            </p>
-                        </div>
+                        <form action="../Database/Admin/promoteNewAdmin_database.php" method="post">
+                            <div>
+                                <p>
+                                    <label for="newAdmin">promote an admin :</label>
+                                    <input type="text" name="newAdmin" id="newAdmin">
+                                    <input type="submit" value="Submit">
+                                </p>
+                            </div>
+                        </form>
+
                     <?php
+                        $find_user_admin = $bdd->prepare('SELECT username FROM user WHERE is_admin = 1');
+                        $find_user_admin->execute();
+                            ?>
+                            <form action="#" method="post">
+                                <div>
+                                    <p>
+                                        <label for="destituteAdmin">Destitute an admin :</label>
+                                        <select name="destituteAdmin" id="destituteAdmin">
+                                            <?php
+                                                while($fetch_find_user_admin = $find_user_admin->fetch()){
+                                                    echo '<option>' . $fetch_find_user_admin['username'] . '</option>';
+                                                }
+                                            ?>
+                                        </select>
+                                    </p>
+                                </div>
+                            </form>
+                        <?php       
                 }
             ?>
-        </form>
     </div>
                 <!-- ------------------------------------ ADMIN PANEL - END ------------------------------------ -->
                 <!-- ------------------------------------ CHANGE USERNAME - START ------------------------------------ -->
