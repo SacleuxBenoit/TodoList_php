@@ -45,7 +45,7 @@ if(empty($_GET['id_todos'])){
     
         $id = $_GET['id_todos'];
 
-        $todos = $bdd->prepare('SELECT task FROM create_todos WHERE id_todos = :id');
+        $todos = $bdd->prepare('SELECT task FROM todos WHERE id_todos = :id');
         $todos->bindParam(':id', $id);
         $todos->execute();
         $get_todos = $todos->fetch();
@@ -89,7 +89,7 @@ if(empty($_GET['id_todos'])){
 
     <div class="divTodos">
         <?php
-            $display_categories = $bdd->prepare('SELECT * FROM create_todos WHERE id_user = :id_user ORDER BY order_todos');
+            $display_categories = $bdd->prepare('SELECT * FROM todos WHERE id_user = :id_user ORDER BY order_todos');
             $display_categories->bindParam(':id_user', $_SESSION['id_user']);
             $display_categories->execute();
 

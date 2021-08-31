@@ -29,7 +29,7 @@ include('../Database/connection_database.php');
         
     <div class="containerDeletedTask">
         <?php
-            $get_todos_deleted = $bdd->prepare('SELECT * FROM create_todos WHERE id_user =:id_user AND is_delete = true');
+            $get_todos_deleted = $bdd->prepare('SELECT * FROM todos WHERE id_user =:id_user AND is_delete = true');
             $get_todos_deleted->bindParam(':id_user', $_SESSION['id_user']);
             $get_todos_deleted->execute();
 

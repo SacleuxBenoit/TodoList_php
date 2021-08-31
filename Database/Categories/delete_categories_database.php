@@ -5,7 +5,7 @@ include('../connection_database.php');
 
 // switch todos to category none + delete the current category
 if(isset($_GET['categories'])){
-    $update_categories = $bdd->prepare('UPDATE create_todos SET categories = "none" WHERE categories = :categories');
+    $update_categories = $bdd->prepare('UPDATE todos SET categories = "none" WHERE categories = :categories');
     $update_categories->bindParam(':categories', $_GET['categories']);
     $update_categories->execute();
     

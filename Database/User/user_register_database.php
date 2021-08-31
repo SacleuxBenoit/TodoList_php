@@ -34,7 +34,7 @@ $_SESSION['username'] = $_POST['RegisterPseudo'];
 
                 // Create todos Welcome
 
-                $welcome_message = $bdd->prepare('INSERT INTO create_todos(id_user,task,categories,createdAT) VALUES (:id_user,"Welcome to your TodoList","none",now())');
+                $welcome_message = $bdd->prepare('INSERT INTO todos(id_user,task,categories,createdAT) VALUES (:id_user,"Welcome to your TodoList","none",now())');
                 $welcome_message->bindParam(':id_user', $_SESSION['id_user']);
                 $welcome_message->execute();
         

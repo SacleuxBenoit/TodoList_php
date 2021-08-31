@@ -10,7 +10,7 @@
             </form>
 
                 <?php
-                    $get_categories = $bdd->prepare('SELECT DISTINCT categories FROM create_todos WHERE id_user = :id_user ORDER BY categories');
+                    $get_categories = $bdd->prepare('SELECT DISTINCT categories FROM todos WHERE id_user = :id_user ORDER BY categories');
                     $get_categories->bindParam('id_user', $_SESSION['id_user']);
                     $get_categories->execute();
     

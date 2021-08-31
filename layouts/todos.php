@@ -80,7 +80,7 @@ if(empty($_SESSION['username'])){
 
     <div class="divTodos">
         <?php
-            $display_todos = $bdd->prepare('SELECT * FROM create_todos WHERE id_user = :id_user AND is_delete = false ORDER BY order_todos');
+            $display_todos = $bdd->prepare('SELECT * FROM todos WHERE id_user = :id_user AND is_delete = false ORDER BY order_todos');
             $display_todos->bindParam(':id_user', $_SESSION['id_user']);
             $display_todos->execute();
 
