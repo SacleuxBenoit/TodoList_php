@@ -30,3 +30,7 @@ a{
 #formChangeUsername{
     border-bottom: 1px solid black;
 }
+
+.adminPanel{
+    border-top: 1px solid black;
+}
