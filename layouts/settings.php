@@ -83,7 +83,7 @@
         </p>
                 <!-- ------------------------------------ DELETE CATEGORIES / ACCOUNT / DARKMODE - END ------------------------------------ -->
                 <!-- ------------------------------------ ADMIN PANEL - START ------------------------------------ -->
-
+        <div class="adminPanel">
             <?php
                 $verify_currentUser_is_admin = $bdd->prepare('SELECT is_admin FROM user WHERE id = :id_user');
                 $verify_currentUser_is_admin->bindParam(':id_user', $_SESSION['id_user']);
@@ -124,6 +124,8 @@
                         <?php       
                 }
             ?>
+        </div>
+
     </div>
                 <!-- ------------------------------------ ADMIN PANEL - END ------------------------------------ -->
                 <!-- ------------------------------------ CHANGE USERNAME - START ------------------------------------ -->
