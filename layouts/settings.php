@@ -85,13 +85,13 @@
                 <!-- ------------------------------------ ADMIN PANEL - START ------------------------------------ -->
         <div class="adminPanel">
             <?php
-                $verify_currentUser_is_admin = $bdd->prepare('SELECT is_admin FROM user WHERE id = :id_user');
+                $verify_currentUser_is_admin = $bdd->prepare('SELECT is_superAdmin FROM user WHERE id = :id_user');
                 $verify_currentUser_is_admin->bindParam(':id_user', $_SESSION['id_user']);
                 $verify_currentUser_is_admin->execute();
 
                 $fetch_verify_currentUser_is_admin = $verify_currentUser_is_admin->fetch();
 
-                if($fetch_verify_currentUser_is_admin['is_admin']){
+                if($fetch_verify_currentUser_is_admin['is_superAdmin']){
                     ?>
                         <form action="../Database/Admin/promoteNewAdmin_database.php" method="post">
                             <div>
