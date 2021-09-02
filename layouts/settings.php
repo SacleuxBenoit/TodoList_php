@@ -107,7 +107,7 @@
                         $find_user_admin = $bdd->prepare('SELECT username FROM user WHERE is_admin = 1');
                         $find_user_admin->execute();
                             ?>
-                            <form action="#" method="post">
+                            <form action="../Database/Admin/destitute_admin_database.php" method="post">
                                 <div>
                                     <p>
                                         <label for="destituteAdmin">Destitute an admin :</label>
@@ -118,6 +118,7 @@
                                                 }
                                             ?>
                                         </select>
+                                        <input type="submit" value="Submit">
                                     </p>
                                 </div>
                             </form>
