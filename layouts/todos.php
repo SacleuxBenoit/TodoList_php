@@ -26,7 +26,6 @@ if(empty($_SESSION['username'])){
         ?>
             <link rel="stylesheet" href="../css/darkMode/darkMode_components/darkMode_header.css">
             <link rel="stylesheet" href="../css/darkMode/darkMode_components/darkMode_navBar.css">
-            <link rel="stylesheet" href="../css/darKmode/darkMode_components/darkMode_footer.css">
             <link rel="stylesheet" href="../css/darkMode/darkMode_todos.css">
         <?php
         }else{
@@ -35,7 +34,6 @@ if(empty($_SESSION['username'])){
             <link rel="stylesheet" href="../css/todos.css">
             <link rel="stylesheet" href="../css/css_components/header.css">
             <link rel="stylesheet" href="../css/css_components/navBar.css">
-            <link rel="stylesheet" href="../css/css_components/footer.css">
         <?php
         }
     ?>
@@ -129,10 +127,6 @@ if(empty($_SESSION['username'])){
         </p>
 
     </div>
-    
-    <?php
-        include('../components/footer.php');
-    ?>
     <script src="../js/script.js"></script>
 </body>
 </html>
