@@ -12,6 +12,18 @@ include('../Database/connection_database.php');
     <title>Document</title>
 </head>
 <body>
-    
+    <form action="#">
+        <p>
+            <label for="date">date</label>
+            <input type="text">
+        </p>
+
+        <p>
+            <label for="content">content</label>
+            <input type="text">
+        </p>
+        
+        <input type="submit" value="Submit">
+    </form>
 </body>
 </html>
