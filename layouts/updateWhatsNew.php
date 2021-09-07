@@ -15,12 +15,12 @@ include('../Database/connection_database.php');
     <form action="#">
         <p>
             <label for="date">date</label>
-            <input type="text">
+            <input type="text" name="date" id="date">
         </p>
 
         <p>
             <label for="content">content</label>
-            <input type="text">
+            <input type="text" name="content" id="content">
         </p>
         
         <input type="submit" value="Submit">
