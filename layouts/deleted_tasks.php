@@ -18,7 +18,7 @@ include('../Database/connection_database.php');
     <link rel="stylesheet" href="../css/deleted_tasks.css">
     <link rel="stylesheet" href="../css/css_components/header.css">
     <link rel="stylesheet" href="../css/css_components/navBar.css">
-    <title>TodoList - deleted tasks</title>
+    <title>deleted tasks | TodoList</title>
 </head>
 <body>
     <?php

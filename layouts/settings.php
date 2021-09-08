@@ -35,7 +35,7 @@
         <?php
         }
     ?>
-    <title>TodoList - Settings</title>
+    <title>Settings | TodoList</title>
 </head>
 <body>
 
