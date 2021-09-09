@@ -11,7 +11,7 @@ include('../Database/connection_database.php');
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="../css/css_components/header.css">
     <link rel="stylesheet" href="../css/css_components/navBar.css">
-    <title>update what's new | TodoList</title>
+    <title>update whats new | TodoList</title>
 </head>
 <body>
     <?php
