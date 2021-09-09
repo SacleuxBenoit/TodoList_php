@@ -18,7 +18,7 @@ include('../Database/connection_database.php');
         include('../components/header.php');
         include('../components/navBar_categories.php');
     ?>
-    <form action="#">
+    <form action="../Database/Admin/updateWhatsNew_database.php">
         <p>
             <label for="date">date</label>
             <input type="text" name="date" id="date">
