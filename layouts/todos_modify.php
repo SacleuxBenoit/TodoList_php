@@ -38,7 +38,7 @@ if(empty($_GET['id_todos'])){
         }
     ?>
 
-    <title>TodoList - Modify</title>
+    <title>Modify | TodoList </title>
 </head>
 <body>
     <?php 
