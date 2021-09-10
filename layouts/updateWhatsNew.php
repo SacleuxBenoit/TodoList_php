@@ -18,15 +18,15 @@ include('../Database/connection_database.php');
         include('../components/header.php');
         include('../components/navBar_categories.php');
     ?>
-    <form action="../Database/Admin/updateWhatsNew_database.php">
+    <form action="../Database/Admin/updateWhatsNew_database.php" method="POST">
         <p>
-            <label for="date">date</label>
-            <input type="text" name="date" id="date">
+            <label for="currentDate">date</label>
+            <input type="text" name="currentDate" id="currentDate">
         </p>
 
         <p>
-            <label for="content">content</label>
-            <input type="text" name="content" id="content">
+            <label for="new">content</label>
+            <input type="text" name="new" id="new">
         </p>
         
         <input type="submit" value="Submit">
