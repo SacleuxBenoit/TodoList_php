@@ -1,7 +1,4 @@
 <?php
-include('../login_database.php');
-include('../Database/connection_database.php');
-
 // verify if user is admin OR super Admin
 $verify_admin = $bdd->prepare('SELECT is_admin,is_superAdmin FROM user WHERE id =:id_user');
 $verify_admin->bindParam(':id_user', $_SESSION['id_user']);
