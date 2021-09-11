@@ -1,7 +1,7 @@
 <?php
 session_start();
-include('../login_database.php');
-include('../Database/connection_database.php');
+include('../../login_database.php');
+include('../../Database/connection_database.php');
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -15,10 +15,10 @@ include('../Database/connection_database.php');
 </head>
 <body>
     <?php
-        include('../components/header.php');
-        include('../components/navBar_categories.php');
+        include('../../components/header.php');
+        include('../../components/navBar_categories.php');
     ?>
-    <form action="../Database/Admin/updateWhatsNew_database.php" method="POST">
+    <form action="./Database/Admin/updateWhatsNew_database.php" method="POST">
         <p>
             <label for="currentDate">date</label>
             <input type="text" name="currentDate" id="currentDate">
