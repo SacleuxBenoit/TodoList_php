@@ -1,0 +1,16 @@
+body{
+    margin: 0;
+    padding: 0;
+    text-align: center;
+    display: grid;
+    grid-template-areas:
+    'header header header header  '
+    'divCategories updateWhatsNew updateWhatsNew .'
+    'divCategories updateWhatsNew updateWhatsNew .'
+    'footer footer footer footer';
+    font-family: 'Open Sans', sans-serif;
+}
+
+.updateWhatsNew{
+    grid-area: updateWhatsNew;
+}
