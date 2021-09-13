@@ -29,7 +29,7 @@ include('../Database/connection_database.php');
 
         while($display_articles = $select_articles->fetch()){
             ?>
-                <div>
+                <div class="displayNews">
                     <h1>
                         <?php 
                             echo $display_articles['currentdate'] 
