@@ -17,12 +17,33 @@ include('../Database/connection_database.php');
     <link rel="stylesheet" href="../css/whatsNew.css">
     <link rel="stylesheet" href="../css/css_components/header.css">
     <link rel="stylesheet" href="../css/css_components/navBar.css">
-    <title>What's new | Todolist</title>
+    <title>Whats new | Todolist</title>
 </head>
 <body>
     <?php
         include('../components/header.php');
         include('../components/navBar_categories.php');
+
+        $select_articles = $bdd->prepare('SELECT * FROM whatsnew');
+        $select_articles->execute();
+
+        while($display_articles = $select_articles->fetch()){
+            ?>
+                <div>
+                    <h1>
+                        <?php 
+                            echo $display_articles['currentdate'] 
+                        ?>
+                    </h1>
+
+                    <p>
+                        <?php
+                            echo $display_articles['new'];
+                        ?>
+                    </p>
+                </div>
+            <?php
+        }
     ?>
 
 </body>
