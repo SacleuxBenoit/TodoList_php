@@ -19,3 +19,7 @@ body{
     grid-area: news;
     text-align: left;
 }
+
+.underlineH1{
+    text-decoration: underline;
+}

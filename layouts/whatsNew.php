@@ -32,9 +32,9 @@ include('../Database/connection_database.php');
         <?php
         while($display_articles = $select_articles->fetch()){
             ?>
-                    <h1>
+                    <h1 class="underlineH1">
                         <?php 
-                            echo $display_articles['currentdate'] 
+                            echo $display_articles['currentdate'];
                         ?>
                     </h1>
 
