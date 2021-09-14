@@ -43,5 +43,6 @@ include('../../Database/connection_database.php');
         </form>
     </div>
 
+    <script src="../../js/script.js"></script>
 </body>
 </html>

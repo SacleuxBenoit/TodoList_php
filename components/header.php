@@ -10,12 +10,12 @@ $fetch_verify_admin = $verify_admin->fetch();
     <div>
         <p>
             <a href="http://localhost/TodoList_php/layouts/todos.php">Todolist</a> |
-            <a href="./settings.php">Settings</a>
+            <a href="http://localhost/TodoList_php/layouts/settings.php">Settings</a>
             <?php
             // if user is admin OR super admin : display link to updateWhatsNew
                 if($fetch_verify_admin['is_admin'] || $fetch_verify_admin['is_superAdmin']){
                    
-                echo '<a href="./Admin/updateWhatsNew.php">' . "| update what's new |" . "</a>";
+                echo '<a href="http://localhost/TodoList_php/layouts/Admin/updateWhatsNew.php">' . "| update what's new |" . "</a>";
                    
                 }
             ?>
