@@ -27,9 +27,11 @@ include('../Database/connection_database.php');
         $select_articles = $bdd->prepare('SELECT * FROM whatsnew');
         $select_articles->execute();
 
+        ?>
+            <div class="news">
+        <?php
         while($display_articles = $select_articles->fetch()){
             ?>
-                <div class="displayNews">
                     <h1>
                         <?php 
                             echo $display_articles['currentdate'] 
@@ -41,10 +43,11 @@ include('../Database/connection_database.php');
                             echo $display_articles['new'];
                         ?>
                     </p>
-                </div>
             <?php
         }
     ?>
+            </div>
+
 
 </body>
 </html>

@@ -5,18 +5,14 @@ body{
     display: grid;
     grid-template-areas:
     'header header header header  '
-    'divCategories displayNews displayNews .'
-    'divCategories displayNews displayNews .'
+    'divCategories news news .'
+    'divCategories news news .'
     'footer footer footer footer';
     font-family: 'Open Sans', sans-serif;
 }
 
 .titleNews{
     grid-area: titleNews;
-}
-
-.displayNews{
-    grid-area: displayNews;
 }
 
 .news{
