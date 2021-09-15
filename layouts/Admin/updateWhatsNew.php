@@ -31,12 +31,12 @@ include('../../Database/connection_database.php');
         <form action="../../Database/Admin/updateWhatsNew_database.php" method="POST">
             <p>
                 <label for="currentDate">date</label>
-                <input type="text" name="currentDate" id="currentDate">
+                <input type="text" name="currentDate" id="currentDate" required>
             </p>
 
             <p>
                 <label for="new">content</label>
-                <input type="text" name="new" id="new">
+                <input type="text" name="new" id="new" required>
             </p>
             
             <input type="submit" value="Submit">

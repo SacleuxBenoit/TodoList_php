@@ -145,13 +145,13 @@
 
             <p>
                 <label for="settingsUsername">New username :</label>
-                <input type="text" name="settingsUsername" id="settingsUsername">
+                <input type="text" name="settingsUsername" id="settingsUsername" required>
             </p>
 
 
             <p>
                 <label for="verifyPassword">password :</label>
-                <input type="password" name="verifyPassword" id="verifyPassword">
+                <input type="password" name="verifyPassword" id="verifyPassword" required>
             </p>
 
             <input type="submit" value="Submit">
@@ -164,17 +164,17 @@
 
             <p>
                 <label for="settingsCurrentPassword">Current password :</label>
-                <input type="password" name="settingsCurrentPassword" id="settingsCurrentPassword">
+                <input type="password" name="settingsCurrentPassword" id="settingsCurrentPassword" required>
             </p>
 
             <p>
                 <label for="settingsNewPassword">New password :</label>
-                <input type="password" name="settingsNewPassword" id="settingsNewPassword">
+                <input type="password" name="settingsNewPassword" id="settingsNewPassword" required>
             </p>
 
             <p>
                 <label for="confirmNewPassword">confirm password :</label>
-                <input type="password" name="confirmNewPassword" id="confirmNewPassword">
+                <input type="password" name="confirmNewPassword" id="confirmNewPassword" required>
             </p>
             <input type="submit" value="Submit">
 
