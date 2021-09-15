@@ -2,8 +2,9 @@ body{
     text-align: center;
     display: grid;
     grid-template-areas:
-    '. header header .'
-    '. div_todos_settings div_user_settings .';
+    'header header header header'
+    'divCategories div_todos_settings div_user_settings .';
+    font-family: 'Open Sans', sans-serif;
 }
 
 header{
