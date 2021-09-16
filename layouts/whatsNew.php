@@ -46,7 +46,7 @@ include('../Database/connection_database.php');
 
                     <p>
                         <a href="../Database/Admin/modifyNew_database.php">Modify</a>
-                        <a href="../Database/Admin/deleteNew_database.php">Delete</a>
+                        <a href="../Database/Admin/deleteNew_database.php?id=<?php echo $display_articles['id']; ?>">Delete</a>
                     </p>
             <?php
         }
