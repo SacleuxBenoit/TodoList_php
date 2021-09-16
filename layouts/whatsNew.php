@@ -43,6 +43,11 @@ include('../Database/connection_database.php');
                             echo $display_articles['new'];
                         ?>
                     </p>
+
+                    <p>
+                        <a href="../Database/Admin/modifyNew_database.php">Modify</a>
+                        <a href="../Database/Admin/deleteNew_database.php">Delete</a>
+                    </p>
             <?php
         }
     ?>
