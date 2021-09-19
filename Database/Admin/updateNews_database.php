@@ -11,5 +11,5 @@ if(!empty($_POST['currentDate']) && !empty($_POST['new'])){
     $create_article->execute();
 }
 
-header('Location: ../../layouts/whatsNew.php');
+header('Location: ../../layouts/News.php');
 ?> 

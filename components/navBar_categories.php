@@ -33,7 +33,7 @@
                 </p>
 
                 <p class="navWhatsNew">
-                    <h2><a href="http://localhost/TodoList_php/layouts/whatsNew.php" class="linkToWhatsNew colorLink">What's new ?</a></h2>
+                    <h2><a href="http://localhost/TodoList_php/layouts/News.php" class="linkToWhatsNew colorLink">What's new ?</a></h2>
                 </p>
         </div>
     </nav>

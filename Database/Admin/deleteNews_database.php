@@ -9,6 +9,6 @@ if(isset($_GET['id'])){
     $deleteNew->bindParam(':id', $_GET['id']);
     $deleteNew->execute();
 }
-header('Location: ../../layouts/whatsNew.php');
+header('Location: ../../layouts/news.php');
 
 ?>
