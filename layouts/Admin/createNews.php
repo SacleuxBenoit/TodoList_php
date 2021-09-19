@@ -28,7 +28,7 @@ include('../../Database/connection_database.php');
 
     <div class="updateWhatsNew">
         <h1>Update what's new :</h1>
-        <form action="../../Database/Admin/updateWhatsNew_database.php" method="POST">
+        <form action="../../Database/Admin/createNews_database.php" method="POST">
             <p>
                 <label for="currentDate">date</label>
                 <input type="text" name="currentDate" id="currentDate" required>
