@@ -46,6 +46,10 @@ include('../Database/connection_database.php');
             <?php
             } 
         ?>
+
+        <p>
+            <button onclick="permanentlyDeleteTodos()">Delete Tasks</button>
+        </p>
     </div>
 
 
