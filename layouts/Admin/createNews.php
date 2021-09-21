@@ -35,8 +35,8 @@ include('../../Database/connection_database.php');
             </p>
 
             <p>
-                <label for="new">content</label>
-                <input type="text" name="new" id="new" required>
+                <label for="news">content</label>
+                <input type="text" name="news" id="news" required>
             </p>
             
             <input type="submit" value="Submit">

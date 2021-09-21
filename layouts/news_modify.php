@@ -2,6 +2,8 @@
 session_start();
 include('../login_database.php');
 include('../Database/connection_database.php');
+
+$_SESSION['id_news'] = $_GET['id_news'];
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -25,7 +27,7 @@ include('../Database/connection_database.php');
         include('../components/header.php');
         include('../components/navBar_categories.php');
     ?>
-    <form action="#" method="post">
+    <form action="../Database/Admin/modifyNews_database.php" method="post">
         <p>
             <label for="modifyDate">Date :</label>
             <input type="text" name="modifyDate" id="modifyDate">
