@@ -13,7 +13,7 @@ $verify_categories = $select_categories->fetch();
 if(!empty($_POST['newCategories']) && $verify_categories['categories'] !== $_POST['newCategories']){
     $create_categories = $bdd->prepare('INSERT INTO categories(id_user,categories) VALUES(:id_user, :categories)');
     $create_categories->bindParam(':id_user', $_SESSION['id_user']);
-    $create_categories->bindParam(':categories', $_POST['newCategories']);
+    $create_categories->bindParam(':categories', $_POST['newCategories'], PDO::PARAM_STR);
     $create_categories->execute();
 }
 header('Location: ../../layouts/todos.php');
