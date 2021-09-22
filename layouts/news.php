@@ -14,10 +14,10 @@ include('../Database/connection_database.php');
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="../css/whatsNew.css">
+    <link rel="stylesheet" href="../css/news.css">
     <link rel="stylesheet" href="../css/css_components/header.css">
     <link rel="stylesheet" href="../css/css_components/navBar.css">
-    <title>Whats new | Todolist</title>
+    <title>news | Todolist</title>
 </head>
 <body>
     <?php
