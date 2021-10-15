@@ -12,7 +12,7 @@ $fetch_verify_admin = $verify_admin->fetch();
 <header>
     <div>
         <p>
-            <a href="http://localhost/TodoList_php/layouts/todos.php">Todolist</a> |
+            <a href="http://localhost:8888/test/TodoList_php/layouts/todos.php">Todolist</a> |
             <a href="./settings.php">Settings</a>
             <?php
             // if user is admin OR super admin : display link to updateWhatsNew
