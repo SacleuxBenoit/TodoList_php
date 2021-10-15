@@ -5,17 +5,12 @@ body{
     display: grid;
     grid-template-areas:
     'header header header header  '
-    'divCategories titleNews titleNews .'
-    'divCategories news news .'
+    'divCategories updateWhatsNew updateWhatsNew .'
+    'divCategories updateWhatsNew updateWhatsNew .'
     'footer footer footer footer';
     font-family: 'Open Sans', sans-serif;
 }
 
-.titleNews{
-    grid-area: titleNews;
-}
-
-.news{
-    grid-area: news;
-    text-align: left;
+.updateWhatsNew{
+    grid-area: updateWhatsNew;
 }

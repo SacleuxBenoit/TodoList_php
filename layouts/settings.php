@@ -15,7 +15,11 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+<<<<<<< HEAD
     <!-- import font -->
+=======
+        <!-- import font -->
+>>>>>>> d87cfa93000caf34b24062a93193f2efee5cf9c2
 
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300&display=swap');
@@ -38,16 +42,24 @@
         ?>
             <link rel="stylesheet" href="../css/settings.css">
             <link rel="stylesheet" href="../css/css_components/header.css">
+            <link rel="stylesheet" href="../css/css_components/navBar.css">
         <?php
         }
     ?>
-    <title>TodoList - Settings</title>
+    <title>Settings | TodoList</title>
 </head>
 <body>
 
+<<<<<<< HEAD
     <?php
         include('../components/header.php');
     ?>
+=======
+<?php
+    include('../components/header.php');
+    include('../components/navBar_categories.php');
+?>
+>>>>>>> d87cfa93000caf34b24062a93193f2efee5cf9c2
                 <!-- ------------------------------------ DELETE CATEGORIES / ACCOUNT / DARKMODE - START ------------------------------------ -->
 
     <div class="div_todos_settings">
@@ -143,13 +155,13 @@
 
             <p>
                 <label for="settingsUsername">New username :</label>
-                <input type="text" name="settingsUsername" id="settingsUsername">
+                <input type="text" name="settingsUsername" id="settingsUsername" required>
             </p>
 
 
             <p>
                 <label for="verifyPassword">password :</label>
-                <input type="password" name="verifyPassword" id="verifyPassword">
+                <input type="password" name="verifyPassword" id="verifyPassword" required>
             </p>
 
             <input type="submit" value="Submit">
@@ -162,17 +174,17 @@
 
             <p>
                 <label for="settingsCurrentPassword">Current password :</label>
-                <input type="password" name="settingsCurrentPassword" id="settingsCurrentPassword">
+                <input type="password" name="settingsCurrentPassword" id="settingsCurrentPassword" required>
             </p>
 
             <p>
                 <label for="settingsNewPassword">New password :</label>
-                <input type="password" name="settingsNewPassword" id="settingsNewPassword">
+                <input type="password" name="settingsNewPassword" id="settingsNewPassword" required>
             </p>
 
             <p>
                 <label for="confirmNewPassword">confirm password :</label>
-                <input type="password" name="confirmNewPassword" id="confirmNewPassword">
+                <input type="password" name="confirmNewPassword" id="confirmNewPassword" required>
             </p>
             <input type="submit" value="Submit">
 

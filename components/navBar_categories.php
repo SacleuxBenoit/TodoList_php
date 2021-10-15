@@ -4,8 +4,8 @@
                 <h2> Categories <button onclick="showForm()" id="buttonCategories" value="+">+</button> </h2> 
             </p>
 
-            <form action="../Database/Categories/create_categories_database.php" id="formHidden" method="post" style='visibility:hidden'>
-                <input type="text" id="newCategories" name="newCategories">
+            <form action="http://localhost/TodoList_php/Database/Categories/create_categories_database.php" id="formHidden" method="post" style='visibility:hidden'>
+                <input type="text" id="newCategories" name="newCategories" required>
                 <input type="submit" value="Submit">
             </form>
 
@@ -19,8 +19,8 @@
                             <div id="divCategories">
                                 <ul>
                                     <li>
-                                    <h2><a href="./categories.php?categories=<?php echo $display_categories['categories']?>" class="colorLink"> <?php echo $display_categories['categories'] ?> </a>
-                                        | <a href="../Database/Categories/delete_categories_database.php?categories=<?php echo $display_categories['categories'] ?>" class="colorLink"> x</h2> </a>
+                                    <h2><a href="http://localhost/TodoList_php/layouts/categories.php?categories=<?php echo $display_categories['categories']?>" class="colorLink"> <?php echo $display_categories['categories'] ?> </a>
+                                        | <a href="http://localhost/TodoList_php/Database/Categories/delete_categories_database.php?categories=<?php echo $display_categories['categories'] ?>" class="colorLink"> x</h2> </a>
                                     </li>
                                 </ul>
                             </div>
@@ -29,11 +29,11 @@
                 ?>
 
                 <p class="navDeletedTasks">
-                    <h2><a href="../layouts/deleted_tasks.php" class="colorLink">Deleted tasks</a></h2>
+                    <h2><a href="http://localhost/TodoList_php/layouts/deleted_tasks.php" class="colorLink">Deleted tasks</a></h2>
                 </p>
 
                 <p class="navWhatsNew">
-                    <h2><a href="../layouts/whatsNew.php" class="linkToWhatsNew colorLink">What's new ?</a></h2>
+                    <h2><a href="http://localhost/TodoList_php/layouts/News.php" class="linkToWhatsNew colorLink">What's new ?</a></h2>
                 </p>
         </div>
     </nav>

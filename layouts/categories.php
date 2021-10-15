@@ -36,7 +36,7 @@ if(isset($_GET['categories'])){
         <?php
         }
     ?>
-    <title>TodoList - categories</title>
+    <title>categories | TodoList</title>
 </head>
 <body>
 

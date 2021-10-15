@@ -20,6 +20,14 @@ function deleteTodos(){
     }
 }
 
+function permanentlyDeleteTodos(){
+    let result = confirm("Are you sure you want to delete all todos ? you won't be able to recover them")
+
+    if(result){
+        document.location.href="../Database/Todos/perma_deleteTodos_database.php";
+    }
+}
+
 // Display input for create category
  
 function showForm(){
