@@ -6,6 +6,7 @@ body{
     grid-template-areas:
     'header header header header'
     '. div_todos_settings div_user_settings .';
+    font-family: 'Open Sans', sans-serif;
 }
 
 header{
