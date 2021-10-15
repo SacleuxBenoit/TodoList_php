@@ -15,11 +15,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<<<<<<< HEAD
-    <!-- import font -->
-=======
         <!-- import font -->
->>>>>>> d87cfa93000caf34b24062a93193f2efee5cf9c2
 
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300&display=swap');

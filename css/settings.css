@@ -5,11 +5,7 @@ body{
     display: grid;
     grid-template-areas:
     'header header header header'
-<<<<<<< HEAD
-    '. div_todos_settings div_user_settings .';
-=======
     'divCategories div_todos_settings div_user_settings .';
->>>>>>> d87cfa93000caf34b24062a93193f2efee5cf9c2
     font-family: 'Open Sans', sans-serif;
 }
 
