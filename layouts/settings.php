@@ -39,9 +39,9 @@
 </head>
 <body>
 
-<header>
-    <h1><a href="./todos.php">Todo List</a></h1>
-</header>
+    <?php
+        include('../components/header.php');
+    ?>
                 <!-- ------------------------------------ DELETE CATEGORIES / ACCOUNT / DARKMODE - START ------------------------------------ -->
 
     <div class="div_todos_settings">

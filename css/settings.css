@@ -1,8 +1,10 @@
 body{
+    margin: 0;
+    padding: 0;
     text-align: center;
     display: grid;
     grid-template-areas:
-    '. header header .'
+    'header header header header'
     '. div_todos_settings div_user_settings .';
 }
 
