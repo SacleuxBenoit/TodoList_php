@@ -46,16 +46,10 @@
 </head>
 <body>
 
-<<<<<<< HEAD
-    <?php
-        include('../components/header.php');
-    ?>
-=======
 <?php
     include('../components/header.php');
     include('../components/navBar_categories.php');
 ?>
->>>>>>> d87cfa93000caf34b24062a93193f2efee5cf9c2
                 <!-- ------------------------------------ DELETE CATEGORIES / ACCOUNT / DARKMODE - START ------------------------------------ -->
 
     <div class="div_todos_settings">
