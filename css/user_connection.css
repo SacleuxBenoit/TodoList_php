@@ -37,3 +37,8 @@ header{
     background-color: white;
     height: 11em;
 }
+
+a{
+    color: black;
+    text-decoration: none;
+}

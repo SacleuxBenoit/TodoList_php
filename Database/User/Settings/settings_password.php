@@ -25,7 +25,7 @@ if(password_verify($_POST['settingsCurrentPassword'],$fetch_get_pass['pass']) &&
     $update_password->bindParam(':pass', $pass_hash);
     $update_password->bindParam(':username', $_SESSION['username']);
     $update_password->execute();
-    header('Location: ../../../index.php');
+    header('Location: ../../../layouts/user_connection.php');
 }else{
    header('Location: ../../../layouts/settings.php');
 }

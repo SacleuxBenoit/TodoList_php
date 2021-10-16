@@ -5,7 +5,7 @@
     include('../components/verify_darkMode.php');
 
     if(empty($_SESSION['username'])){
-        header('Location: ../index.php');
+        header('Location: ./layouts/user_connection.php');
     }
 
     $select_categories = $bdd->prepare('SELECT DISTINCT categories FROM categories WHERE id_user = :id_user');

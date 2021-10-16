@@ -15,7 +15,7 @@
     if($_POST['LoginPseudo'] == $donnees['username'] && password_verify($_POST['LoginPass'],$donnees['pass'])){
         header('Location: ../../layouts/todos.php');
     }else{
-        header('Location: ../../index.php');
+        header('Location: ../../layouts/user_connection.php');
     }
  }
 

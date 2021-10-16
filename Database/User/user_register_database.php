@@ -40,7 +40,7 @@ $_SESSION['username'] = $_POST['RegisterPseudo'];
         
         header('Location: ../../layouts/todos.php');
     }else{
-        header('Location: ../../index.php');
+        header('Location: ../../layouts/user_connection.php');
     }
 
  ?>

@@ -17,7 +17,7 @@
     if($_POST['SettingsPseudo'] == $donnees['username'] && password_verify($_POST['SettingsPass'],$donnees['pass'])){
         header('Location: ../../layouts/settings.php');
     }else{
-        header('Location: ../../index.php');
+        header('Location: ../../layouts/user_connection.php');
     }
  }
 
