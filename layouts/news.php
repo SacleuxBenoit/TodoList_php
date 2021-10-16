@@ -40,12 +40,12 @@ include('../Database/connection_database.php');
 
                     <p>
                         <?php
-                            echo $display_articles['new'];
+                            echo $display_articles['news'];
                         ?>
                     </p>
 
                     <p>
-                        <a href="./Admin/news_modify.php?id_news=<?php echo $display_articles['id']; ?>">Modify</a>
+                        <a href="./Admin/news_modify.php?id_news=<?php echo $display_articles['id']; ?>">Modify</a> |
                         <a href="../Database/Admin/deleteNews_database.php?id=<?php echo $display_articles['id']; ?>">Delete</a>
                     </p>
             <?php
