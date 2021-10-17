@@ -49,10 +49,9 @@ if(empty($_SESSION['username'])){
 
             <!-- ------------------------------------ CREATE TODOS - START ------------------------------------ -->
     <form action="../Database/Todos/todos_create_database.php" method="post" class="createTodos">
-        <label for="addTask" class="titleTask"><u>task :</u></label>
 
         <p>
-            <input type="text" class="addTask" name="addTask" id="addTask">
+            <input type="text" class="addTask" name="addTask" id="addTask" placeholder="your task here..." minlength="1" maxlength="250">
         </p>
 
         <select name="categories" id="categories">
