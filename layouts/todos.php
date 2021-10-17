@@ -38,7 +38,7 @@ if(empty($_SESSION['username'])){
         }
     ?>
 
-    <title>TodoList</title>
+    <title>TaskHead | Home</title>
 </head>
 <body>
 
