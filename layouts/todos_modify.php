@@ -89,7 +89,7 @@ if(empty($_GET['id_todos'])){
 
     <div class="divTodos">
         <?php
-            $display_categories = $bdd->prepare('SELECT * FROM todos WHERE id_user = :id_user ORDER BY order_todos');
+            $display_categories = $bdd->prepare('SELECT * FROM todos WHERE id_user = :id_user AND is_delete = false ORDER BY order_todos');
             $display_categories->bindParam(':id_user', $_SESSION['id_user']);
             $display_categories->execute();
 
