@@ -1,5 +1,5 @@
 <?php
-// verify user want the darkMode
+// verify if user want the darkMode
 
 $select_darkMode = $bdd->prepare('SELECT darkMode FROM user WHERE username =:username');
 $select_darkMode->bindParam(':username', $_SESSION['username']);

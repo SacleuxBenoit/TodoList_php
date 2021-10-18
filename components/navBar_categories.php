@@ -10,6 +10,7 @@
             </form>
 
                 <?php
+                    // -------------------- Display categories - START --------------------
                     $get_categories = $bdd->prepare('SELECT DISTINCT categories FROM todos WHERE id_user = :id_user AND is_delete = false ORDER BY categories');
                     $get_categories->bindParam('id_user', $_SESSION['id_user']);
                     $get_categories->execute();
@@ -26,6 +27,7 @@
                             </div>
                         <?php
                     }
+                    // -------------------- Display categories - END --------------------
                 ?>
 
                 <p class="navDeletedTasks">
