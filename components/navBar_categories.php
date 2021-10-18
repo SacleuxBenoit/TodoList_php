@@ -4,7 +4,7 @@
                 <h2> Categories <button onclick="showForm()" id="buttonCategories" value="+">+</button> </h2> 
             </p>
 
-            <form action="http://localhost/TodoList_php/Database/Categories/create_categories_database.php" id="formHidden" method="post" style='visibility:hidden'>
+            <form action="http://localhost:8888/test/TodoList_php/Database/Categories/create_categories_database.php" id="formHidden" method="post" style='visibility:hidden'>
                 <input type="text" id="newCategories" name="newCategories" placeholder="create your category here" required>
                 <input type="submit" value="Submit">
             </form>
