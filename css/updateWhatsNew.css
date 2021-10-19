@@ -14,3 +14,8 @@ body{
 .updateWhatsNew{
     grid-area: updateWhatsNew;
 }
+
+a{
+    text-decoration: none;
+    color: black;
+}

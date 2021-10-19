@@ -19,7 +19,7 @@ $fetch_verify_admin = $verify_admin->fetch();
                     echo '<a href="http://localhost:8888/test/TodoList_php/layouts/Admin/createNews.php">' . " create news |" . "</a>";
                 }
             ?>
-            <a href="../Database/User/user_logout_database.php"> Logout</a>
+            <a href="http://localhost:8888/test/TodoList_php/Database/User/user_logout_database.php"> Logout</a>
         </p>
 
     </div>   
