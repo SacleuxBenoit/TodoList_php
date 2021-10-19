@@ -69,7 +69,7 @@ if(empty($_SESSION['username'])){
             <option value='none'>none</option>
         </select> 
 
-            <input type="submit" value="Envoyer">
+            <input type="submit" value="Submit">
     </form>
             <!-- ------------------------------------ CREATE TODOS - END ------------------------------------ -->
             
