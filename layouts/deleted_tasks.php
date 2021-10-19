@@ -27,6 +27,8 @@ include('../Database/connection_database.php');
     ?>
         <h2 class="title">Deleted tasks :</h2>
         
+        <!-- DISPLAY THE DELETED TASKS -->
+
     <div class="containerDeletedTask">
         <?php
             $get_todos_deleted = $bdd->prepare('SELECT * FROM todos WHERE id_user =:id_user AND is_delete = true');
