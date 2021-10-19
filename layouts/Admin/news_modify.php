@@ -26,16 +26,24 @@ $_SESSION['id_news'] = $_GET['id_news'];
     <?php
         include('../../components/header.php');
         include('../../components/navBar_categories.php');
+
+        /* --------------------- SELECT CURRENT DATE && NEWS --------------------- */
+
+        $select_news = $bdd->prepare('SELECT currentdate,news FROM whatsnew WHERE id =:id');
+        $select_news->bindParam(':id', $_GET['id_news']);
+        $select_news->execute();
+
+        $news_found = $select_news->fetch();
     ?>
     <form action="../../Database/Admin/modifyNews_database.php" method="post">
         <p>
             <label for="modifyDate">Date :</label>
-            <input type="text" name="modifyDate" id="modifyDate">
+            <input type="text" name="modifyDate" id="modifyDate" value="<?php echo $news_found['currentdate']?>">
         </p>
 
         <p>
             <label for="modifyNews">News :</label>
-            <input type="text" id="modifyNews" name="modifyNews">
+            <input type="text" id="modifyNews" name="modifyNews" value="<?php echo $news_found['news']?>">
         </p>
 
         <input type="submit" value="Submit">
