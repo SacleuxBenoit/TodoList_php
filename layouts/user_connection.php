@@ -9,7 +9,7 @@
 </head>
 <body>
 <header>
-    <h1><a href="../index.html">TaskHead</a></h1>
+    <h1><a href="../index.php">TaskHead</a></h1>
 </header>
 
     <div class="login">
