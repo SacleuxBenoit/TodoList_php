@@ -1,3 +1,6 @@
+<?php
+session_start();
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -15,15 +18,31 @@
 
     <main>
         <div class="descriptionOfTodolist">
+        
             <p>
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Rerum iure, nesciunt ducimus hic eos quae? Cumque rem delectus atque fuga ea et vel dolor vitae at suscipit. Quas, unde maiores.
+                What is "PlaceHolderName" ?
             </p>
 
+            <h2>"PlaceHolderName" is a simple tool to organise everything</h2>
+
             <p>
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Totam sed esse adipisci dolore voluptatem alias quisquam. Iste in laboriosam aperiam sunt sequi atque, mollitia incidunt velit tempora eos reprehenderit eligendi.
-                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatibus recusandae laborum sint dolorum dolores, inventore ullam aperiam illum quaerat facilis, ut architecto excepturi animi laboriosam sit error dicta rem corporis.
-                Lorem ipsum dolor, sit amet consectetur adipisicing elit. Expedita blanditiis modi incidunt esse odio optio asperiores eaque adipisci. Aut soluta asperiores obcaecati vero vitae beatae eius natus dolor corrupti ducimus.
+                <ul>
+                    <li>"PlaceHolderImages" it will help you achieve your goals</li>
+                    <li>"PlaceHolderImages" it will help your productivity</li>
+                    <li>"PlaceHolderImages" it will let you save time</li>
+                </ul>
             </p>
+
+            <h2>Some stats :</h2>
+
+            <p>
+                <ul>
+                    <li>(x) actif account </li>
+                    <li>There is (x) todos right now waiting to be complete</li>
+                    <li>(x) todos has been done</li>
+                </ul>
+            </p>
+
         </div>
     </main>
 </body>
