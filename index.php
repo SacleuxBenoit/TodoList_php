@@ -18,14 +18,10 @@ session_start();
 
     <main>
         <div class="descriptionOfTodolist">
-        
-            <p>
-                What is "PlaceHolderName" ?
-            </p>
 
-            <h2>"PlaceHolderName" is a simple tool to organise everything</h2>
+            <h2 class="descriptionTitle">"PlaceHolderName" is a simple tool to organise everything</h2>
 
-            <p>
+            <p class="descriptionObjectives">
                 <ul>
                     <li>"PlaceHolderImages" it will help you achieve your goals</li>
                     <li>"PlaceHolderImages" it will help your productivity</li>
@@ -33,16 +29,19 @@ session_start();
                 </ul>
             </p>
 
-            <h2>Some stats :</h2>
+        </div>
 
-            <p>
+        <div class="stats">
+
+            <h2 class="statsTitle">Some stats :</h2>
+
+            <p class="statsList">
                 <ul>
                     <li>(x) actif account </li>
                     <li>There is (x) todos right now waiting to be complete</li>
                     <li>(x) todos has been done</li>
                 </ul>
             </p>
-
         </div>
     </main>
 </body>
