@@ -43,8 +43,6 @@ if(isset($_GET['categories'])){
     <?php
         include('../components/header.php');
         include('../components/navBar_categories.php');
-
-        echo '<h2 class="titleCategory">' . '<a href="./todos.php">' . '<u>' . $_SESSION['categories'] . '</u>' . '</a>' . '</h2>'; 
     ?>
             <!-- ------------------------------------ DISPLAY TODOS BY CATEGORY - START ------------------------------------ -->
     <div class="divTodos">
