@@ -70,7 +70,7 @@
                     ?> 
                 </select> 
 
-                <input type="submit" value="Submit">
+                <input type="submit" value="DELETE">
             </form>
         </p>
 
@@ -106,7 +106,7 @@
                                     <p>
                                         <label for="newAdmin">promote an admin :</label>
                                         <input type="text" name="newAdmin" id="newAdmin">
-                                        <input type="submit" value="Submit">
+                                        <input type="submit" value="<- Promote">
                                     </p>
                                 </div>
                             </form>
@@ -126,7 +126,7 @@
                                             }
                                         ?>
                                     </select>
-                                    <input type="submit" value="Submit">
+                                    <input type="submit" value="<- Destitute">
                                 </p>
                             </div>
 
@@ -155,7 +155,7 @@
                 <input type="password" name="verifyPassword" id="verifyPassword" required>
             </p>
 
-            <input type="submit" value="Submit">
+            <input type="submit" value="Change username">
         </form>
                 <!-- ------------------------------------ CHANGE USERNAME - END ------------------------------------ -->
 
@@ -177,7 +177,7 @@
                 <label for="confirmNewPassword">confirm password :</label>
                 <input type="password" name="confirmNewPassword" id="confirmNewPassword" required>
             </p>
-            <input type="submit" value="Submit">
+            <input type="submit" value="Change password">
 
         </form>
     </div>
