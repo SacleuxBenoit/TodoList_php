@@ -35,7 +35,7 @@
     include('../components/header.php');
     include('../components/navBar_categories.php');
 ?>
-                <!-- ------------------------------------ DELETE CATEGORIES / ACCOUNT / DARKMODE - START ------------------------------------ -->
+                <!-- ------------------------------------ DELETE CATEGORIES / ACCOUNT - START ------------------------------------ -->
 
     <div class="div_todos_settings">
         <p>
@@ -60,21 +60,10 @@
         </p>
 
         <p>
-            <form action="../Database/User/user_darkMode_database.php" method="post">
-                <label for="darkMode">Dark mode :</label>
-                    <select name="darkMode" id="darkMode">
-                        <option value="1">Yes</option>
-                        <option value="0">No</option>
-                    </select>
-
-                <input type="submit" value="Submit">
-
-            </form>
-            <p>
-                <button onclick="deleteAccount()">DELETE ACCOUNT</button>
-            </p>
+            <button onclick="deleteAccount()">DELETE ACCOUNT</button>
         </p>
-                <!-- ------------------------------------ DELETE CATEGORIES / ACCOUNT / DARKMODE - END ------------------------------------ -->
+
+                <!-- ------------------------------------ DELETE CATEGORIES / ACCOUNT - END ------------------------------------ -->
                 <!-- ------------------------------------ ADMIN PANEL - START ------------------------------------ -->
             <?php
                 $verify_currentUser_is_admin = $bdd->prepare('SELECT is_superAdmin FROM user WHERE id = :id_user');
