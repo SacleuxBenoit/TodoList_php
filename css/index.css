@@ -1,14 +1,14 @@
 body{
     margin: 0;
     padding: 0;
-    background-color: black;
+    background-color: #141d26;
     color: white;
     font-family: 'Open Sans', sans-serif;
 }
 
 header{
     text-align: center;
-    background-color: rgb(66, 65, 65);
+    background-color: #243447;
     border: 0.5px solid gainsboro;
 }
 
@@ -21,7 +21,7 @@ ul{
 }
 
 main{
-    background-color: rgb(66, 65, 65);
+    background-color: #243447;
     border: 0.5px solid gainsboro;
     margin: 0.8% 8%;
 }
