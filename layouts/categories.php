@@ -2,7 +2,6 @@
 session_start();
 include('../login_database.php');
 include('../Database/connection_database.php');
-include('../components/verify_darkMode.php');
 if(isset($_GET['categories'])){
     $_SESSION['categories'] = $_GET['categories'];
 }
@@ -11,31 +10,18 @@ if(isset($_GET['categories'])){
 <!DOCTYPE html>
 <html lang="en">
 <head>
+
     <!-- import font -->
     <style>
-    @import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300&display=swap');
+        @import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300&display=swap');
     </style>
 
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-        <!-- if darkmode is enabled : use the css below -->
-    <?php
-        if(isset($fetch_select_darkMode['darkMode']) && $fetch_select_darkMode['darkMode']){
-        ?>
-            <link rel="stylesheet" href="../css/darkMode/darkMode_categories.css">
-            <link rel="stylesheet" href="../css/darkMode/darkMode_components/darkMode_header.css">
-            <link rel="stylesheet" href="../css/darkMode/darkMode_components/darkMode_navBar.css">
-        <?php
-        }else{
-        ?>
-            <!-- if darkmode is disabled : use the css below -->
-            <link rel="stylesheet" href="../css/categories.css">
-            <link rel="stylesheet" href="../css/css_components/header.css">
-            <link rel="stylesheet" href="../css/css_components/navBar.css">
-        <?php
-        }
-    ?>
+    <link rel="stylesheet" href="../css/categories.css">
+    <link rel="stylesheet" href="../css/css_components/header.css">
+    <link rel="stylesheet" href="../css/css_components/navBar.css">
     <title>categories | TodoList</title>
 </head>
 <body>

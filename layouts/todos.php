@@ -2,7 +2,6 @@
 session_start();
 include('../login_database.php');
 include('../Database/connection_database.php');
-include('../components/verify_darkMode.php');
 
 if(empty($_SESSION['username'])){
     header('Location: ../index.php');
@@ -20,24 +19,9 @@ if(empty($_SESSION['username'])){
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">    
-    <!-- if darkmode is enabled : use the css below -->
-    <?php
-        if($fetch_select_darkMode['darkMode']){
-        ?>
-            <link rel="stylesheet" href="../css/darkMode/darkMode_components/darkMode_header.css">
-            <link rel="stylesheet" href="../css/darkMode/darkMode_components/darkMode_navBar.css">
-            <link rel="stylesheet" href="../css/darkMode/darkMode_todos.css">
-        <?php
-        }else{
-        ?>
-            <!-- if darkmode is disabled : use the css below -->
-            <link rel="stylesheet" href="../css/todos.css">
-            <link rel="stylesheet" href="../css/css_components/header.css">
-            <link rel="stylesheet" href="../css/css_components/navBar.css">
-        <?php
-        }
-    ?>
-
+    <link rel="stylesheet" href="../css/todos.css">
+    <link rel="stylesheet" href="../css/css_components/header.css">
+    <link rel="stylesheet" href="../css/css_components/navBar.css">
     <title>TaskHead | Home</title>
 </head>
 <body>

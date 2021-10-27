@@ -2,7 +2,6 @@
     session_start();
     include('../login_database.php');
     include('../Database/connection_database.php');
-    include('../components/verify_darkMode.php');
 
     if(empty($_SESSION['username'])){
         header('Location: ./layouts/user_connection.php');
@@ -24,24 +23,10 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <?php
-    $select_darkMode = $bdd->prepare('SELECT darkMode FROM user WHERE username =:username');
-    $select_darkMode->bindParam(':username', $_SESSION['username']);
-    $select_darkMode->execute();
-    $fetch_select_darkMode = $select_darkMode->fetch();
-        if($fetch_select_darkMode['darkMode']){
-        ?>
-            <link rel="stylesheet" href="../css/darkMode/darkMode_settings.css">
-            <link rel="stylesheet" href="../css/darkMode/darkMode_components/darkMode_header.css">
-        <?php
-        }else{
-        ?>
-            <link rel="stylesheet" href="../css/settings.css">
-            <link rel="stylesheet" href="../css/css_components/header.css">
-            <link rel="stylesheet" href="../css/css_components/navBar.css">
-        <?php
-        }
-    ?>
+    <link rel="stylesheet" href="../css/settings.css">
+    <link rel="stylesheet" href="../css/css_components/header.css">
+    <link rel="stylesheet" href="../css/css_components/navBar.css">
+
     <title>Settings | TodoList</title>
 </head>
 <body>
