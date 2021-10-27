@@ -1,44 +1,51 @@
 body{
-    background-color: #ebebebc2;
+    margin: 0;
+    padding: 0;
+    background-color: #141d26;
+    color: white;
     text-align: center;
     display: grid;
     grid-template-areas:
     '. header header .'
     '. login register .'
     '. settings settings .';
+    font-family: 'Open Sans', sans-serif;
 }
 
 header{
     grid-area: header;
-    color: black;
+    background-color: #243447;
+    border: 0.1px solid white;
+
+
 }
 
 .login{
     grid-area: login;
-    border: 1px solid black;
+    border: 0.1px solid white;
     font-size: 2em;
     height: 11em;
-    background-color: white;
+    background-color: #243447;
 }
 
 .register{
     grid-area: register;
-    border: 1px solid black;
+    border: 0.1px solid white;
     font-size: 2em;
     height: 11em;
-    background-color: white;
+    background-color: #243447;
 }
 
 .settings{
     grid-area: settings;
-    border: 1px solid black;
+    border: 0.1px solid white;
     border-top: none;
     font-size: 2em;
-    background-color: white;
+    background-color: #243447;
     height: 11em;
 }
 
 a{
-    color: black;
+    color: white;
     text-decoration: none;
 }
