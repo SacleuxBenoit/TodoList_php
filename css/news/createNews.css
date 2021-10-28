@@ -9,13 +9,17 @@ body{
     'divCategories updateWhatsNew updateWhatsNew .'
     'footer footer footer footer';
     font-family: 'Open Sans', sans-serif;
+    background-color: #141d26;
+    color: white;
+
 }
 
 .updateWhatsNew{
     grid-area: updateWhatsNew;
+    background-color: #243447;
 }
 
 a{
     text-decoration: none;
-    color: black;
+    color: white;
 }
