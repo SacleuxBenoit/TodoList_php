@@ -24,12 +24,12 @@ include('../Database/connection_database.php');
     <?php
         include('../components/header.php');
         include('../components/navBar_categories.php');
-    ?>
-        <h2 class="title">Deleted tasks :</h2>
-        
+    ?>        
         <!-- DISPLAY THE DELETED TASKS -->
 
     <div class="containerDeletedTask">
+        <h2 class="title">Deleted tasks :</h2>
+
         <?php
             $get_todos_deleted = $bdd->prepare('SELECT * FROM todos WHERE id_user =:id_user AND is_delete = true');
             $get_todos_deleted->bindParam(':id_user', $_SESSION['id_user']);

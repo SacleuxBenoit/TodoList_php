@@ -46,7 +46,7 @@ if(isset($_GET['categories'])){
                     if($donnees['is_check']){
                         echo '<p class="colorP" style="color:green">' . htmlspecialchars($donnees['task']) .'</p>';
                     }else{
-                        echo '<p class="colorP" style="color:black">' . htmlspecialchars($donnees['task']) .'</p>';
+                        echo '<p class="colorP" style="color:white">' . htmlspecialchars($donnees['task']) .'</p>';
                     }
                 ?>
 

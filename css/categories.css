@@ -8,11 +8,13 @@ body{
     'divCategories todos todos todos'
     'divCategories todos todos todos';
     font-family: 'Open Sans', sans-serif;
+    background-color: #141d26;
+    color: white;
 }
 
 a{
     text-decoration: none;
-    color: black;
+    color: white;
 }
 
 .color_lightcoral_link{
@@ -33,4 +35,5 @@ li{
 .todosTask{
     font-size: 1.6em;
     border: 0.5px solid black;
+    background-color: #243447;
 }

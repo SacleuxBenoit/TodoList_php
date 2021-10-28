@@ -9,6 +9,8 @@ body{
     'divCategories news news .'
     'footer footer footer footer';
     font-family: 'Open Sans', sans-serif;
+    background-color: #141d26;
+    color: white;
 }
 
 a{
@@ -23,6 +25,7 @@ a{
 .news{
     grid-area: news;
     text-align: left;
+    background-color: #243447;
 }
 
 .underlineH1{
