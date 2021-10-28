@@ -9,11 +9,13 @@ body{
     'divCategories . todos .'
     'footer footer footer footer';
     font-family: 'Open Sans', sans-serif;
+    background-color: #243447;
+    color: white;
 }
 
 a{
     text-decoration: none;
-    color: black;
+    color: white;
 }
 
 .color_lightcoral_link{
@@ -39,6 +41,7 @@ li{
 }
 
 .todosTask{
+    background-color: #243447;
     font-size: 1.6em;
     border: 0.5px solid black;
 }
