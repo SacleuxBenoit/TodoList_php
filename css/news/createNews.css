@@ -17,6 +17,7 @@ body{
 .updateWhatsNew{
     grid-area: updateWhatsNew;
     background-color: #243447;
+    border: 0.2px solid whitesmoke;
 }
 
 a{
