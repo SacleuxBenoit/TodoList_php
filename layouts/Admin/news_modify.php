@@ -36,17 +36,20 @@ $_SESSION['id_news'] = $_GET['id_news'];
         $news_found = $select_news->fetch();
     ?>
     <form action="../../Database/Admin/modifyNews_database.php" method="post">
+    <div class="container_news_modify">
         <p>
-            <label for="modifyDate">Date :</label>
-            <input type="text" name="modifyDate" id="modifyDate" value="<?php echo $news_found['currentdate']?>">
-        </p>
+                <label for="modifyDate">Date :</label>
+                <input type="text" name="modifyDate" id="modifyDate" value="<?php echo $news_found['currentdate']?>">
+            </p>
 
-        <p>
-            <label for="modifyNews">News :</label>
-            <input type="text" id="modifyNews" name="modifyNews" value="<?php echo $news_found['news']?>">
-        </p>
+            <p>
+                <label for="modifyNews">News :</label>
+                <input type="text" id="modifyNews" name="modifyNews" value="<?php echo $news_found['news']?>">
+            </p>
 
-        <input type="submit" value="Submit">
+            <input type="submit" value="Submit">
+        </div>
+
     </form>
 </body>
 </html>

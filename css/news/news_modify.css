@@ -8,5 +8,11 @@ body{
     'divCategories . . .'
     'divCategories . . .'
     'footer footer footer footer';
-    font-family: 'Open Sans', sans-serif;
+    background-color: #141d26;
+    color: white;
+}
+
+.container_news_modify{
+    background-color: #243447;
+    border: 0.2px solid whitesmoke;
 }
