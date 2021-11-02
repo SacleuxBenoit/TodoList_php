@@ -35,7 +35,7 @@
     include('../components/header.php');
     include('../components/navBar_categories.php');
 ?>
-                <!-- ------------------------------------ DELETE CATEGORIES / ACCOUNT - START ------------------------------------ -->
+                <!-- ------------------------------------ DELETE CATEGORIES - START ------------------------------------ -->
 
     <div class="div_todos_settings">
         <p>
@@ -54,16 +54,41 @@
                         }
                     ?> 
                 </select> 
-
                 <input type="submit" value="DELETE">
             </form>
         </p>
+                <!-- ------------------------------------ DELETE CATEGORIES - END ------------------------------------ -->
+                <!-- ------------------------------------ Modify the name of categories - START ------------------------------------ -->
+        <p>
+            <form action="#" method="post">
+                <label for="modifyCategoriesName">Modify categories name :</label>
+                <p>
+                    <select name="modifyCategoriesName" id="modifyCategoriesName">
+                        <?php
+                            $get_categories = $bdd->prepare('SELECT DISTINCT categories FROM categories WHERE id_user = :id_user');
+                            $get_categories->bindParam(':id_user', $_SESSION['id_user']);
+                            $get_categories->execute();
+
+                            while($display_categories = $get_categories->fetch()){
+                                ?>
+                                    <option><?php echo $display_categories['categories'] ?></option>
+                                <?php
+                            }
+                        ?> 
+                    </select>  
+                            
+                    <label for="">to :</label>
+                    <input type="text">
+                    <input type="submit" value="Modify">
+                </p>
+            </form>
+        </p>
+                <!-- ------------------------------------ Modify the name of categories - END ------------------------------------ -->
 
         <p>
             <button onclick="deleteAccount()">DELETE ACCOUNT</button>
         </p>
 
-                <!-- ------------------------------------ DELETE CATEGORIES / ACCOUNT - END ------------------------------------ -->
     </div>
                 <!-- ------------------------------------ CHANGE USERNAME - START ------------------------------------ -->
 
