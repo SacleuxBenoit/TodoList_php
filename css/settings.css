@@ -5,7 +5,8 @@ body{
     display: grid;
     grid-template-areas:
     'header header header header'
-    'divCategories div_todos_settings div_user_settings .';
+    'divCategories div_todos_settings div_user_settings .'
+    'divCategories containerAdminPanel containerAdminPanel .';
     font-family: 'Open Sans', sans-serif;
     background-color: #141d26;
     color: white;
@@ -40,4 +41,10 @@ a{
 
 .adminPanel{
     border-top: 1px solid black;
+}
+
+.containerAdminPanel{
+    margin-top: 1.2em;
+    background-color: #243447;
+    grid-area: containerAdminPanel;
 }
