@@ -60,7 +60,7 @@
                 <!-- ------------------------------------ DELETE CATEGORIES - END ------------------------------------ -->
                 <!-- ------------------------------------ Modify the name of categories - START ------------------------------------ -->
         <p>
-            <form action="#" method="post">
+            <form action="../Database/Categories/rename_categories_database.php" method="post">
                 <label for="modifyCategoriesName">Modify categories name :</label>
                 <p>
                     <select name="modifyCategoriesName" id="modifyCategoriesName">
