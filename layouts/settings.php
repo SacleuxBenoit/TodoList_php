@@ -78,7 +78,7 @@
                     </select>  
                             
                     <label for="newCategories">to :</label>
-                    <input type="text" name="newCategories" id="newCategories" required>
+                    <input type="text" name="newCategories" id="newCategories" minlength="2" maxlength="12" required>
                     <input type="submit" value="Modify">
                 </p>
             </form>
