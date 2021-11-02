@@ -136,7 +136,6 @@
         <!-- ------------------------------------ CHANGE PASSWORD - END ------------------------------------ -->
 
     <div class="containerAdminPanel">
-        <h2>Admin panel</h2>
         <!-- ------------------------------------ ADMIN PANEL - START ------------------------------------ -->
         <?php
             $verify_currentUser_is_admin = $bdd->prepare('SELECT is_superAdmin FROM user WHERE id = :id_user');
@@ -147,6 +146,7 @@
 
             if($fetch_verify_currentUser_is_admin['is_superAdmin']){
                 ?>
+                    <h2>Admin panel</h2>
                     <form action="../Database/Admin/promoteNewAdmin_database.php" method="post">
                         <div class="adminPanel">
                             <div class="promoteAdmin">
@@ -183,7 +183,7 @@
             }
         ?>
     </div>
-                    <!-- ------------------------------------ ADMIN PANEL - END ------------------------------------ -->
+        <!-- ------------------------------------ ADMIN PANEL - END ------------------------------------ -->
 <script src="../js/script.js"></script>
 </body>
 </html>
