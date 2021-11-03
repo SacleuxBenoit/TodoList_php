@@ -22,10 +22,14 @@ a{
     grid-area: titleNews;
 }
 
-.news{
+.containerNews{
     grid-area: news;
     text-align: left;
     background-color: #243447;
+}
+
+.news{
+    border-bottom: 1px solid black;
 }
 
 .underlineH1{

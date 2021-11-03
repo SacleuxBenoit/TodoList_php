@@ -38,34 +38,36 @@ include('../Database/connection_database.php');
         $select_articles->execute();
 
         ?>
-            <div class="news">
+            <div class="containerNews">
         <?php
         while($display_articles = $select_articles->fetch()){
             ?>
-                <h1 class="underlineH1">
-                    <?php 
-                        echo $display_articles['currentdate'];
-                    ?>
-                </h1>
+                <div class="news">
+                    <h1 class="underlineH1">
+                        <?php 
+                            echo $display_articles['currentdate'];
+                        ?>
+                    </h1>
 
-                <p>
+                    <p>
+                        <?php
+                            echo $display_articles['news'];
+                        ?>
+                    </p>
+            
                     <?php
-                        echo $display_articles['news'];
+                        /* -------------------- IF USER IS ADMIN ADD LINK FOR MODIFY && DELETE --------------------*/
+                        
+                        if($user_admin['is_admin']){
+                        ?>
+                            <p>
+                                <a href="./Admin/news_modify.php?id_news=<?php echo $display_articles['id']; ?>">Modify</a> |
+                                <a href="../Database/Admin/deleteNews_database.php?id=<?php echo $display_articles['id']; ?>">Delete</a>
+                            </p>
+                        <?php
+                        }
                     ?>
-                </p>
-        
-                <?php
-                    /* -------------------- IF USER IS ADMIN ADD LINK FOR MODIFY && DELETE --------------------*/
-                    
-                    if($user_admin['is_admin']){
-                    ?>
-                        <p>
-                            <a href="./Admin/news_modify.php?id_news=<?php echo $display_articles['id']; ?>">Modify</a> |
-                            <a href="../Database/Admin/deleteNews_database.php?id=<?php echo $display_articles['id']; ?>">Delete</a>
-                        </p>
-                    <?php
-                    }
-                ?>
+                </div>
             <?php
         }
     ?>
