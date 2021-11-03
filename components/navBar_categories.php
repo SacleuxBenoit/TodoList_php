@@ -7,12 +7,6 @@
             <!--------------------- USER CAN CREATE A CATEGORY + CHOOSE THE MODE HERE ----------------------->
             <form action="http://localhost:8888/test/TodoList_php/Database/Categories/create_categories_database.php" id="formHidden" method="post" style='visibility:hidden'>
                 <input type="text" id="newCategories" name="newCategories" placeholder="create your category here" minlength="2" maxlength="12" required>
-
-                <select name="categoryMode" id="categoryMode">
-                    <option value="normal">normal</option>
-                    <option value="daily">daily</option>
-                </select>
-
                 <input type="submit" value="Submit">
             </form>
 
