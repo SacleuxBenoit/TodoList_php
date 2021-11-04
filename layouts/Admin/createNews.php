@@ -27,11 +27,11 @@ include('../../Database/connection_database.php');
     ?>
 
     <div class="updateWhatsNew">
-        <h1><a href="../todos.php">Update news :</a></h1>
+        <h1><a href="../todos.php">Create news :</a></h1>
         <form action="../../Database/Admin/createNews_database.php" method="POST">
             <p>
                 <label for="currentDate">date</label>
-                <input type="text" name="currentDate" id="currentDate" required>
+                <input type="text" name="currentDate" id="currentDate" placeholder="ex : 11/02/21" required>
             </p>
 
             <p>
