@@ -38,6 +38,7 @@
                 <!-- ------------------------------------ DELETE CATEGORIES - START ------------------------------------ -->
 
     <div class="div_todos_settings">
+        <p class="paragraphCategories">Categories</p>
         <p>
             <form action="../Database/Categories/delete_categories_database.php" method="post">
                 <label for="deleteCategories">Delete categories :</label>
@@ -93,7 +94,7 @@
                 <!-- ------------------------------------ CHANGE USERNAME - START ------------------------------------ -->
 
     <div class="div_user_settings">
-
+        <p class="paragraphUser">user</p>
         <form action="../Database/User/Settings/settings_username.php" method="post" id="formChangeUsername">
 
             <p>
