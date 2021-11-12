@@ -43,6 +43,10 @@ a{
     border-top: 1px solid black;
 }
 
+.paragraphUser, .paragraphCategories{
+    border-bottom: 1px solid black;
+}
+
 .containerAdminPanel{
     margin-top: 1.2em;
     background-color: #243447;
