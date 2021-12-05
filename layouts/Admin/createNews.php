@@ -29,14 +29,14 @@ include('../../Database/connection_database.php');
     <div class="updateWhatsNew">
         <h1><a href="../todos.php">Create news :</a></h1>
         <form action="../../Database/Admin/createNews_database.php" method="POST">
+
             <p>
-                <label for="currentDate">date</label>
-                <input type="text" name="currentDate" id="currentDate" placeholder="ex : 11/02/21" required>
+                <textarea name="news" id="news" cols="30" rows="10" required placeholder="here is the content..."></textarea>
             </p>
 
             <p>
-                <label for="news">content</label>
-                <input type="text" name="news" id="news" required>
+                <label for="currentDate">Date : </label>
+                <input type="text" name="currentDate" id="currentDate" placeholder="ex : 11/02/21" required>
             </p>
             
             <input type="submit" value="Submit">
