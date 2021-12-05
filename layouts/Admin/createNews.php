@@ -31,7 +31,7 @@ include('../../Database/connection_database.php');
         <form action="../../Database/Admin/createNews_database.php" method="POST">
 
             <p>
-                <textarea name="news" id="news" cols="30" rows="10" required placeholder="here is the content..."></textarea>
+                <textarea name="news" id="news" cols="70" rows="10" required placeholder="here is the content..."></textarea>
             </p>
 
             <p>
