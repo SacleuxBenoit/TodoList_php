@@ -27,7 +27,7 @@ include('../../Database/connection_database.php');
     ?>
 
     <div class="updateWhatsNew">
-        <h1><a href="../todos.php">Create news :</a></h1>
+        <h1>Create news :</h1>
         <form action="../../Database/Admin/createNews_database.php" method="POST">
 
             <p>
