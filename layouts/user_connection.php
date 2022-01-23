@@ -23,12 +23,22 @@
         <form action="../Database/User/user_login_database.php" method="post">
             <p>
                 <label for="LoginPseudo">Pseudo :</label>
-                <input type="text" id="LoginPseudo" name="LoginPseudo" required>
+                <input
+                    type="text"
+                    id="LoginPseudo"
+                    name="LoginPseudo"
+                    required
+                >
             </p>
 
             <p>
                 <label for="LoginPass">Password :</label>
-                <input type="password" id="LoginPass" name="LoginPass" required>
+                <input
+                    type="password"
+                    id="LoginPass"
+                    name="LoginPass"
+                    required
+                >
             </p>
             <input type="submit" value="Submit">
         </form>
@@ -39,12 +49,22 @@
         <form action="../Database/User/user_register_database.php" method="post">
             <p>
                 <label for="RegisterPseudo">Pseudo :</label>
-                <input type="text" id="RegisterPseudo" name="RegisterPseudo" required>
+                <input
+                    type="text"
+                    id="RegisterPseudo"
+                    name="RegisterPseudo"
+                    required
+                >
             </p>
 
             <p>
                 <label for="RegisterPass">Password :</label>
-                <input type="password" id="RegisterPass" name="RegisterPass" required>
+                <input
+                    type="password"
+                    id="RegisterPass"
+                    name="RegisterPass"
+                    required
+                >
             </p>
             <input type="submit" value="Submit">
         </form>
@@ -55,12 +75,22 @@
         <form action="../Database/User/user_settings_database.php" method="post">
             <p>
                 <label for="SettingsPseudo">Pseudo :</label>
-                <input type="text" id="SettingsPseudo" name="SettingsPseudo" required>
+                <input
+                    type="text"
+                    id="SettingsPseudo"
+                    name="SettingsPseudo"
+                    required
+                >
             </p>
 
             <p>
                 <label for="SettingsPass">Password :</label>
-                <input type="password" id="SettingsPass" name="SettingsPass" required>
+                <input
+                    type="password"
+                    id="SettingsPass"
+                    name="SettingsPass"
+                    required
+                >
             </p>
 
             <input type="submit" value="Submit">
