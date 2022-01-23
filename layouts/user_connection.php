@@ -28,6 +28,7 @@
                     id="LoginPseudo"
                     name="LoginPseudo"
                     required
+                    pattern="[a-zA-Z0-9]+"
                 >
             </p>
 
@@ -54,6 +55,7 @@
                     id="RegisterPseudo"
                     name="RegisterPseudo"
                     required
+                    pattern="[a-zA-Z0-9]+"
                 >
             </p>
 
@@ -80,6 +82,7 @@
                     id="SettingsPseudo"
                     name="SettingsPseudo"
                     required
+                    pattern="[a-zA-Z0-9]+"
                 >
             </p>
 
