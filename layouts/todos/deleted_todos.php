@@ -1,7 +1,7 @@
 <?php
 session_start();
-include('../login_database.php');
-include('../Database/connection_database.php');
+include('../../login_database.php');
+include('../../Database/connection_database.php');
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -15,15 +15,15 @@ include('../Database/connection_database.php');
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="../css/deleted_tasks.css">
-    <link rel="stylesheet" href="../css/css_components/header.css">
-    <link rel="stylesheet" href="../css/css_components/navBar.css">
+    <link rel="stylesheet" href="../../css/deleted_tasks.css">
+    <link rel="stylesheet" href="../../css/css_components/header.css">
+    <link rel="stylesheet" href="../../css/css_components/navBar.css">
     <title>deleted tasks | TodoList</title>
 </head>
 <body>
     <?php
-        include('../components/header.php');
-        include('../components/navBar_categories.php');
+        include('../../components/header.php');
+        include('../../components/navBar_categories.php');
     ?>        
         <!-- DISPLAY THE DELETED TASKS -->
 
@@ -41,8 +41,8 @@ include('../Database/connection_database.php');
                     <p><?php echo htmlspecialchars($display_todos['task'])?></p>
 
                     <p>
-                        <a href="../Database/Todos/todos_restoreTodos_database.php?id_todos=<?php echo $display_todos['id_todos']?>" class="color_lightcoral_link">RESTORE</a> |
-                        <a href="../Database/Todos/todos_delete_database.php?id_todos=<?php echo $display_todos['id_todos']?>" class="color_lightcoral_link">DELETE</a>
+                        <a href="../../Database/Todos/todos_restoreTodos_database.php?id_todos=<?php echo $display_todos['id_todos']?>" class="color_lightcoral_link">RESTORE</a> |
+                        <a href="../../Database/Todos/todos_delete_database.php?id_todos=<?php echo $display_todos['id_todos']?>" class="color_lightcoral_link">DELETE</a>
                     </p>
                 </div>  
             <?php
@@ -55,6 +55,6 @@ include('../Database/connection_database.php');
     </div>
 
 
-        <script src="../js/script.js"></script>
+        <script src="../../js/script.js"></script>
 </body>
 </html>

@@ -1,10 +1,10 @@
 <?php
 session_start();
-include('../login_database.php');
-include('../Database/connection_database.php');
+include('../../login_database.php');
+include('../../Database/connection_database.php');
 
 if(empty($_SESSION['username'])){
-    header('Location: ../index.php');
+    header('Location: ../../index.php');
 }
 ?>
 <!DOCTYPE html>
@@ -19,20 +19,20 @@ if(empty($_SESSION['username'])){
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">    
-    <link rel="stylesheet" href="../css/todos.css">
-    <link rel="stylesheet" href="../css/css_components/header.css">
-    <link rel="stylesheet" href="../css/css_components/navBar.css">
+    <link rel="stylesheet" href="../../css/todos.css">
+    <link rel="stylesheet" href="../../css/css_components/header.css">
+    <link rel="stylesheet" href="../../css/css_components/navBar.css">
     <title>TaskHead | Home</title>
 </head>
 <body>
 
     <?php
-        include('../components/header.php');
-        include('../components/navBar_categories.php');
+        include('../../components/header.php');
+        include('../../components/navBar_categories.php');
     ?>
 
             <!-- ------------------------------------ CREATE TODOS - START ------------------------------------ -->
-    <form action="../Database/Todos/todos_create_database.php" method="post" class="createTodos">
+    <form action="../../Database/Todos/todos_create_database.php" method="post" class="createTodos">
 
         <p>
             <input type="text" class="addTask" name="addTask" id="addTask" placeholder="your task here..." minlength="1" maxlength="250">
@@ -78,26 +78,26 @@ if(empty($_SESSION['username'])){
                 ?>      
 
                 <p>
-                    <a href="./todos_modify.php?id_todos=<?php echo $donnees['id_todos']; ?>" class="color_lightcoral_link">Modify</a> |
-                    <a href="../Database/Todos/todos_addToTrash.php?id_todos=<?php echo $donnees['id_todos']; ?>" class="color_lightcoral_link">Delete</a> 
+                    <a href="../todos_modify.php?id_todos=<?php echo $donnees['id_todos']; ?>" class="color_lightcoral_link">Modify</a> |
+                    <a href="../../Database/Todos/todos_addToTrash.php?id_todos=<?php echo $donnees['id_todos']; ?>" class="color_lightcoral_link">Delete</a> 
                 </p>
 
                 <p>
-                    <a href="../Database/Todos/todos_orderUp_database.php?id_todos=<?php echo $donnees['id_todos']?>" class="color_lightcoral_link">Up</a> |
-                    <a href="../Database/Todos/todos_orderDown_database.php?id_todos=<?php echo $donnees['id_todos']?>" class="color_lightcoral_link">Down</a> |
+                    <a href="../../Database/Todos/todos_orderUp_database.php?id_todos=<?php echo $donnees['id_todos']?>" class="color_lightcoral_link">Up</a> |
+                    <a href="../../Database/Todos/todos_orderDown_database.php?id_todos=<?php echo $donnees['id_todos']?>" class="color_lightcoral_link">Down</a> |
 
                         <?php 
                             if($donnees['order_todos'] > 0){
                                 echo $donnees['order_todos'] . ' |';
                         ?>
-                            <a href="../Database/Todos/todos_pin_database.php?id_todos=<?php echo $donnees['id_todos']?>" class="color_lightcoral_link">pin</a> |
+                            <a href="../../Database/Todos/todos_pin_database.php?id_todos=<?php echo $donnees['id_todos']?>" class="color_lightcoral_link">pin</a> |
                         <?php
                             }
                             else{
                                 echo 'message pinned |';
                             }
                         ?>
-                    <a href="../Database/Todos/todos_check_database.php?id_todos=<?php echo $donnees['id_todos']?>">Check todos</a>
+                    <a href="../../Database/Todos/todos_check_database.php?id_todos=<?php echo $donnees['id_todos']?>">Check todos</a>
                 </p>
             </div>  
             <!-- ------------------------------------ DISPLAY TODOS - END ------------------------------------ -->
@@ -110,6 +110,6 @@ if(empty($_SESSION['username'])){
         </p>
 
     </div>
-    <script src="../js/script.js"></script>
+    <script src="../../js/script.js"></script>
 </body>
 </html>
