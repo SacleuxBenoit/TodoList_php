@@ -9,6 +9,6 @@ if(isset($_GET['id_todos'])){
     $delete_todos->bindParam(':id', $_GET['id_todos']);
     $delete_todos->execute();
 }
-header('Location: ../../layouts/deleted_tasks.php');
+header('Location: ../../layouts/deleted_todos.php');
 
 ?>
