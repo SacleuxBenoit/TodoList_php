@@ -11,5 +11,5 @@ if(isset($_GET['id_todos'])){
     $modify_todos->bindParam(':id', $_GET['id_todos']);
     $modify_todos->execute();
 }
-header('Location: ../../layouts/todos.php');
+header('Location: ../../layouts/todos/todos.php');
 ?>

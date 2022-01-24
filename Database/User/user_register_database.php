@@ -38,7 +38,7 @@ $_SESSION['username'] = $_POST['RegisterPseudo'];
                 $welcome_message->bindParam(':id_user', $_SESSION['id_user']);
                 $welcome_message->execute();
         
-        header('Location: ../../layouts/todos.php');
+        header('Location: ../../layouts/todos/todos.php');
     }else{
         header('Location: ../../layouts/user_connection.php');
     }

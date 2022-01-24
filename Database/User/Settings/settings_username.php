@@ -17,7 +17,7 @@ if(password_verify($_POST['verifyPassword'],$fetch_get_pass['pass']) && !empty($
     $send->bindParam(':newUsername', $_POST['settingsUsername']);
     $send->bindParam(':username', $_SESSION['username']);
     $send->execute();
-    header('Location: ../../../layouts/todos.php');
+    header('Location: ../../../layouts/todos/todos.php');
 }else{
     header('Location: ../../../layouts/settings.php');
 }

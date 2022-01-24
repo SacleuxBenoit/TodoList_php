@@ -7,5 +7,5 @@ $perma_delete = $bdd->prepare('DELETE FROM todos WHERE id_user = :id_user AND is
 $perma_delete->bindParam(':id_user', $_SESSION['id_user']);
 $perma_delete->execute();
 
-header('Location: ../../layouts/todos.php');
+header('Location: ../../layouts/todos/todos.php');
 ?>

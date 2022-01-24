@@ -18,5 +18,5 @@ include('../../login_database.php');
         
     }
 
-header('Location: ../../layouts/todos.php');
+header('Location: ../../layouts/todos/todos.php');
 ?>

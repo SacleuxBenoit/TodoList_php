@@ -25,7 +25,7 @@ else if(isset($_POST['deleteCategories'])){
     header('Location: ../../layouts/settings.php');
     exit();
 }else{
-    header('Location: ../../layouts/todos.php');
+    header('Location: ../../layouts/todos/todos.php');
 }
 
 ?>

@@ -16,5 +16,5 @@ if(!empty($_POST['newCategories']) && $verify_categories['categories'] !== $_POS
     $create_categories->bindParam(':categories', $_POST['newCategories'], PDO::PARAM_STR);
     $create_categories->execute();
 }
-header('Location: ../../layouts/todos.php');
+header('Location: ../../layouts/todos/todos.php');
 ?>

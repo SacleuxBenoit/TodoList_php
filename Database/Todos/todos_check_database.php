@@ -21,5 +21,5 @@ else{
     $update_is_check->bindParam(':id_todos', $_GET['id_todos']);
     $update_is_check->execute();
 }
-header('Location: ../../layouts/todos.php');
+header('Location: ../../layouts/todos/todos.php');
 ?>

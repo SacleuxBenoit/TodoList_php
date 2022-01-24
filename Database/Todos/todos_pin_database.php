@@ -9,7 +9,7 @@ if(isset($_GET['id_todos'])){
     $update_pin->bindParam(':id_todos', $_GET['id_todos']);
     $update_pin->execute();
 
-    header('Location: ../../layouts/todos.php');
+    header('Location: ../../layouts/todos/todos.php');
     exit();
 }
 // if $_GET['order_categories'] exist : pin the todo by updating order_categories to 0 in categories.php

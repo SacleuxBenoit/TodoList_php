@@ -9,5 +9,5 @@ if($_SESSION['id_user']){
     $deleteALL_todos->bindParam(':id_user', $_SESSION['id_user']);
     $deleteALL_todos->execute();
 }
-header('Location: ../../layouts/todos.php');
+header('Location: ../../layouts/todos/todos.php');
 ?>

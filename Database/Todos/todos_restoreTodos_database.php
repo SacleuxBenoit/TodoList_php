@@ -9,5 +9,5 @@ if(!empty($_GET['id_todos'])){
     $update_is_delete->bindParam(':id_todos', $_GET['id_todos']);
     $update_is_delete->execute();
 }
-header('Location: ../../layouts/deleted_todos.php');
+header('Location: ../../layouts/todos/deleted_todos.php');
 ?>

@@ -11,5 +11,5 @@ if(!empty($_POST['addTask'])){
     $addTodos->bindParam(':categories', $_POST['categories'], PDO::PARAM_STR);
     $addTodos->execute();
 }
-header('Location: ../../layouts/todos.php');
+header('Location: ../../layouts/todos/todos.php');
 ?>
