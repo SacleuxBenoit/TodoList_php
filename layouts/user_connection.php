@@ -27,6 +27,8 @@
                     type="text"
                     id="LoginPseudo"
                     name="LoginPseudo"
+                    minlength="4"
+                    maxlength="12"
                     required
                     pattern="[a-zA-Z0-9]+"
                 >
@@ -38,6 +40,8 @@
                     type="password"
                     id="LoginPass"
                     name="LoginPass"
+                    minlength="4"
+                    maxlength="255"
                     required
                 >
             </p>
@@ -54,6 +58,8 @@
                     type="text"
                     id="RegisterPseudo"
                     name="RegisterPseudo"
+                    minlength="4"
+                    maxlength="12"
                     required
                     pattern="[a-zA-Z0-9]+"
                 >
@@ -65,6 +71,8 @@
                     type="password"
                     id="RegisterPass"
                     name="RegisterPass"
+                    minlength="4"
+                    maxlength="255"
                     required
                 >
             </p>
