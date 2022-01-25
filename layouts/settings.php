@@ -118,17 +118,17 @@
 
             <p>
                 <label for="settingsCurrentPassword">Current password :</label>
-                <input type="password" name="settingsCurrentPassword" id="settingsCurrentPassword" required>
+                <input type="password" name="settingsCurrentPassword" id="settingsCurrentPassword" minlength="4" maxlength="255" required>
             </p>
 
             <p>
                 <label for="settingsNewPassword">New password :</label>
-                <input type="password" name="settingsNewPassword" id="settingsNewPassword" required>
+                <input type="password" name="settingsNewPassword" id="settingsNewPassword" minlength="4" maxlength="255" required>
             </p>
 
             <p>
                 <label for="confirmNewPassword">confirm password :</label>
-                <input type="password" name="confirmNewPassword" id="confirmNewPassword" required>
+                <input type="password" name="confirmNewPassword" id="confirmNewPassword" minlength="4" maxlength="255" required>
             </p>
             <input type="submit" value="Change password">
 

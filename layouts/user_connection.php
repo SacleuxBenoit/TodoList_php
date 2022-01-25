@@ -102,6 +102,8 @@
                     type="password"
                     id="SettingsPass"
                     name="SettingsPass"
+                    minlength="4"
+                    maxlength="255"
                     required
                 >
             </p>
