@@ -89,6 +89,8 @@
                     type="text"
                     id="SettingsPseudo"
                     name="SettingsPseudo"
+                    minlength="4"
+                    maxlength="12"
                     required
                     pattern="[a-zA-Z0-9]+"
                 >
