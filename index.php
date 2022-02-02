@@ -46,14 +46,16 @@ include('./Database/connection_database.php');
             <h2 class="statsTitle">Some stats :</h2>
 
             <p class="statsList">
-            <?php
-                $findNumberOfUser = $bdd->query('SELECT COUNT(*) FROM user');
-                $findNumberOfUser->execute();
-                while($fetchFindNumberOfUser = $findNumberOfUser->fetch()){
-                    $numberOfUser = 0;
-                    $numberOfUser+=1 ;
-                }
-            ?>
+                <?php
+                // count number of user
+                    $findNumberOfUser = $bdd->query('SELECT COUNT(username) FROM user');
+                    $findNumberOfUser->execute();
+                    while($fetchFindNumberOfUser = $findNumberOfUser->fetch()){
+                        foreach($fetchFindNumberOfUser as $numberOfUser){
+                            $numberOfUser+=1;
+                        }
+                    }
+                ?>
                 <ul>
                     <li>(<?php echo $numberOfUser?>) actif account </li>
                     <li>There is (x) todos right now waiting to be complete</li>
