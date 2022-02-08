@@ -32,7 +32,7 @@
                 ?>
 
                 <p class="navDeletedTasks">
-                    <h2><a href="http://localhost:8888/test/TodoList_php/layouts/deleted_tasks.php" class="colorLink">Deleted tasks</a></h2>
+                    <h2><a href="http://localhost:8888/test/TodoList_php/layouts/deleted_todos.php" class="colorLink">Deleted todos</a></h2>
                 </p>
 
                 <p class="navWhatsNew">
