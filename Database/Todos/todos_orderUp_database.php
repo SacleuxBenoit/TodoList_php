@@ -21,7 +21,7 @@ if(isset($_GET['id_todos'])){
         $update_orderUp_todos->bindParam(':id_todos', $id_todos);
         $update_orderUp_todos->execute();   
     }
-header('Location: ../../layouts/todos.php');
+header('Location: ../../layouts/todos/todos.php');
 exit();
 }
 // if user came from categories.php update order_categories (decrease 1)
