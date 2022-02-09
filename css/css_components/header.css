@@ -21,3 +21,7 @@ header > div > p > a{
     text-decoration: none;
     color: white;
 }
+
+a:hover{
+    color: rgb(126, 122, 122);
+}
