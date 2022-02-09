@@ -13,7 +13,7 @@ if(isset($_GET['categories'])){
     $delete_categories->bindParam(':categories', $_GET['categories']);
     $delete_categories->execute();
 
-    header('Location: ../../layouts/todos.php');
+    header('Location: ../../layouts/todos/todos.php');
     exit();
 }
 // delete the current category (if we came from settings.php)
