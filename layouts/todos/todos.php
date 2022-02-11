@@ -78,7 +78,7 @@ if(empty($_SESSION['username'])){
                 ?>      
 
                 <p>
-                    <a href="../todos_modify.php?id_todos=<?php echo $donnees['id_todos']; ?>" class="color_lightcoral_link">Modify</a> |
+                    <a href="./todos_modify.php?id_todos=<?php echo $donnees['id_todos']; ?>" class="color_lightcoral_link">Modify</a> |
                     <a href="../../Database/Todos/todos_addToTrash.php?id_todos=<?php echo $donnees['id_todos']; ?>" class="color_lightcoral_link">Delete</a> 
                 </p>
 
