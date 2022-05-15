@@ -19,5 +19,3 @@ Simple todolist where you can :
 *   Clone this project with `git@github.com:SacleuxBenoit/TodoList_php.git`
 
 *   Create a file `login_database.php` at the root of the project with `<?php $_SESSION['pass'] = 'root'?>` in it. For MAMP the default password is `root` and for WAMP there's no password `''`.
-
-*   Import the [database](Database/database.sql)
