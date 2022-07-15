@@ -7,6 +7,11 @@ Simple todolist where you can :
 *   create / delete / categories for todos
 *   sort and pin todos
 
+## WARNING 
+
+I know that there is so many weird things in my code :') i'm using this project as a sandbox
+I'll soon organise files && separate the php code from the html.
+
 ## Stack :
 
 *   html / css

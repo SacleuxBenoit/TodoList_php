@@ -11,8 +11,8 @@ $fetch_verify_admin = $verify_admin->fetch();
 <header>
     <div>
         <p>
-            <a href="http://localhost:8888/test/TodoList_php/layouts/todos/todos.php">TaskHead</a> |
-            <a href="http://localhost:8888/test/TodoList_php/layouts/settings.php">Settings</a> |
+            <a href="http://localhost/TodoList_php/layouts/todos/todos.php">TaskHead</a> |
+            <a href="http://localhost/TodoList_php/layouts/settings.php">Settings</a> |
             <?php
             // -------------------- if user is admin OR super admin : display link to updateWhatsNew - START--------------------
                 if($fetch_verify_admin['is_admin'] || $fetch_verify_admin['is_superAdmin']){
